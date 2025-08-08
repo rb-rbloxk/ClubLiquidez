@@ -35,7 +35,7 @@ const Footer = () => {
       links: [
         { name: 'About Us', href: '/about' },
         // { name: 'Careers', href: '/careers' },
-        { name: 'Press', href: '/press' },
+        // { name: 'Press', href: '/press' },
         { name: 'Contact', href: '/contact' },
       ]
     },

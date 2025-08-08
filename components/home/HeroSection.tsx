@@ -100,7 +100,7 @@ const HeroSection = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-blue/20"
               >
                 <div className="w-2 h-2 bg-neon-blue rounded-full animate-pulse" />
-                <span className="text-sm text-neon-blue">Live Trading Platform</span>
+                <span className="text-sm text-neon-blue">Trading Platform</span>
               </motion.div>
               
               <motion.h1
@@ -134,13 +134,13 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button variant="primary" size="lg" className="group">
+              {/* <Button variant="primary" size="lg" className="group">
                 Start Trading
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="secondary" size="lg">
                 Explore Markets
-              </Button>
+              </Button> */}
             </motion.div>
 
             {/* Features */}

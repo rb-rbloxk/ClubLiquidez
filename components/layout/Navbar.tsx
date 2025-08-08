@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
-import { Menu, X, TrendingUp, BarChart3, BookOpen, Users, Shield } from 'lucide-react'
+import { Menu, X, TrendingUp, BarChart3, BookOpen, Users, Shield, Mail } from 'lucide-react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -22,7 +22,11 @@ const Navbar = () => {
     { name: 'Markets', href: '/markets', icon: TrendingUp },
     { name: 'Trading Tools', href: '/tools', icon: BarChart3 },
     { name: 'Insights', href: '/insights', icon: BookOpen },
+    { name: 'Copy Trading', href: '/copy-trading', icon: TrendingUp },
+    { name: 'Algo Trading', href: '/algo-trading', icon: BarChart3 },
+    { name: 'Academy', href: '/academy', icon: BookOpen },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Mail },
   ]
 
   return (
@@ -70,16 +74,16 @@ const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/auth">
+            {/* <Link href="/auth">
               <Button variant="ghost" size="sm">
                 Sign In
               </Button>
-            </Link>
-            <Link href="/auth">
+            </Link> */}
+            {/* <Link href="/auth">
               <Button variant="primary" size="sm">
                 Start Trading
               </Button>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,16 +124,16 @@ const Navbar = () => {
                 </motion.div>
               ))}
               <div className="pt-4 space-y-3">
-                <Link href="/auth">
+                {/* <Link href="/auth">
                   <Button variant="ghost" size="sm" className="w-full">
                     Sign In
                   </Button>
-                </Link>
-                <Link href="/auth">
+                </Link> */}
+                {/* <Link href="/auth">
                   <Button variant="primary" size="sm" className="w-full">
                     Start Trading
                   </Button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </motion.div>
