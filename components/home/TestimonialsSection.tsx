@@ -74,6 +74,11 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     }
   ]
 
+const TestimonialsSection = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  })
   const [testimonials, setTestimonials] = useState<Testimonial[]>(FALLBACK_TESTIMONIALS)
   const [loading, setLoading] = useState(true)
 
