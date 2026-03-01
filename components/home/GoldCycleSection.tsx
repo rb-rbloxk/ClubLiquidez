@@ -131,9 +131,9 @@ const GoldCycleSection = () => {
                 <TrendingUp className="w-5 h-5" />
                 <span className="font-semibold">February Peak: Consistent Breakout Pattern</span>
               </div>
-              <Link href="/copy-trading">
+              <Link href="/programs">
                 <Button variant="primary" size="md" className="w-full group">
-                  Start Copy Trading
+                  View Gold Program
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>

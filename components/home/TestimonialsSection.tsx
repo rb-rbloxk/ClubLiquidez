@@ -14,21 +14,21 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       name: 'Michael Chen',
-      role: 'Professional Trader',
+      role: 'Former Student',
       location: 'Singapore',
       image: 'MC',
       rating: 5,
-      text: 'ClubLiquidez transformed my trading. The copy trading feature alone has increased my returns by 300%. The community support is incredible.',
-      highlight: '300% increase in returns'
+      text: 'ClubLiquidez gave me structure I was missing. The mentorship and live sessions improved my discipline and risk management. No hype — just solid education.',
+      highlight: 'Structure and discipline'
     },
     {
       name: 'Sarah Johnson',
-      role: 'Institutional Investor',
+      role: 'Academy Graduate',
       location: 'London, UK',
       image: 'SJ',
       rating: 5,
-      text: 'The algo trading platform is world-class. I\'ve been able to backtest and deploy strategies that would have taken months to develop elsewhere.',
-      highlight: 'World-class platform'
+      text: 'I learned how to build and backtest strategies properly. The Advanced Strategy & Automation training was exactly what I needed to understand how algorithms work.',
+      highlight: 'Strategy and automation education'
     },
     {
       name: 'David Rodriguez',
@@ -36,35 +36,35 @@ const TestimonialsSection = () => {
       location: 'New York, USA',
       image: 'DR',
       rating: 5,
-      text: 'The Master Course is comprehensive and practical. My students have seen remarkable improvements after completing the program. Highly recommended.',
+      text: 'The Master Course is comprehensive and practical. My students have seen remarkable improvements in their approach after completing the program. Highly recommended.',
       highlight: 'Comprehensive education'
     },
     {
       name: 'Emma Thompson',
-      role: 'Day Trader',
+      role: 'Gold Program Student',
       location: 'Sydney, Australia',
       image: 'ET',
       rating: 5,
-      text: 'The February Gold Cycle strategy has been a game-changer. The insights and timing have been spot-on. Best investment in my trading career.',
-      highlight: 'Game-changing strategy'
+      text: 'The Gold (XAUUSD) and price action modules changed how I look at markets. Small batch size meant real attention from the educators. Best learning investment I made.',
+      highlight: 'Gold and price action'
     },
     {
       name: 'James Wilson',
-      role: 'Crypto Trader',
+      role: 'Weekend Batch Student',
       location: 'Dubai, UAE',
       image: 'JW',
       rating: 5,
-      text: 'The membership club gives me access to tools and insights I couldn\'t get anywhere else. The monthly webinars are worth the price alone.',
-      highlight: 'Exclusive access'
+      text: 'As a working professional, the weekend batch and study materials fit my schedule. The community and mentorship made the difference.',
+      highlight: 'Weekend batch and community'
     },
     {
       name: 'Lisa Anderson',
-      role: 'Portfolio Manager',
-      location: 'Toronto, Canada',
+      role: 'Offline Batch, Kanchipuram',
+      location: 'Tamil Nadu, India',
       image: 'LA',
       rating: 5,
-      text: 'Outstanding risk management features. The platform gives me confidence to scale my operations while maintaining strict control over exposure.',
-      highlight: 'Outstanding risk management'
+      text: 'Attending the offline classroom in Kanchipuram was invaluable. Face-to-face sessions and 1:1 feedback accelerated my learning. No signal selling — pure education.',
+      highlight: 'Offline classroom experience'
     }
   ]
 
@@ -109,11 +109,11 @@ const TestimonialsSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto space-y-2 mb-8"
           >
-            <p><span className="text-neon-gold font-semibold">190+</span> active copy clients</p>
-            <p>Years of consistent breakout execution</p>
-            <p>Trusted automation models</p>
-            <p>A serious, growing trading community</p>
-            <p className="text-gray-400 text-lg mt-4">This strengthens trust without bragging.</p>
+            <p><span className="text-neon-gold font-semibold">500+</span> students trained</p>
+            <p>Small batch sizes for real attention</p>
+            <p>Live and offline sessions</p>
+            <p>A serious, growing learning community</p>
+            <p className="text-gray-400 text-lg mt-4">Education-focused. No get-rich promises.</p>
           </motion.div>
         </motion.div>
 

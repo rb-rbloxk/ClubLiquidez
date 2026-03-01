@@ -33,10 +33,10 @@ const FinalCTASection = () => {
             className="space-y-4"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-              <span className="gradient-text">Precision.</span> <span className="text-white">Discipline.</span> <span className="gradient-text">Compounding.</span>
+              <span className="gradient-text">Precision.</span> <span className="text-white">Discipline.</span> <span className="gradient-text">Growth.</span>
             </h2>
             <p className="text-xl sm:text-2xl text-gray-300">
-              This is your trading ecosystem.
+              This is structured trading education.
             </p>
           </motion.div>
 
@@ -46,7 +46,7 @@ const FinalCTASection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-lg text-gray-400 max-w-2xl mx-auto"
           >
-            If you're ready to build real wealth instead of chasing shortcuts…
+            If you're ready to learn with structure instead of chasing shortcuts…
           </motion.p>
 
           <motion.div
@@ -55,15 +55,15 @@ const FinalCTASection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Link href="/auth">
+            <Link href="/contact">
               <Button variant="primary" size="lg" className="group">
-                Join the Ecosystem
+                Enroll Now
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="/copy-trading">
+            <Link href="/programs">
               <Button variant="secondary" size="lg" className="group">
-                Start Copy Trading
+                View Programs
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>

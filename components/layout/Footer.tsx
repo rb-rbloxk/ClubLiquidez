@@ -23,12 +23,11 @@ const Footer = () => {
 
   const footerSections = [
     {
-      title: 'Platform',
+      title: 'Academy',
       links: [
-        { name: 'Markets', href: '/markets' },
-        { name: 'Trading Tools', href: '/tools' },
+        { name: 'Programs', href: '/programs' },
+        { name: 'Academy', href: '/academy' },
         { name: 'Insights', href: '/insights' },
-        // { name: 'API Documentation', href: '/api' },
       ]
     },
     {
@@ -67,9 +66,9 @@ const Footer = () => {
   ]
 
   const trustBadges = [
-    { name: 'Bank-Grade Security', icon: Shield },
-    { name: '256-bit Encryption', icon: Lock },
-    { name: 'Award Winning', icon: Award },
+    { name: 'Structured Curriculum', icon: Award },
+    { name: 'Mentorship-Led', icon: Shield },
+    { name: 'Small Batches', icon: Lock },
   ]
 
   return (
@@ -107,8 +106,7 @@ const Footer = () => {
                 </div>
               </Link>
               <p className="text-gray-400 max-w-md">
-                Unlock liquidity and trade smarter with our cutting-edge platform. 
-                Join thousands of traders worldwide.
+                Professional Forex & Gold trading academy. Structured education, live and offline batches in Kanchipuram, and 1:1 mentorship. Learn. Trade. Grow.
               </p>
               
               {/* Trust Badges */}
@@ -167,7 +165,7 @@ const Footer = () => {
                 Stay Updated
               </h3>
               <p className="text-gray-400">
-                Get the latest market insights and trading strategies delivered to your inbox.
+                Course updates, batch announcements, and educational insights delivered to your inbox.
               </p>
             </div>
             <div className="flex space-x-4">
@@ -191,8 +189,9 @@ const Footer = () => {
           viewport={{ once: true }}
           className="mt-8 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
         >
-          <div className="flex items-center space-x-6 text-sm text-gray-400">
+          <div className="flex flex-col md:flex-row items-center md:items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400 text-center md:text-left">
             <span>© {currentYear} ClubLiquidez. All rights reserved.</span>
+            <span className="text-gray-500 text-xs">We provide educational services only. We do not provide investment advice or manage funds.</span>
             <div className="flex items-center space-x-4">
               <Link href="/privacy" className="hover:text-neon-gold transition-colors">
                 Privacy

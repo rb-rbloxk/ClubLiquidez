@@ -28,7 +28,7 @@ const TermsOfServicePage = () => {
       title: 'Acceptance of Terms',
       content: [
         'By accessing and using ClubLiquidez, you accept and agree to be bound by these Terms of Service',
-        'If you do not agree to these terms, you must not use our platform',
+        'If you do not agree to these terms, you must not use our services',
         'We reserve the right to modify these terms at any time',
         'Continued use of our services after changes constitutes acceptance of updated terms'
       ]
@@ -44,13 +44,13 @@ const TermsOfServicePage = () => {
       ]
     },
     {
-      title: 'Trading and Investment Risks',
+      title: 'Educational Services Only / No Investment Advice',
       content: [
-        'Trading involves substantial risk of loss and is not suitable for all investors',
-        'Past performance does not guarantee future results',
-        'You should only trade with funds you can afford to lose',
-        'We do not provide investment advice or recommendations',
-        'You are responsible for your own trading decisions and strategies'
+        'ClubLiquidez provides educational services only. We do not provide investment advice or manage client funds',
+        'Trading involves substantial risk of loss. Past performance does not guarantee future results',
+        'You are solely responsible for your own trading and investment decisions',
+        'We do not sell signals, guarantee returns, or offer execution or fund management services',
+        'Our courses and mentorship are for educational purposes only'
       ]
     },
     {
@@ -61,17 +61,16 @@ const TermsOfServicePage = () => {
         'Attempting to gain unauthorized access to our systems',
         'Violating applicable laws or regulations',
         'Engaging in fraudulent or deceptive practices',
-        'Interfering with other users\' trading activities'
+        'Interfering with other users or our educational services'
       ]
     },
     {
       title: 'Fees and Charges',
       content: [
-        'We charge fees for trading, withdrawals, and certain services',
-        'Fees are clearly disclosed before you complete any transaction',
-        'We may change our fee structure with 30 days notice',
-        'You are responsible for all taxes related to your trading activities',
-        'We do not guarantee specific returns or profit levels'
+        'Fees for courses, batches, or mentorship are disclosed before enrollment',
+        'We may change our fee structure with reasonable notice',
+        'You are responsible for any taxes applicable to your payments',
+        'We do not guarantee any trading or investment outcomes; we provide education only'
       ]
     },
     {
@@ -107,8 +106,8 @@ const TermsOfServicePage = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
-              Please read these terms carefully before using our trading platform. 
-              These terms govern your use of ClubLiquidez services.
+              Please read these terms carefully before using our services. 
+              ClubLiquidez provides educational services only. We do not provide investment advice or manage funds.
             </p>
             <div className="text-gray-400">
               Last updated: {lastUpdated}

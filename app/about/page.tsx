@@ -13,24 +13,8 @@ import {
   TrendingUp, 
   Globe,
   Zap,
-  Lock,
   CheckCircle,
-  Star,
-  Linkedin,
-  Twitter,
-  Github
 } from 'lucide-react'
-
-interface TeamMember {
-  id: string
-  name: string
-  role: string
-  bio: string
-  avatar: string
-  linkedin: string
-  twitter: string
-  github: string
-}
 
 const AboutPage = () => {
   const [ref, inView] = useInView({
@@ -38,83 +22,11 @@ const AboutPage = () => {
     threshold: 0.1,
   })
 
-  const teamMembers: TeamMember[] = [
-    {
-      id: '1',
-      name: 'Alexandra Chen',
-      role: 'CEO & Co-Founder',
-      bio: 'Former VP of Engineering at Coinbase. 15+ years in fintech and blockchain.',
-      avatar: '/avatars/alexandra.jpg',
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    },
-    {
-      id: '2',
-      name: 'Marcus Rodriguez',
-      role: 'CTO & Co-Founder',
-      bio: 'Ex-Google engineer with expertise in high-frequency trading systems.',
-      avatar: '/avatars/marcus.jpg',
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    },
-    {
-      id: '3',
-      name: 'Sarah Kim',
-      role: 'Head of Product',
-      bio: 'Product leader with experience at Robinhood and Stripe.',
-      avatar: '/avatars/sarah.jpg',
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    },
-    {
-      id: '4',
-      name: 'David Park',
-      role: 'Head of Security',
-      bio: 'Cybersecurity expert with 20+ years protecting financial systems.',
-      avatar: '/avatars/david.jpg',
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    },
-    {
-      id: '5',
-      name: 'Emma Wilson',
-      role: 'Head of Trading',
-      bio: 'Former institutional trader with deep market expertise.',
-      avatar: '/avatars/emma.jpg',
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    },
-    {
-      id: '6',
-      name: 'Michael Thompson',
-      role: 'Head of Compliance',
-      bio: 'Regulatory expert ensuring platform compliance worldwide.',
-      avatar: '/avatars/michael.jpg',
-      linkedin: '#',
-      twitter: '#',
-      github: '#'
-    }
-  ]
-
   const achievements = [
-    { icon: Users, value: '50,000+', label: 'Active Traders' },
-    { icon: TrendingUp, value: '$5B+', label: 'Daily Volume' },
-    { icon: Globe, value: '150+', label: 'Countries Served' },
-    { icon: Zap, value: '<10ms', label: 'Execution Speed' }
-  ]
-
-  const securityFeatures = [
-    'Bank-Grade Security',
-    '256-bit AES Encryption',
-    'Multi-factor Authentication',
-    'Cold Storage for Assets',
-    'Real-time Fraud Detection',
-    'Insurance Coverage'
+    { icon: Users, value: '500+', label: 'Students Trained' },
+    { icon: TrendingUp, value: '4+', label: 'Years Experience' },
+    { icon: Globe, value: 'Kanchipuram', label: 'Education Center' },
+    { icon: Zap, value: '1:1', label: 'Mentorship' }
   ]
 
   return (
@@ -132,11 +44,10 @@ const AboutPage = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
-              About <span className="gradient-text">ClubLiquidez</span>
+              ClubLiquidez – <span className="gradient-text">Market Education Services</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionizing trading with cutting-edge technology and unwavering commitment to security, 
-              transparency, and user experience.
+              Education center in Kanchipuram, Tamil Nadu. We provide structured trading education — not investment advice, not signal selling, not get-rich marketing.
             </p>
           </motion.div>
         </div>
@@ -155,19 +66,18 @@ const AboutPage = () => {
               <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
               <div className="space-y-6 text-gray-300">
                 <p>
-                  Founded in 2022 by a team of fintech veterans and blockchain pioneers, 
-                  ClubLiquidez was born from a simple vision: to democratize access to 
-                  professional-grade trading tools and market data.
+                  ClubLiquidez is a market education center based in Kanchipuram, Tamil Nadu. 
+                  We focus on structured trading education: Forex, Gold (XAUUSD), price action, 
+                  risk management, and trading psychology.
                 </p>
                 <p>
-                  After witnessing the limitations of existing trading platforms—slow execution, 
-                  poor user experience, and lack of transparency—our founders set out to build 
-                  something different. Something that would put traders first.
+                  We believe in discipline and education over hype. We do not sell signals, 
+                  we do not promise returns, and we do not manage client funds. We teach — 
+                  so you can make informed decisions in your own trading.
                 </p>
                 <p>
-                  Today, ClubLiquidez serves over 50,000 traders across 150+ countries, 
-                  processing billions in daily trading volume while maintaining the highest 
-                  standards of security and compliance.
+                  Our programs include beginner to advanced courses, weekend and online live batches, 
+                  and offline classroom sessions. Limited seats per batch so every student gets real attention.
                 </p>
               </div>
             </div>
@@ -179,8 +89,8 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-white">Our Mission</h3>
                 </div>
                 <p className="text-gray-300 mb-6">
-                  To provide institutional-grade trading infrastructure to individual traders, 
-                  enabling them to compete on equal footing with the world's largest financial institutions.
+                  To provide structured, professional trading education so every student can build discipline, 
+                  understand risk, and trade with clarity. We focus on education — not signals, not fund management, not get-rich promises.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-dark-700 rounded-lg">
@@ -206,7 +116,7 @@ const AboutPage = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Key Achievements</h2>
+            <h2 className="text-4xl font-bold text-white text-center mb-12">Why Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {achievements.map((achievement, index) => (
                 <motion.div
@@ -231,140 +141,57 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Our Approach */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Meet Our Team</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {teamMembers.map((member, index) => (
-                <motion.div
-                  key={member.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={inView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6 hover:border-neon-gold/50 transition-all duration-300 group"
-                >
-                  <div className="text-center mb-6">
-                    <div className="w-20 h-20 bg-gradient-neon rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                    <p className="text-neon-gold font-medium">{member.role}</p>
-                  </div>
-                  
-                  <p className="text-gray-400 text-sm mb-6 text-center">
-                    {member.bio}
-                  </p>
-                  
-                  <div className="flex justify-center space-x-4">
-                    <motion.a
-                      href={member.linkedin}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      className="p-2 bg-dark-700 rounded-lg text-gray-400 hover:text-neon-gold transition-colors"
-                    >
-                      <Linkedin className="w-4 h-4" />
-                    </motion.a>
-                    <motion.a
-                      href={member.twitter}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      className="p-2 bg-dark-700 rounded-lg text-gray-400 hover:text-neon-gold transition-colors"
-                    >
-                      <Twitter className="w-4 h-4" />
-                    </motion.a>
-                    <motion.a
-                      href={member.github}
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      className="p-2 bg-dark-700 rounded-lg text-gray-400 hover:text-neon-gold transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                    </motion.a>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+            <h2 className="text-4xl font-bold text-white mb-8">Our Approach</h2>
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              We are educators first. Our focus is on structured curriculum, small batches, live and offline sessions, 
+              and 1:1 mentorship. We do not sell signals, we do not manage client funds, and we do not promise returns. 
+              We teach discipline, psychology, and risk — so you can trade with clarity on your own.
+            </p>
+            <p className="text-gray-400">
+              Education center in Kanchipuram, Tamil Nadu. Online and offline batches available.
+            </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Security & Compliance */}
+      {/* What We Stand For */}
       <section className="py-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
-            <div>
-              <div className="flex items-center space-x-3 mb-6">
-                <Shield className="w-8 h-8 text-neon-gold-champagne" />
-                <h2 className="text-4xl font-bold text-white">Security & Compliance</h2>
-              </div>
-              <p className="text-gray-300 mb-8">
-                Your security is our top priority. We employ industry-leading security measures 
-                and maintain compliance with global financial regulations to protect your assets 
-                and personal information.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {securityFeatures.map((feature, index) => (
-                  <motion.div
-                    key={feature}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-center space-x-3"
-                  >
-                    <CheckCircle className="w-5 h-5 text-neon-gold-champagne" />
-                    <span className="text-gray-300">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
+            <div className="flex items-center space-x-3 mb-8">
+              <Shield className="w-8 h-8 text-neon-gold-champagne" />
+              <h2 className="text-4xl font-bold text-white">What We Stand For</h2>
             </div>
-            
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Security Standards</h3>
-              <div className="space-y-6">
-                <div className="flex items-center justify-between p-4 bg-dark-700 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Lock className="w-6 h-6 text-neon-gold" />
-                    <div>
-                      <div className="text-white font-semibold">256-bit Encryption</div>
-                      <div className="text-sm text-gray-400">Bank-Grade Security</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-6 h-6 text-neon-gold-champagne" />
-                </div>
-                
-                <div className="flex items-center justify-between p-4 bg-dark-700 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Shield className="w-6 h-6 text-neon-gold" />
-                    <div>
-                      <div className="text-white font-semibold">Multi-Factor Auth</div>
-                      <div className="text-sm text-gray-400">2FA & Biometric</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-6 h-6 text-neon-gold-champagne" />
-                </div>
-                
-                <div className="flex items-center justify-between p-4 bg-dark-700 rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Award className="w-6 h-6 text-neon-gold" />
-                    <div>
-                      <div className="text-white font-semibold">GDPR Compliant</div>
-                      <div className="text-sm text-gray-400">Data Protection</div>
-                    </div>
-                  </div>
-                  <CheckCircle className="w-6 h-6 text-neon-gold-champagne" />
-                </div>
-              </div>
+            <p className="text-gray-300 mb-8">
+              We provide educational services only. We do not provide investment advice or manage funds. 
+              Trading involves risk; past educational outcomes do not guarantee future results.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {['Structured curriculum', 'No signal selling', 'No get-rich marketing', 'Discipline & psychology focus', 'Small batch sizes', 'Mentorship-led'].map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center space-x-3"
+                >
+                  <CheckCircle className="w-5 h-5 text-neon-gold-champagne" />
+                  <span className="text-gray-300">{item}</span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -383,18 +210,18 @@ const AboutPage = () => {
               {[
                 {
                   icon: Shield,
-                  title: 'Security First',
-                  description: 'We never compromise on security. Your assets and data are protected with the highest standards.'
+                  title: 'Education First',
+                  description: 'We teach. We do not sell signals, manage funds, or promise returns. Structured learning only.'
                 },
                 {
                   icon: TrendingUp,
-                  title: 'Innovation',
-                  description: 'We continuously push the boundaries of what\'s possible in trading technology.'
+                  title: 'Discipline & Psychology',
+                  description: 'Focus on risk management, mindset, and consistency — not hype or shortcuts.'
                 },
                 {
                   icon: Users,
-                  title: 'User-Centric',
-                  description: 'Every decision we make is driven by what\'s best for our traders.'
+                  title: 'Mentorship-Led',
+                  description: 'Small batches and 1:1 support so every student gets real attention.'
                 }
               ].map((value, index) => (
                 <motion.div

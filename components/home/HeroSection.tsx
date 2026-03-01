@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { ArrowRight, TrendingUp, BarChart3, Zap, BookOpen } from 'lucide-react'
+import { ArrowRight, GraduationCap, BookOpen, Users } from 'lucide-react'
 
 const HeroSection = () => {
   const chartRef = useRef<HTMLDivElement>(null)
@@ -34,19 +34,19 @@ const HeroSection = () => {
 
   const features = [
     {
-      icon: TrendingUp,
-      title: 'Copy Trading',
-      description: 'Real-time trade replication'
-    },
-    {
-      icon: BarChart3,
-      title: 'Algo Trading',
-      description: 'Trade automation based on predefined rules'
+      icon: GraduationCap,
+      title: 'Structured Programs',
+      description: 'Beginner to advanced curriculum'
     },
     {
       icon: BookOpen,
-      title: 'Master Course',
-      description: 'Comprehensive trading from basics to advanced strategies'
+      title: 'Live & Offline Batches',
+      description: 'Online and classroom in Kanchipuram'
+    },
+    {
+      icon: Users,
+      title: '1:1 Mentorship',
+      description: 'Personal guidance from experienced educators'
     }
   ]
 
@@ -101,7 +101,7 @@ const HeroSection = () => {
                 className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold/20"
               >
                 <div className="w-2 h-2 bg-neon-gold rounded-full animate-pulse" />
-                <span className="text-sm text-neon-gold">Powered by Precision</span>
+                <span className="text-sm text-neon-gold">Market Educational Services</span>
               </motion.div>
               
               <motion.h1
@@ -110,7 +110,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.3 }}
                 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight"
               >
-                <span className="gradient-text">CLUB LIQUIDEZ</span>
+                Professional <span className="gradient-text">Forex & Gold</span> Trading Academy
               </motion.h1>
               
               <motion.p
@@ -119,7 +119,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.4 }}
                 className="text-lg sm:text-xl text-gray-300 max-w-lg"
               >
-                A premium trading ecosystem offering: Copy Trading, Algo Models, Master-Level Trading Course, and Membership Club.
+                Structured training in price action, risk management, and trading psychology — online and offline.
               </motion.p>
               
               <motion.p
@@ -128,7 +128,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.45 }}
                 className="text-base sm:text-lg text-gray-400 max-w-lg"
               >
-                Designed for traders who want structure, discipline, and long-term compounding, not hype.
+                Education center in Kanchipuram. Learn with small batches, live sessions, and dedicated mentorship.
               </motion.p>
             </div>
 
@@ -139,15 +139,15 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Link href="/auth">
+              <Link href="/contact">
                 <Button variant="primary" size="lg" className="group">
-                  Enter the Ecosystem
+                  Enroll Now
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              <Link href="/about">
+              <Link href="/academy">
                 <Button variant="secondary" size="lg">
-                  Explore Services
+                  View Courses
                 </Button>
               </Link>
             </motion.div>

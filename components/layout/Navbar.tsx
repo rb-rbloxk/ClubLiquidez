@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
-import { Menu, X, TrendingUp, BarChart3, BookOpen, Users, Shield, Mail, LogOut, User as UserIcon, ChevronDown } from 'lucide-react'
+import { Menu, X, BookOpen, Users, Mail, LogOut, User as UserIcon, ChevronDown, GraduationCap, FileText } from 'lucide-react'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,14 +30,11 @@ const Navbar = () => {
   }
 
   const navItems = [
-   // { name: 'Markets', href: '/markets', icon: TrendingUp },
-    { name: '', href: '/tools', icon: BarChart3 },
-    { name: '', href: '/insights', icon: BookOpen },
-    { name: 'Copy Trading', href: '/copy-trading', icon: TrendingUp },
-    { name: 'Algo Trading', href: '/algo-trading', icon: BarChart3 },
-    { name: 'Master Course', href: '/academy', icon: BookOpen },
-    { name: '', href: '/about', icon: Users },
-    { name: '', href: '/contact', icon: Mail },
+    { name: 'Programs', href: '/programs', icon: GraduationCap },
+    { name: 'Academy', href: '/academy', icon: BookOpen },
+    { name: 'Insights', href: '/insights', icon: FileText },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: Mail },
   ]
 
   return (
@@ -82,7 +79,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <motion.div
-                key={item.name}
+                key={item.href}
                 whileHover={{ y: -2 }}
                 className="relative group"
               >
@@ -160,9 +157,9 @@ const Navbar = () => {
                     Sign In
                   </Button>
                 </Link>
-                <Link href="/auth">
+                <Link href="/contact">
                   <Button variant="primary" size="sm">
-                    Start Trading
+                    Enroll Now
                   </Button>
                 </Link>
               </>
@@ -192,7 +189,7 @@ const Navbar = () => {
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <motion.div
-                  key={item.name}
+                  key={item.href}
                   whileHover={{ x: 10 }}
                   className="flex items-center space-x-3"
                 >
@@ -242,9 +239,9 @@ const Navbar = () => {
                           Sign In
                         </Button>
                       </Link>
-                      <Link href="/auth" onClick={() => setIsOpen(false)}>
+                      <Link href="/contact" onClick={() => setIsOpen(false)}>
                         <Button variant="primary" size="sm" className="w-full">
-                          Start Trading
+                          Enroll Now
                         </Button>
                       </Link>
                     </>

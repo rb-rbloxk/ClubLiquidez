@@ -27,19 +27,19 @@ const PrivacyPolicyPage = () => {
       title: 'Information We Collect',
       content: [
         'Personal identification information (name, email address, phone number)',
-        'Financial information (bank account details, trading history)',
+        'Contact and enrollment information',
         'Technical information (IP address, browser type, device information)',
-        'Usage data (trading patterns, platform interactions)',
+        'Usage data (course access, site interactions)',
         'Communication records (support tickets, chat logs)'
       ]
     },
     {
       title: 'How We Use Your Information',
       content: [
-        'To provide and maintain our trading services',
-        'To process transactions and manage your account',
+        'To provide and maintain our educational services',
+        'To manage enrollments, batches, and course access',
         'To comply with legal and regulatory requirements',
-        'To improve our platform and user experience',
+        'To improve our services and user experience',
         'To communicate with you about our services',
         'To detect and prevent fraud and security threats'
       ]

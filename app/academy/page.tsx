@@ -34,106 +34,88 @@ export default function AcademyPage() {
   const modules = [
     {
       id: 1,
-      title: 'Breakout Strategy',
-      icon: TrendingUp,
-      description: 'Master the art of identifying and trading breakouts with precision. Learn entry, exit, and stop-loss techniques.',
+      title: 'Basics of Forex',
+      icon: BookOpen,
+      description: 'Foundations of the forex market: pairs, sessions, structure, and key terminology.',
       topics: [
-        'Identifying breakout patterns',
-        'Volume confirmation techniques',
-        'Entry and exit strategies',
-        'False breakout prevention',
-        'Breakout trading psychology'
+        'Forex market structure',
+        'Major and minor pairs',
+        'Trading sessions and liquidity',
+        'Pips, lots, and position sizing basics',
+        'Introduction to technical analysis'
       ],
-      duration: '4 weeks',
+      duration: '2–3 weeks',
       color: 'neon-gold'
     },
     {
       id: 2,
-      title: 'Risk Management',
-      icon: Shield,
-      description: 'Build unshakeable risk management systems. Protect your capital while maximizing profit potential.',
+      title: 'Gold (XAUUSD) Strategy',
+      icon: TrendingUp,
+      description: 'Specialized focus on Gold: price action, key levels, and strategy tailored to XAUUSD.',
       topics: [
-        'Position sizing formulas',
-        'Risk-reward ratios',
-        'Stop-loss placement',
-        'Portfolio risk management',
-        'Drawdown control strategies'
+        'Gold market drivers',
+        'Key support and resistance',
+        'Gold-specific patterns',
+        'Session-based Gold behavior',
+        'Risk parameters for Gold'
       ],
       duration: '3 weeks',
       color: 'neon-gold-champagne'
     },
     {
       id: 3,
-      title: 'Psychology',
-      icon: Brain,
-      description: 'Develop the mental fortitude of a professional trader. Overcome emotional barriers and maintain discipline.',
+      title: 'Price Action',
+      icon: BarChart3,
+      description: 'Read price without clutter. Candlestick patterns, structure, and confluence.',
       topics: [
-        'Trading psychology fundamentals',
-        'Emotional control techniques',
-        'Dealing with losses',
-        'Building confidence',
-        'Maintaining consistency'
+        'Candlestick patterns',
+        'Market structure (HH, HL, LH, LL)',
+        'Confluence and key levels',
+        'Entry and exit techniques',
+        'False breakouts and confirmation'
       ],
-      duration: '3 weeks',
+      duration: '3–4 weeks',
       color: 'neon-gold-dark'
     },
     {
       id: 4,
-      title: 'Execution Discipline',
-      icon: Target,
-      description: 'Execute trades flawlessly with strict discipline. Learn to follow your plan without deviation.',
+      title: 'Risk Management',
+      icon: Shield,
+      description: 'Protect your capital. Position sizing, risk-reward, and drawdown control.',
       topics: [
-        'Trade execution protocols',
-        'Discipline frameworks',
-        'Journaling and review',
-        'Performance tracking',
-        'Continuous improvement'
+        'Position sizing formulas',
+        'Risk-reward ratios',
+        'Stop-loss placement',
+        'Drawdown control',
+        'Journaling and review'
       ],
-      duration: '2 weeks',
+      duration: '2–3 weeks',
       color: 'neon-amber'
     },
     {
       id: 5,
-      title: 'Strategy Building',
-      icon: BarChart3,
-      description: 'Create your own profitable trading strategy from scratch. Build, test, and refine your approach.',
+      title: 'Trading Psychology',
+      icon: Brain,
+      description: 'Build discipline and consistency. Overcome emotional barriers and follow your plan.',
       topics: [
-        'Strategy development process',
-        'Backtesting methodologies',
-        'Forward testing protocols',
-        'Strategy optimization',
-        'Live implementation'
+        'Trading psychology fundamentals',
+        'Emotional control',
+        'Dealing with losses',
+        'Discipline and execution',
+        'Maintaining consistency'
       ],
-      duration: '4 weeks',
+      duration: '2–3 weeks',
       color: 'neon-gold'
     }
   ]
 
   const learningOutcomes = [
-    {
-      icon: CheckCircle2,
-      text: 'Develop a complete trading strategy from scratch'
-    },
-    {
-      icon: CheckCircle2,
-      text: 'Master breakout trading with 85%+ accuracy'
-    },
-    {
-      icon: CheckCircle2,
-      text: 'Implement professional risk management systems'
-    },
-    {
-      icon: CheckCircle2,
-      text: 'Build unshakeable trading psychology'
-    },
-    {
-      icon: CheckCircle2,
-      text: 'Execute trades with perfect discipline'
-    },
-    {
-      icon: CheckCircle2,
-      text: 'Achieve consistent profitability'
-    }
+    { icon: CheckCircle2, text: 'Understand Forex and Gold (XAUUSD) from basics to strategy' },
+    { icon: CheckCircle2, text: 'Apply price action and key level analysis' },
+    { icon: CheckCircle2, text: 'Implement professional risk management systems' },
+    { icon: CheckCircle2, text: 'Build discipline and trading psychology' },
+    { icon: CheckCircle2, text: 'Execute with structure and consistency' },
+    { icon: CheckCircle2, text: 'Develop a clear, rule-based approach' }
   ]
 
   return (
@@ -161,7 +143,7 @@ export default function AcademyPage() {
               className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold-deep/30 mb-8"
             >
               <Award className="w-4 h-4 text-neon-gold" />
-              <span className="text-sm text-neon-gold font-medium">Master-Level Course</span>
+              <span className="text-sm text-neon-gold font-medium">Professional Forex & Gold Trading Academy</span>
             </motion.div>
             
             <motion.h1
@@ -179,10 +161,7 @@ export default function AcademyPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
-              Our goal: Help traders gain <span className="text-neon-gold">clarity</span>, 
-              <span className="text-neon-blue"> structure</span> & 
-              <span className="text-neon-gold-champagne"> confidence</span>. 
-              Transform from beginner to master trader.
+              Structured training in price action, risk management, and trading psychology. Online and offline batches. Limited seats. Live sessions and classroom in <span className="text-neon-gold">Kanchipuram</span>.
             </motion.p>
 
             <motion.div
@@ -244,7 +223,7 @@ export default function AcademyPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Format</span>
-                  <span className="text-white font-semibold">Online</span>
+                  <span className="text-white font-semibold">Online & Offline (Kanchipuram)</span>
                 </div>
               </div>
             </motion.div>
@@ -489,20 +468,20 @@ export default function AcademyPage() {
               },
               {
                 icon: Users,
-                title: 'Live Zoom Sessions',
-                description: 'Interactive live training 2x per week',
+                title: 'Live Sessions',
+                description: 'Interactive live training. Limited seats per batch.',
                 color: 'neon-gold-champagne'
               },
               {
                 icon: FileText,
-                title: 'Weekly Q&A',
-                description: 'Get your questions answered weekly',
+                title: 'Offline Classroom',
+                description: 'In-person batches in Kanchipuram, Tamil Nadu',
                 color: 'neon-gold-dark'
               },
               {
                 icon: Award,
                 title: 'Mentorship',
-                description: 'One-on-one mentorship support',
+                description: '1:1 and group mentorship support',
                 color: 'neon-amber'
               }
             ].map((format, index) => (
@@ -575,9 +554,7 @@ export default function AcademyPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed"
             >
-              Transform your trading journey. Gain <span className="text-neon-gold">clarity</span>, 
-              <span className="text-neon-blue"> structure</span> & 
-              <span className="text-neon-gold-champagne"> confidence</span> with our master-level course.
+              Gain clarity, structure, and confidence. Enroll in the next batch or book a free session to learn more.
             </motion.p>
 
             <motion.div
@@ -587,15 +564,20 @@ export default function AcademyPage() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Link href="/auth">
+              <Link href="/contact">
                 <Button variant="primary" size="lg" className="group">
-                  Join the Course
+                  Enroll Now
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button variant="secondary" size="lg">
-                  Schedule a Call
+                  Join the Next Batch
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline" size="lg">
+                  Book a Free Session
                 </Button>
               </Link>
             </motion.div>
@@ -609,7 +591,7 @@ export default function AcademyPage() {
             >
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                <span>30-day money-back guarantee</span>
+                <span>Limited seats per batch</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-4 h-4 text-neon-gold" />

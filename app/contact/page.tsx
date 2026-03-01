@@ -17,6 +17,9 @@ import {
   AlertCircle
 } from 'lucide-react'
 
+const WHATSAPP_NUMBER = '917338833887'
+const WHATSAPP_MESSAGE = 'Hi, I would like to know more about your courses and batch availability.'
+
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -57,23 +60,23 @@ const ContactPage = () => {
   const contactMethods = [
     {
       icon: Mail,
-      title: 'Email Support',
-      description: 'Get help with your account and trading',
+      title: 'Email',
+      description: 'Course and batch inquiries',
       contact: 'support@clubliquidez.com',
       response: 'Within 2 hours'
     },
     {
       icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak with our trading specialists',
+      title: 'Phone',
+      description: 'Speak with our course advisors',
       contact: '+91 733 88 33887',
       response: '24/7 Available'
     },
     {
       icon: MessageSquare,
-      title: 'Live Chat',
-      description: 'Instant support during trading hours',
-      contact: 'Available on platform',
+      title: 'WhatsApp',
+      description: 'Quick questions and batch inquiries',
+      contact: '+91 733 88 33887',
       response: 'Real-time'
     }
   ]
@@ -97,8 +100,8 @@ const ContactPage = () => {
               Get in <span className="gradient-text">Touch</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Have questions about trading, need technical support, or want to partner with us? 
-              We're here to help 24/7.
+              Course and batch inquiries, or want to book a free session? 
+              We're here to help. Visit us in Kanchipuram or reach out online.
             </p>
           </motion.div>
         </div>
@@ -161,7 +164,7 @@ const ContactPage = () => {
             <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <Send className="w-6 h-6 text-neon-gold" />
-                <h2 className="text-2xl font-bold text-white">Send us a Message</h2>
+                <h2 className="text-2xl font-bold text-white">Batch inquiry form</h2>
               </div>
 
               {submitStatus === 'success' && (
@@ -228,6 +231,8 @@ const ContactPage = () => {
                     className="w-full px-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                   >
                     <option value="">Select a subject</option>
+                    <option value="Batch / Course inquiry">Batch / Course inquiry</option>
+                    <option value="Book a Free Session">Book a Free Session</option>
                     <option value="Trading Support">Trading Support</option>
                     <option value="Technical Issues">Technical Issues</option>
                     <option value="Account Questions">Account Questions</option>
@@ -276,11 +281,41 @@ const ContactPage = () => {
                     <Phone className="w-5 h-5 text-neon-gold" />
                     <span className="text-gray-300">+91 733 88 33887</span>
                   </div>
+                  <a
+                    href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-3 text-neon-gold hover:text-neon-gold-champagne transition-colors"
+                  >
+                    <MessageSquare className="w-5 h-5" />
+                    <span>WhatsApp – Course & batch inquiry</span>
+                  </a>
                   <div className="flex items-center space-x-3">
                     <Clock className="w-5 h-5 text-neon-gold" />
                     <span className="text-gray-300">24/7 Support Available</span>
                   </div>
                 </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Location – Kanchipuram</h3>
+                <p className="text-gray-400 mb-4">Education center in Kanchipuram, Tamil Nadu.</p>
+                <div className="aspect-video rounded-xl overflow-hidden border border-gray-700">
+                  <iframe
+                    title="Kanchipuram location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.360761278!2d79.6996!3d12.8392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52f2b37b2e7b3d%3A0x0!2sKanchipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full min-h-[240px]"
+                  />
+                </div>
+                <p className="text-sm text-gray-500 mt-2">
+                  <a href="https://www.google.com/maps/search/education+center+Kanchipuram+Tamil+Nadu" target="_blank" rel="noopener noreferrer" className="text-neon-gold hover:underline">Open in Google Maps</a>
+                </p>
               </div>
 
               {/* <div>
@@ -324,20 +359,20 @@ const ContactPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  question: 'How do I get started with trading?',
-                  answer: 'Sign up for an account, complete verification, deposit funds, and start trading with our intuitive platform.'
+                  question: 'How do I join a batch?',
+                  answer: 'Contact us via the form, WhatsApp, or phone. We will share batch schedules and enrollment details. Limited seats per batch.'
                 },
                 {
-                  question: 'What are your trading fees?',
-                  answer: 'We offer competitive fees starting at 0.1% with volume discounts available for active traders.'
+                  question: 'Do you have offline classes?',
+                  answer: 'Yes. We run offline classroom batches in Kanchipuram, Tamil Nadu. Inquire for the next batch schedule.'
                 },
                 {
-                  question: 'Is my money safe?',
-                  answer: 'Yes, we use bank-grade security, cold storage for assets, and follow industry best practices for security and compliance.'
+                  question: 'What is included in the course?',
+                  answer: 'Structured curriculum (Forex, Gold, Price Action, Risk Management, Psychology), live sessions, study materials, and mentorship. We do not provide investment advice or manage funds.'
                 },
                 {
                   question: 'Do you offer customer support?',
-                  answer: 'Yes, we provide 24/7 support via email, phone, and live chat during trading hours.'
+                  answer: 'Yes. We provide support via email, phone, and WhatsApp for course and batch inquiries.'
                 }
               ].map((faq, index) => (
                 <motion.div

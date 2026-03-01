@@ -42,7 +42,7 @@ const AdminInsightsPage = () => {
     excerpt: '',
     content: '',
     author: '',
-    category: 'Technical Analysis' as 'Technical Analysis' | 'News' | 'Strategy' | 'Education',
+    category: 'Forex Education' as 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown',
     tags: [] as string[],
     featured: false,
     published: false,
@@ -471,10 +471,11 @@ const AdminInsightsPage = () => {
                       onChange={(e) => setFormData({ ...formData, category: e.target.value as any })}
                       className="w-full px-4 py-2 bg-dark-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-neon-gold"
                     >
-                      <option value="Technical Analysis">Technical Analysis</option>
-                      <option value="News">News</option>
-                      <option value="Strategy">Strategy</option>
-                      <option value="Education">Education</option>
+                      <option value="Forex Education">Forex Education</option>
+                      <option value="Gold Strategy">Gold Strategy</option>
+                      <option value="Risk Management">Risk Management</option>
+                      <option value="Trading Psychology">Trading Psychology</option>
+                      <option value="Market Breakdown">Market Breakdown</option>
                     </select>
                   </div>
                   <div>
@@ -603,10 +604,11 @@ const AdminInsightsPage = () => {
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                          insight.category === 'Technical Analysis' ? 'bg-neon-gold/20 text-neon-gold' :
-                          insight.category === 'News' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
-                          insight.category === 'Strategy' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
-                          'bg-neon-amber/20 text-neon-amber'
+                          insight.category === 'Forex Education' ? 'bg-neon-gold/20 text-neon-gold' :
+                          insight.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
+                          insight.category === 'Risk Management' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
+                          insight.category === 'Trading Psychology' ? 'bg-neon-amber/20 text-neon-amber' :
+                          'bg-neon-gold/20 text-neon-gold'
                         }`}>
                           {insight.category}
                         </span>

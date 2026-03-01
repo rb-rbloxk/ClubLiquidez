@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
@@ -238,9 +239,11 @@ const MarketsPage = () => {
                 </div>
 
                 <div className="mt-6 pt-4 border-t border-gray-700">
-                  <Button variant="outline" size="sm" className="w-full">
-                    Trade Now
-                  </Button>
+                  <Link href="/academy">
+                    <Button variant="outline" size="sm" className="w-full">
+                      View Courses
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}

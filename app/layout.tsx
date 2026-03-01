@@ -7,9 +7,9 @@ import { AuthProvider } from '@/contexts/AuthContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ClubLiquidez - Unlock Liquidity. Trade Smarter.',
-  description: 'Premium trading platform with cutting-edge tools, real-time market data, and advanced analytics. Join ClubLiquidez for the ultimate trading experience.',
-  keywords: 'trading, cryptocurrency, stocks, forex, liquidity, ClubLiquidez, trading platform, market data, trading tools',
+  title: 'ClubLiquidez - Professional Forex & Gold Trading Academy',
+  description: 'Master the markets with structured trading education. Professional training in price action, risk management, and trading psychology — online and offline. Education center in Kanchipuram, Tamil Nadu.',
+  keywords: 'trading academy, forex education, gold trading course, trading psychology, risk management, ClubLiquidez, market education, Kanchipuram, mentorship',
   authors: [{ name: 'ClubLiquidez Team' }],
   icons: {
     icon: '/LC.png',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     apple: '/LC.png',
   },
   openGraph: {
-    title: 'ClubLiquidez - Unlock Liquidity. Trade Smarter.',
-    description: 'Premium trading platform with cutting-edge tools and real-time market data.',
+    title: 'ClubLiquidez - Professional Forex & Gold Trading Academy',
+    description: 'Structured trading education in price action, risk management, and psychology. Online and offline batches. Market Educational Services.',
     url: 'https://clubliquidez.com',
     siteName: 'ClubLiquidez',
     images: [
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ClubLiquidez Trading Platform',
+        alt: 'ClubLiquidez Trading Academy',
       },
     ],
     locale: 'en_US',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ClubLiquidez - Unlock Liquidity. Trade Smarter.',
-    description: 'Premium trading platform with cutting-edge tools and real-time market data.',
+    title: 'ClubLiquidez - Professional Forex & Gold Trading Academy',
+    description: 'Structured trading education in price action, risk management, and psychology. Online and offline batches.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -63,6 +63,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${inter.className} bg-dark-950 text-white antialiased`}>
         <AuthProvider>
+          <p className="sr-only">We provide educational services only. We do not provide investment advice or manage funds.</p>
           {children}
           <Toaster
             position="top-right"

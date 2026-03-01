@@ -28,27 +28,27 @@ const PillarsSection = () => {
   const firstThreePillars = [
     {
       icon: Users,
-      title: 'Copy Trading',
-      description: 'A low-risk breakout strategy with auto-scaled equity. Your account mirrors the discipline of one master model.',
-      features: ['Real-time trade replication', 'Controlled, consistent risk', 'Automated position sizing', 'Long-term compounding approach'],
+      title: 'Mentorship Program',
+      description: '1:1 and group mentorship. Get structured feedback and guidance — we teach you how to think and trade, we do not copy trades for you.',
+      features: ['Personal trading mentorship', 'Structured feedback', 'Discipline and psychology', 'Long-term learning approach'],
       href: '/copy-trading',
       color: 'neon-gold',
       gradient: 'from-neon-gold/20 to-neon-gold-champagne/20'
     },
     {
       icon: Bot,
-      title: 'Algo Models',
-      description: 'Automated systems built with rule-based logic. No emotion. No impulsive trades. Just precision.',
-      features: ['Rule-based automation', 'No emotional trading', 'Precise execution', 'Consistent performance'],
+      title: 'Advanced Strategy & Automation Training',
+      description: 'Learn how algorithms and automated systems work. We teach EA development and strategy logic — education only, no execution services.',
+      features: ['Trading automation concepts', 'EA development basics', 'MT4/MT5 strategy training', 'Risk and backtesting'],
       href: '/algo-trading',
       color: 'neon-gold-champagne',
       gradient: 'from-neon-gold-champagne/20 to-neon-amber/20'
     },
     {
       icon: GraduationCap,
-      title: 'Master-Level Course',
-      description: 'A full training program teaching Technical Analysis, Risk Management, Psychology & Execution.',
-      features: ['Fundamentals & Technical Analysis', 'Risk Management', 'Trading Psychology', 'Execution Mastery' , 'Live Trading Sessions'],
+      title: 'Master Course / Academy',
+      description: 'Full curriculum: Forex basics, Gold (XAUUSD), Price Action, Risk Management, Trading Psychology. Live and offline batches.',
+      features: ['Basics of Forex & Gold', 'Price Action & Risk Management', 'Trading Psychology', 'Live sessions', 'Offline classroom in Kanchipuram'],
       href: '/academy',
       color: 'neon-gold-dark',
       gradient: 'from-neon-gold-dark/20 to-neon-gold/20'
@@ -58,18 +58,18 @@ const PillarsSection = () => {
   const lastTwoPillars = [
     {
       icon: Crown,
-      title: 'Membership Club',
-      description: 'Subscription: access to portal, community, blogs, tools, algos, copy trading & Live Trading Sessions included.',
-      features: ['Private portal access', 'Community support', 'Blogs & insights', 'Study Materials', 'All tools included'],
-      href: '/contact',
+      title: 'Programs & Batches',
+      description: 'Beginner, Advanced, Gold Specialist, Weekend, Online Live, and Offline Classroom batches. Limited seats per batch.',
+      features: ['Beginner to Advanced programs', 'Weekend & online batches', 'Offline classroom (Kanchipuram)', 'Study materials & community'],
+      href: '/programs',
       color: 'neon-amber',
       gradient: 'from-neon-amber/20 to-neon-gold/20'
     },
     {
       icon: Target,
       title: 'Funded Account Coaching',
-      description: 'Clear evaluations. Earn real payouts. Build capital without risking your own.',
-      features: ['Challenge rules mastery', 'Risk structuring', 'Lot sizing for evaluations', 'Streak recovery strategies', 'Drawdown control', 'Psychology under pressure'],
+      description: 'Education on evaluation rules, risk structuring, and psychology under pressure. Learn how to approach funded account challenges.',
+      features: ['Challenge rules mastery', 'Risk structuring', 'Lot sizing for evaluations', 'Drawdown control', 'Psychology under pressure'],
       href: '/academy',
       color: 'neon-gold',
       gradient: 'from-neon-gold/20 to-neon-gold-champagne/20'

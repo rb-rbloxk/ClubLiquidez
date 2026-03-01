@@ -7,7 +7,7 @@ export interface Insight {
   content: string
   author: string
   author_id?: string
-  category: 'Technical Analysis' | 'News' | 'Strategy' | 'Education'
+  category: 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown'
   tags: string[]
   views: number
   featured: boolean

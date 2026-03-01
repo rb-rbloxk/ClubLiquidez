@@ -31,7 +31,7 @@ interface Article {
   author: string
   date: string
   readTime: string
-  category: 'Technical Analysis' | 'News' | 'Strategy' | 'Education'
+  category: 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown'
   tags: string[]
   views: number
   featured: boolean
@@ -39,7 +39,7 @@ interface Article {
 
 const InsightsPage = () => {
   const [mounted, setMounted] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'Technical Analysis' | 'News' | 'Strategy' | 'Education'>('all')
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown'>('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [articles, setArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
@@ -107,10 +107,11 @@ const InsightsPage = () => {
 
   const categories = [
     { id: 'all', name: 'All Insights', count: displayArticles.length },
-    { id: 'Technical Analysis', name: 'Technical Analysis', count: displayArticles.filter(a => a.category === 'Technical Analysis').length },
-    { id: 'News', name: 'News', count: displayArticles.filter(a => a.category === 'News').length },
-    { id: 'Strategy', name: 'Strategy', count: displayArticles.filter(a => a.category === 'Strategy').length },
-    { id: 'Education', name: 'Education', count: displayArticles.filter(a => a.category === 'Education').length }
+    { id: 'Forex Education', name: 'Forex Education', count: displayArticles.filter(a => a.category === 'Forex Education').length },
+    { id: 'Gold Strategy', name: 'Gold Strategy', count: displayArticles.filter(a => a.category === 'Gold Strategy').length },
+    { id: 'Risk Management', name: 'Risk Management', count: displayArticles.filter(a => a.category === 'Risk Management').length },
+    { id: 'Trading Psychology', name: 'Trading Psychology', count: displayArticles.filter(a => a.category === 'Trading Psychology').length },
+    { id: 'Market Breakdown', name: 'Market Breakdown', count: displayArticles.filter(a => a.category === 'Market Breakdown').length }
   ]
 
   const filteredArticles = displayArticles.filter(article => {
@@ -141,8 +142,7 @@ const InsightsPage = () => {
               Market <span className="gradient-text">Insights</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Stay ahead with expert analysis, market trends, and educational content. 
-              From technical analysis to trading strategies, everything you need to succeed.
+              Educational blog for traders. Forex education, Gold strategy, risk management, trading psychology, and market breakdowns. No signal service — just learning.
             </p>
             
             {/* Search and Filters */}
@@ -281,10 +281,11 @@ const InsightsPage = () => {
                 >
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      article.category === 'Technical Analysis' ? 'bg-neon-gold/20 text-neon-gold' :
-                      article.category === 'News' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
-                      article.category === 'Strategy' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
-                      'bg-neon-amber/20 text-neon-amber'
+                      article.category === 'Forex Education' ? 'bg-neon-gold/20 text-neon-gold' :
+                      article.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
+                      article.category === 'Risk Management' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
+                      article.category === 'Trading Psychology' ? 'bg-neon-amber/20 text-neon-amber' :
+                      'bg-neon-gold/20 text-neon-gold'
                     }`}>
                       {article.category}
                     </span>

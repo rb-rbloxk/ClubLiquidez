@@ -43,7 +43,7 @@ const BrandIntroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
-            <span className="gradient-text">Build Wealth That Works While You Sleep</span>
+            <span className="gradient-text">Master the Markets</span> with Structured Education
           </motion.h1>
 
           <motion.p
@@ -52,7 +52,7 @@ const BrandIntroSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl sm:text-2xl text-gray-300 mb-4 leading-relaxed"
           >
-            Stop trading your time for money.
+            Learn. Trade. Grow.
           </motion.p>
           
           <motion.p
@@ -61,7 +61,7 @@ const BrandIntroSection = () => {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="text-xl sm:text-2xl text-gray-300 mb-4 leading-relaxed"
           >
-            Start making your money work for you, even while you rest.
+            No get-rich promises. No signal selling. Just structured training in price action, risk management, and trading psychology.
           </motion.p>
           
           <motion.p
@@ -70,7 +70,7 @@ const BrandIntroSection = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-lg sm:text-xl text-gray-400 mb-6 leading-relaxed max-w-3xl mx-auto"
           >
-            Through automation, Logical & Technical Analysis, Risk Management, Trading Psychology, and disciplined execution, you can build passive income, early freedom, and long-term compounding. A life where your capital works harder than you do.
+            Our curriculum covers Forex and Gold (XAUUSD), from basics to advanced strategy. Live sessions, offline batches in Kanchipuram, and 1:1 mentorship. We teach you how to think and trade with discipline — not how to chase shortcuts.
           </motion.p>
           
           <motion.p

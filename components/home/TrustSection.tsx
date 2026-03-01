@@ -45,8 +45,8 @@ const TrustSection = () => {
     },
     {
       icon: CheckCircle2,
-      title: 'No Signals',
-      description: 'Automated execution, not manual signals',
+      title: 'No Signal Selling',
+      description: 'We teach you to trade; we don\'t sell signals',
       color: 'neon-gold'
     },
     {
@@ -164,7 +164,7 @@ const TrustSection = () => {
           transition={{ duration: 0.8, delay: 1.2 }}
           className="text-xl text-gray-300 max-w-3xl mx-auto text-center mt-12 font-semibold"
         >
-          This ecosystem is built for serious traders.
+          Our academy is built for serious learners.
         </motion.p>
 
         {/* Additional Trust Badges */}

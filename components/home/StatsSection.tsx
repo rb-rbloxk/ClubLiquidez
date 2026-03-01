@@ -22,22 +22,28 @@ const StatsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            The <span className="gradient-text">Ecosystem Advantage</span>
+            Why Choose <span className="gradient-text">Our Academy</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            When you join Club Liquidez, you get access to a complete ecosystem:
+            Structured education. Limited seats. Real mentorship.
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
-            {['Copy trading', 'Algos', 'Education', 'Community', 'Tools', 'Blogs', 'Private portal', 'Support'].map((item, index) => (
+            {[
+              { label: '500+', sub: 'Students Trained' },
+              { label: '4+', sub: 'Years Experience' },
+              { label: '1:1', sub: 'Mentorship' },
+              { label: 'Small', sub: 'Batch Size' },
+            ].map((item, index) => (
               <motion.div
-                key={item}
+                key={item.sub}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
                 className="text-center p-4 bg-dark-800 rounded-lg border border-gray-700"
               >
-                <span className="text-white font-medium">{item}</span>
+                <span className="text-neon-gold font-bold text-2xl block">{item.label}</span>
+                <span className="text-white font-medium text-sm">{item.sub}</span>
               </motion.div>
             ))}
           </div>
@@ -48,7 +54,7 @@ const StatsSection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-lg text-gray-400 max-w-3xl mx-auto text-center"
           >
-            Everything you need to grow — in one place. No fragmentation. No confusion. No jumping between services. Just one premium ecosystem designed to build consistency.
+            We focus on discipline, psychology, and structured learning — not hype or get-rich promises. No signal selling. Just education.
           </motion.p>
         </motion.div>
 
