@@ -9,7 +9,7 @@ export async function generateStaticParams() {
     const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
     if (!supabaseUrl || !supabaseAnonKey) {
-      return []
+      return [{ id: '_placeholder' }]
     }
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
@@ -19,12 +19,12 @@ export async function generateStaticParams() {
       .eq('published', true)
 
     if (error || !data || data.length === 0) {
-      return []
+      return [{ id: '_placeholder' }]
     }
 
     return data.map((insight) => ({ id: insight.id }))
   } catch (error) {
-    return []
+    return [{ id: '_placeholder' }]
   }
 }
 

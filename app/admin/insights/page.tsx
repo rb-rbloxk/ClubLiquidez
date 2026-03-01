@@ -42,7 +42,7 @@ const AdminInsightsPage = () => {
     excerpt: '',
     content: '',
     author: '',
-    category: 'Forex Education' as 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown',
+    category: 'Forex Education' as Insight['category'],
     tags: [] as string[],
     featured: false,
     published: false,

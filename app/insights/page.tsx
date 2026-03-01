@@ -31,7 +31,7 @@ interface Article {
   author: string
   date: string
   readTime: string
-  category: 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown'
+  category: Insight['category']
   tags: string[]
   views: number
   featured: boolean
@@ -39,7 +39,7 @@ interface Article {
 
 const InsightsPage = () => {
   const [mounted, setMounted] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'Forex Education' | 'Gold Strategy' | 'Risk Management' | 'Trading Psychology' | 'Market Breakdown'>('all')
+  const [selectedCategory, setSelectedCategory] = useState<Insight['category'] | 'all'>('all')
   const [searchTerm, setSearchTerm] = useState('')
   const [articles, setArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
@@ -111,7 +111,8 @@ const InsightsPage = () => {
     { id: 'Gold Strategy', name: 'Gold Strategy', count: displayArticles.filter(a => a.category === 'Gold Strategy').length },
     { id: 'Risk Management', name: 'Risk Management', count: displayArticles.filter(a => a.category === 'Risk Management').length },
     { id: 'Trading Psychology', name: 'Trading Psychology', count: displayArticles.filter(a => a.category === 'Trading Psychology').length },
-    { id: 'Market Breakdown', name: 'Market Breakdown', count: displayArticles.filter(a => a.category === 'Market Breakdown').length }
+    { id: 'Market Breakdown', name: 'Market Breakdown', count: displayArticles.filter(a => a.category === 'Market Breakdown').length },
+    { id: 'Technical Analysis', name: 'Technical Analysis', count: displayArticles.filter(a => a.category === 'Technical Analysis').length }
   ]
 
   const filteredArticles = displayArticles.filter(article => {
