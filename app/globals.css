@@ -53,17 +53,17 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #F2B50B;
 }
 
 /* Custom utility classes */
 @layer components {
   .neon-glow {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 20px rgba(242, 181, 11, 0.3);
   }
   
   .neon-text {
-    text-shadow: 0 0 10px rgba(177, 138, 12, 0.8);
+    text-shadow: 0 0 10px rgba(242, 181, 11, 0.8);
   }
   
   .glass-effect {
@@ -73,22 +73,22 @@ a {
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #D4AF37 0%, #e1bd6f 50%, #C6A667 100%);
+    background: linear-gradient(135deg, #F2B50B 0%, #48A111 50%, #25671E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .gradient-neon {
-    background: linear-gradient(135deg, #D4AF37 0%, #efc15d 50%, #C6A667 100%);
+    background: linear-gradient(135deg, #F2B50B 0%, #48A111 50%, #25671E 100%);
   }
   
   .gradient-gold {
-    background: linear-gradient(135deg, #D4AF37 0%, #e4b755 100%);
+    background: linear-gradient(135deg, #F2B50B 0%, #48A111 100%);
   }
   
   .gradient-gold-deep {
-    background: linear-gradient(135deg, #D4AF37 0%, #efbc56 50%, #A68B2D 100%);
+    background: linear-gradient(135deg, #F2B50B 0%, #48A111 50%, #25671E 100%);
   }
   
   .card-hover {
@@ -97,11 +97,11 @@ a {
   
   .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 20px 40px rgba(242, 181, 11, 0.1);
   }
   
   .button-primary {
-    background: linear-gradient(135deg, #D4AF37 0%, #e2b657 100%);
+    background: linear-gradient(135deg, #F2B50B 0%, #48A111 100%);
     transition: all 0.3s ease;
     color: #000000;
     font-weight: 600;
@@ -109,101 +109,109 @@ a {
   
   .button-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 20px rgba(242, 181, 11, 0.3);
   }
   
   .button-secondary {
     background: transparent;
-    border: 2px solid #dfb052;
+    border: 2px solid #48A111;
     transition: all 0.3s ease;
-    color: #D4AF37;
+    color: #F2B50B;
     font-weight: 600;
   }
   
   .button-secondary:hover {
-    background: rgba(212, 175, 55, 0.1);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-    border-color: #D4AF37;
+    background: rgba(242, 181, 11, 0.1);
+    box-shadow: 0 0 20px rgba(242, 181, 11, 0.3);
+    border-color: #F2B50B;
   }
   
   .text-neon-gold {
-    color: #D4AF37;
+    color: #F2B50B;
   }
   
   .text-neon-gold-deep {
-    color: #C6A667;
+    color: #48A111;
   }
   
   .text-neon-gold-champagne {
-    color: #f2c564;
+    color: #48A111;
   }
   
   .text-neon-gold-dark {
-    color: #A68B2D;
+    color: #25671E;
   }
   
   .text-neon-amber {
-    color: #F59E0B;
+    color: #F2B50B;
+  }
+  
+  .text-neon-cream {
+    color: #F7F0F0;
   }
   
   .bg-neon-gold {
-    background-color: #D4AF37;
+    background-color: #F2B50B;
   }
   
   .bg-neon-gold-deep {
-    background-color: #C6A667;
+    background-color: #48A111;
   }
   
   .bg-neon-gold-champagne {
-    background-color: #eabc5b;
+    background-color: #48A111;
   }
   
   .bg-neon-gold-dark {
-    background-color: #A68B2D;
+    background-color: #25671E;
   }
   
   .bg-neon-amber {
-    background-color: #F59E0B;
+    background-color: #F2B50B;
+  }
+  
+  .bg-neon-cream {
+    background-color: #F7F0F0;
   }
   
   .border-neon-gold {
-    border-color: #D4AF37;
+    border-color: #F2B50B;
   }
   
   .border-neon-gold-deep {
-    border-color: #C6A667;
+    border-color: #48A111;
   }
   
   .border-neon-gold-champagne {
-    border-color: #ecbe5b;
+    border-color: #48A111;
   }
   
   .border-neon-gold-dark {
-    border-color: #A68B2D;
+    border-color: #25671E;
   }
   
   .border-neon-amber {
-    border-color: #F59E0B;
+    border-color: #F2B50B;
   }
   
   .ring-neon-gold {
-    --tw-ring-color: #D4AF37;
+    --tw-ring-color: #F2B50B;
   }
   
   .ring-neon-gold-deep {
-    --tw-ring-color: #C6A667;
+    --tw-ring-color: #48A111;
   }
   
   .ring-neon-gold-champagne {
-    --tw-ring-color: #E6C98B;
+    --tw-ring-color: #48A111;
   }
   
   .ring-neon-gold-dark {
-    --tw-ring-color: #A68B2D;
+    --tw-ring-color: #25671E;
   }
   
   .ring-neon-amber {
-    --tw-ring-color: #F59E0B;
+    --tw-ring-color: #F2B50B;
   }
   
   .bg-dark-50 { background-color: #f5f5f5; }

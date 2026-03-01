@@ -85,7 +85,7 @@ const Footer = () => {
               className="space-y-4"
             >
               <Link href="/" className="flex items-center space-x-2">
-                <div className="relative w-6 h-6 md:w-8 md:h-8">
+                {/* <div className="relative w-6 h-6 md:w-8 md:h-8">
                   <Image
                     src="/LC.png"
                     alt="ClubLiquidez Logo"
@@ -93,7 +93,7 @@ const Footer = () => {
                     className="object-contain"
                     priority
                   />
-                </div>
+                </div> */}
                 <div className="relative h-6 md:h-8 w-auto">
                   <Image
                     src="/LCP.png"
