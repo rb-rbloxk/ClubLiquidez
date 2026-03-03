@@ -54,7 +54,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-dark-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.1),transparent_50%)]" />
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -110,7 +110,7 @@ const HeroSection = () => {
                 transition={{ delay: 0.3 }}
                 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight"
               >
-                Professional <span className="gradient-text">Forex & Gold</span> Trading Academy
+                Professional Trading Academy
               </motion.h1>
               
               <motion.p

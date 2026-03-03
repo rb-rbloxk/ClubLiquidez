@@ -5,9 +5,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --foreground-rgb: 234, 230, 223;
+  --background-start-rgb: 15, 17, 20;
+  --background-end-rgb: 15, 17, 20;
+  --color-primary-gold: #C9A55C;
+  --color-deep-gold: #A8843B;
+  --color-light-gold: #E5C97A;
+  --color-soft-white: #EAE6DF;
+  --color-dark-black: #0F1114;
+  --color-charcoal: #1A1D22;
 }
 
 * {
@@ -44,7 +50,7 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #0F1114;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -53,17 +59,17 @@ a {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F2B50B;
+  background: #C9A55C;
 }
 
 /* Custom utility classes */
 @layer components {
   .neon-glow {
-    box-shadow: 0 0 20px rgba(242, 181, 11, 0.3);
+    box-shadow: 0 0 20px rgba(201, 165, 92, 0.3);
   }
   
   .neon-text {
-    text-shadow: 0 0 10px rgba(242, 181, 11, 0.8);
+    text-shadow: 0 0 10px rgba(201, 165, 92, 0.8);
   }
   
   .glass-effect {
@@ -73,22 +79,22 @@ a {
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #F2B50B 0%, #48A111 50%, #25671E 100%);
+    background: linear-gradient(135deg, #C9A55C 0%, #A8843B 50%, #E5C97A 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .gradient-neon {
-    background: linear-gradient(135deg, #F2B50B 0%, #48A111 50%, #25671E 100%);
+    background: linear-gradient(135deg, #C9A55C 0%, #A8843B 50%, #E5C97A 100%);
   }
   
   .gradient-gold {
-    background: linear-gradient(135deg, #F2B50B 0%, #48A111 100%);
+    background: linear-gradient(135deg, #C9A55C 0%, #A8843B 100%);
   }
   
   .gradient-gold-deep {
-    background: linear-gradient(135deg, #F2B50B 0%, #48A111 50%, #25671E 100%);
+    background: linear-gradient(135deg, #C9A55C 0%, #A8843B 50%, #E5C97A 100%);
   }
   
   .card-hover {
@@ -97,11 +103,11 @@ a {
   
   .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(242, 181, 11, 0.1);
+    box-shadow: 0 20px 40px rgba(201, 165, 92, 0.1);
   }
   
   .button-primary {
-    background: linear-gradient(135deg, #F2B50B 0%, #48A111 100%);
+    background: linear-gradient(135deg, #C9A55C 0%, #A8843B 100%);
     transition: all 0.3s ease;
     color: #000000;
     font-weight: 600;
@@ -109,109 +115,109 @@ a {
   
   .button-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(242, 181, 11, 0.3);
+    box-shadow: 0 10px 20px rgba(201, 165, 92, 0.3);
   }
   
   .button-secondary {
     background: transparent;
-    border: 2px solid #48A111;
+    border: 2px solid #A8843B;
     transition: all 0.3s ease;
-    color: #F2B50B;
+    color: #C9A55C;
     font-weight: 600;
   }
   
   .button-secondary:hover {
-    background: rgba(242, 181, 11, 0.1);
-    box-shadow: 0 0 20px rgba(242, 181, 11, 0.3);
-    border-color: #F2B50B;
+    background: rgba(201, 165, 92, 0.1);
+    box-shadow: 0 0 20px rgba(201, 165, 92, 0.3);
+    border-color: #C9A55C;
   }
   
   .text-neon-gold {
-    color: #F2B50B;
+    color: #C9A55C;
   }
   
   .text-neon-gold-deep {
-    color: #48A111;
+    color: #A8843B;
   }
   
   .text-neon-gold-champagne {
-    color: #48A111;
+    color: #A8843B;
   }
   
   .text-neon-gold-dark {
-    color: #25671E;
+    color: #8a6b2f;
   }
   
   .text-neon-amber {
-    color: #F2B50B;
+    color: #C9A55C;
   }
   
   .text-neon-cream {
-    color: #F7F0F0;
+    color: #EAE6DF;
   }
   
   .bg-neon-gold {
-    background-color: #F2B50B;
+    background-color: #C9A55C;
   }
   
   .bg-neon-gold-deep {
-    background-color: #48A111;
+    background-color: #A8843B;
   }
   
   .bg-neon-gold-champagne {
-    background-color: #48A111;
+    background-color: #A8843B;
   }
   
   .bg-neon-gold-dark {
-    background-color: #25671E;
+    background-color: #8a6b2f;
   }
   
   .bg-neon-amber {
-    background-color: #F2B50B;
+    background-color: #C9A55C;
   }
   
   .bg-neon-cream {
-    background-color: #F7F0F0;
+    background-color: #EAE6DF;
   }
   
   .border-neon-gold {
-    border-color: #F2B50B;
+    border-color: #C9A55C;
   }
   
   .border-neon-gold-deep {
-    border-color: #48A111;
+    border-color: #A8843B;
   }
   
   .border-neon-gold-champagne {
-    border-color: #48A111;
+    border-color: #A8843B;
   }
   
   .border-neon-gold-dark {
-    border-color: #25671E;
+    border-color: #8a6b2f;
   }
   
   .border-neon-amber {
-    border-color: #F2B50B;
+    border-color: #C9A55C;
   }
   
   .ring-neon-gold {
-    --tw-ring-color: #F2B50B;
+    --tw-ring-color: #C9A55C;
   }
   
   .ring-neon-gold-deep {
-    --tw-ring-color: #48A111;
+    --tw-ring-color: #A8843B;
   }
   
   .ring-neon-gold-champagne {
-    --tw-ring-color: #48A111;
+    --tw-ring-color: #A8843B;
   }
   
   .ring-neon-gold-dark {
-    --tw-ring-color: #25671E;
+    --tw-ring-color: #8a6b2f;
   }
   
   .ring-neon-amber {
-    --tw-ring-color: #F2B50B;
+    --tw-ring-color: #C9A55C;
   }
   
   .bg-dark-50 { background-color: #f5f5f5; }
@@ -221,10 +227,10 @@ a {
   .bg-dark-400 { background-color: #737373; }
   .bg-dark-500 { background-color: #525252; }
   .bg-dark-600 { background-color: #404040; }
-  .bg-dark-700 { background-color: #262626; }
-  .bg-dark-800 { background-color: #171717; }
-  .bg-dark-900 { background-color: #0a0a0a; }
-  .bg-dark-950 { background-color: #000000; }
+  .bg-dark-700 { background-color: #25282E; }
+  .bg-dark-800 { background-color: #1A1D22; }
+  .bg-dark-900 { background-color: #0F1114; }
+  .bg-dark-950 { background-color: #0F1114; }
   
   .text-dark-50 { color: #f5f5f5; }
   .text-dark-100 { color: #e5e5e5; }
@@ -233,10 +239,10 @@ a {
   .text-dark-400 { color: #737373; }
   .text-dark-500 { color: #525252; }
   .text-dark-600 { color: #404040; }
-  .text-dark-700 { color: #262626; }
-  .text-dark-800 { color: #171717; }
-  .text-dark-900 { color: #0a0a0a; }
-  .text-dark-950 { color: #000000; }
+  .text-dark-700 { color: #25282E; }
+  .text-dark-800 { color: #1A1D22; }
+  .text-dark-900 { color: #0F1114; }
+  .text-dark-950 { color: #0F1114; }
   
   .border-dark-50 { border-color: #f5f5f5; }
   .border-dark-100 { border-color: #e5e5e5; }
@@ -245,8 +251,8 @@ a {
   .border-dark-400 { border-color: #737373; }
   .border-dark-500 { border-color: #525252; }
   .border-dark-600 { border-color: #404040; }
-  .border-dark-700 { border-color: #262626; }
-  .border-dark-800 { border-color: #171717; }
-  .border-dark-900 { border-color: #0a0a0a; }
-  .border-dark-950 { border-color: #000000; }
+  .border-dark-700 { border-color: #25282E; }
+  .border-dark-800 { border-color: #1A1D22; }
+  .border-dark-900 { border-color: #0F1114; }
+  .border-dark-950 { border-color: #0F1114; }
 } 

@@ -16,7 +16,7 @@ const FinalCTASection = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-black via-dark-900 to-black relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.15),transparent_50%)]" />
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
