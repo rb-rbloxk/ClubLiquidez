@@ -138,7 +138,7 @@ export default function ProgramsPage() {
                 <h3 className="text-xl font-bold text-slate-900 mb-3">{program.title}</h3>
                 <p className="text-slate-500 flex-1 mb-6">{program.description}</p>
                 <Link href={program.href}>
-                  <Button variant="secondary" size="md" className="w-full group">
+                  <Button variant="primary" size="md" className="w-full group">
                     {program.cta}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
