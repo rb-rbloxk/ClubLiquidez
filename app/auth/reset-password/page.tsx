@@ -97,8 +97,8 @@ function ResetPasswordForm() {
       setTimeout(() => {
         router.push('/auth')
       }, 2000)
-    } catch (error: any) {
-      toast.error(error.message || 'An unexpected error occurred')
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : 'An unexpected error occurred')
       setIsSubmitting(false)
     }
   }
@@ -192,7 +192,7 @@ function ResetPasswordForm() {
               </h1>
             </div>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Enter your new password below. Make sure it's strong and secure.
+              Enter your new password below. Make sure it&apos;s strong and secure.
             </p>
           </motion.div>
         </div>

@@ -24,7 +24,7 @@ export async function generateStaticParams() {
     }
 
     return data.map((insight) => ({ id: insight.id }))
-  } catch (error) {
+  } catch {
     return [{ id: '_placeholder' }]
   }
 }

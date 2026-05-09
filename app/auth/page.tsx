@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -9,20 +9,7 @@ import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import toast from 'react-hot-toast'
-import { 
-  Mail, 
-  Lock, 
-  Eye, 
-  EyeOff,
-  User,
-  Shield,
-  CheckCircle,
-  AlertCircle,
-  ArrowRight,
-  Github,
-  Twitter,
-  Chrome
-} from 'lucide-react'
+import { Mail, Lock, Eye, EyeOff, User, Shield, ArrowRight } from 'lucide-react'
 
 const AuthPage = () => {
   const [isLogin, setIsLogin] = useState(true)
@@ -34,7 +21,7 @@ const AuthPage = () => {
   const [forgotPassword, setForgotPassword] = useState(false)
   const [resetEmail, setResetEmail] = useState('')
 
-  const { signIn, signUp, signInWithProvider, resetPassword } = useAuth()
+  const { signIn, signUp, resetPassword } = useAuth()
   const router = useRouter()
 
   const [ref, inView] = useInView({
@@ -148,26 +135,12 @@ const AuthPage = () => {
           setIsLogin(true)
         }
       }
-    } catch (error: any) {
-      toast.error(error.message || 'An unexpected error occurred')
+    } catch (error: unknown) {
+      toast.error(error instanceof Error ? error.message : 'An unexpected error occurred')
     } finally {
       setIsSubmitting(false)
     }
   }
-
-  const handleSocialSignIn = async (provider: 'google' | 'github' | 'twitter') => {
-    try {
-      await signInWithProvider(provider)
-    } catch (error: any) {
-      toast.error(`Failed to sign in with ${provider}`)
-    }
-  }
-
-  // const socialProviders = [
-  //   { name: 'Google', icon: Chrome, provider: 'google' as const, color: 'bg-red-600 hover:bg-red-700' },
-  //   { name: 'GitHub', icon: Github, provider: 'github' as const, color: 'bg-gray-800 hover:bg-gray-900' },
-  //   { name: 'Twitter', icon: Twitter, provider: 'twitter' as const, color: 'bg-blue-500 hover:bg-blue-600' }
-  // ]
 
   return (
     <main className="min-h-screen bg-dark-950">

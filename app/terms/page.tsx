@@ -5,14 +5,12 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { 
-  FileText, 
-  Shield, 
-  AlertTriangle, 
+import {
+  FileText,
+  Shield,
+  AlertTriangle,
   CheckCircle,
   Scale,
-  Users,
-  DollarSign
 } from 'lucide-react'
 
 const TermsOfServicePage = () => {
@@ -130,9 +128,10 @@ const TermsOfServicePage = () => {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Introduction</h2>
               <div className="space-y-4 text-slate-600">
                 <p>
-                  These Terms of Service ("Terms") govern your use of ClubLiquidez's trading platform, 
-                  website, and related services (collectively, the "Services"). By using our Services, 
-                  you agree to these Terms and our Privacy Policy.
+                  These Terms of Service (&quot;Terms&quot;) govern your use of ClubLiquidez&apos;s
+                  trading platform, website, and related services (collectively, the
+                  &quot;Services&quot;). By using our Services, you agree to these Terms and our Privacy
+                  Policy.
                 </p>
                 <p>
                   ClubLiquidez is operated by ClubLiquidez Inc., a company registered in the United States. 

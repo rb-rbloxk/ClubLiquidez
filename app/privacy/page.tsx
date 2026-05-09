@@ -132,7 +132,8 @@ const PrivacyPolicyPage = () => {
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Introduction</h2>
               <div className="space-y-4 text-slate-600">
                 <p>
-                  ClubLiquidez ("we," "our," or "us") is committed to protecting your privacy. 
+                  ClubLiquidez (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to
+                  protecting your privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your 
                   information when you use our trading platform and services.
                 </p>
@@ -240,7 +241,7 @@ const PrivacyPolicyPage = () => {
             <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <Lock className="w-6 h-6 text-neon-gold-champagne" />
-                <h3 className="text-xl font-bold text-slate-900">Children's Privacy</h3>
+                <h3 className="text-xl font-bold text-slate-900">Children&apos;s Privacy</h3>
               </div>
               <div className="space-y-4 text-slate-600">
                 <p>
@@ -263,7 +264,7 @@ const PrivacyPolicyPage = () => {
                 <p>
                   We may update this Privacy Policy from time to time. We will notify you of 
                   any changes by posting the new Privacy Policy on this page and updating the 
-                  "Last updated" date.
+                  &quot;Last updated&quot; date.
                 </p>
                 <p>
                   We will also notify you via email or through our platform for significant 

@@ -2,7 +2,6 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { Button } from '@/components/ui/Button'
@@ -10,8 +9,6 @@ import { ArrowRight, Users, MessageSquare, Target, CheckCircle2 } from 'lucide-r
 import Link from 'next/link'
 
 const CopyTradingPage = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
-
   return (
     <main className="min-h-screen bg-dark-950">
       <Navbar />
@@ -110,7 +107,7 @@ const CopyTradingPage = () => {
           </h2>
 
           <p className="text-slate-600 text-lg">
-            Limited mentorship slots. Book a free session to see if we're a fit.
+            Limited mentorship slots. Book a free session to see if we&apos;re a fit.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

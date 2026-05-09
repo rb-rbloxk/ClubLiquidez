@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { Button } from '@/components/ui/Button'
 import { 
   Users, 
   Shield, 

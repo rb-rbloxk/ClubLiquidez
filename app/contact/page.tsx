@@ -7,9 +7,8 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { Button } from '@/components/ui/Button'
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
+  Mail,
+  Phone,
   Clock,
   MessageSquare,
   Send,
@@ -101,7 +100,7 @@ const ContactPage = () => {
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Course and batch inquiries, or want to book a free session? 
-              We're here to help. Visit us in Kanchipuram or reach out online.
+              We&apos;re here to help. Visit us in Kanchipuram or reach out online.
             </p>
           </motion.div>
         </div>
@@ -174,7 +173,7 @@ const ContactPage = () => {
                   className="flex items-center space-x-2 p-4 bg-neon-gold-champagne/20 border border-neon-gold-champagne/30 rounded-lg mb-6"
                 >
                   <CheckCircle className="w-5 h-5 text-neon-gold-champagne" />
-                  <span className="text-neon-gold-champagne">Message sent successfully! We'll get back to you soon.</span>
+                  <span className="text-neon-gold-champagne">Message sent successfully! We&apos;ll get back to you soon.</span>
                 </motion.div>
               )}
 
@@ -201,7 +200,7 @@ const ContactPage = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                      className="w-full px-4 py-3 bg-dark-800 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                     />
                   </div>
                   <div>
@@ -214,7 +213,7 @@ const ContactPage = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                      className="w-full px-4 py-3 bg-dark-800 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -228,7 +227,7 @@ const ContactPage = () => {
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                    className="w-full px-4 py-3 bg-dark-800 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                   >
                     <option value="">Select a subject</option>
                     <option value="Batch / Course inquiry">Batch / Course inquiry</option>
@@ -251,7 +250,7 @@ const ContactPage = () => {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 bg-dark-800 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent resize-none"
                     placeholder="Tell us how we can help you..."
                   />
                 </div>

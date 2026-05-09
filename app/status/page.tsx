@@ -93,7 +93,7 @@ const StatusPage = () => {
             </div>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
               Real-time status of our trading platform and services. 
-              We're committed to providing 99.9% uptime.
+              We&apos;re committed to providing 99.9% uptime.
             </p>
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neon-gold-champagne/20 border border-neon-gold-champagne/30 rounded-full">
               <div className="w-2 h-2 bg-neon-gold-champagne rounded-full animate-pulse" />
@@ -200,7 +200,7 @@ const StatusPage = () => {
               <div className="text-center text-slate-500">
                 <CheckCircle className="w-16 h-16 text-neon-gold-champagne mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-slate-900 mb-2">No Recent Incidents</h3>
-                <p>All systems are operating normally. We'll post updates here if any issues arise.</p>
+                <p>All systems are operating normally. We&apos;ll post updates here if any issues arise.</p>
               </div>
             </div>
           </motion.div>
