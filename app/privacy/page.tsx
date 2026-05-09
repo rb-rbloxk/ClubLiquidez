@@ -27,19 +27,19 @@ const PrivacyPolicyPage = () => {
       title: 'Information We Collect',
       content: [
         'Personal identification information (name, email address, phone number)',
-        'Financial information (bank account details, trading history)',
+        'Contact and enrollment information',
         'Technical information (IP address, browser type, device information)',
-        'Usage data (trading patterns, platform interactions)',
+        'Usage data (course access, site interactions)',
         'Communication records (support tickets, chat logs)'
       ]
     },
     {
       title: 'How We Use Your Information',
       content: [
-        'To provide and maintain our trading services',
-        'To process transactions and manage your account',
+        'To provide and maintain our educational services',
+        'To manage enrollments, batches, and course access',
         'To comply with legal and regulatory requirements',
-        'To improve our platform and user experience',
+        'To improve our services and user experience',
         'To communicate with you about our services',
         'To detect and prevent fraud and security threats'
       ]
@@ -93,7 +93,7 @@ const PrivacyPolicyPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -104,14 +104,14 @@ const PrivacyPolicyPage = () => {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Shield className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
                 Privacy <span className="gradient-text">Policy</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
               Your privacy is our priority. Learn how we protect and handle your personal information.
             </p>
-            <div className="text-gray-400">
+            <div className="text-slate-500">
               Last updated: {lastUpdated}
             </div>
           </motion.div>
@@ -119,7 +119,7 @@ const PrivacyPolicyPage = () => {
       </section>
 
       {/* Policy Content */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -128,9 +128,9 @@ const PrivacyPolicyPage = () => {
             className="space-y-12"
           >
             {/* Introduction */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Introduction</h2>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">Introduction</h2>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   ClubLiquidez ("we," "our," or "us") is committed to protecting your privacy. 
                   This Privacy Policy explains how we collect, use, disclose, and safeguard your 
@@ -155,14 +155,14 @@ const PrivacyPolicyPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-dark-800 rounded-2xl border border-gray-700 p-8"
+                className="bg-dark-800 rounded-2xl border border-slate-200 p-8"
               >
-                <h3 className="text-xl font-bold text-white mb-6">{section.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-6">{section.title}</h3>
                 <ul className="space-y-3">
                   {section.content.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{item}</span>
+                      <span className="text-slate-600">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -170,12 +170,12 @@ const PrivacyPolicyPage = () => {
             ))}
 
             {/* Cookies Section */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <Database className="w-6 h-6 text-neon-gold" />
-                <h3 className="text-xl font-bold text-white">Cookies and Tracking</h3>
+                <h3 className="text-xl font-bold text-slate-900">Cookies and Tracking</h3>
               </div>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-600">
                 <p>
                   We use cookies and similar tracking technologies to enhance your experience on our platform. 
                   These technologies help us:
@@ -194,12 +194,12 @@ const PrivacyPolicyPage = () => {
             </div>
 
             {/* Third-Party Services */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <AlertTriangle className="w-6 h-6 text-neon-amber" />
-                <h3 className="text-xl font-bold text-white">Third-Party Services</h3>
+                <h3 className="text-xl font-bold text-slate-900">Third-Party Services</h3>
               </div>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-600">
                 <p>
                   Our platform may integrate with third-party services for:
                 </p>
@@ -218,12 +218,12 @@ const PrivacyPolicyPage = () => {
             </div>
 
             {/* International Transfers */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <Eye className="w-6 h-6 text-neon-gold" />
-                <h3 className="text-xl font-bold text-white">International Data Transfers</h3>
+                <h3 className="text-xl font-bold text-slate-900">International Data Transfers</h3>
               </div>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-600">
                 <p>
                   Your information may be transferred to and processed in countries other than 
                   your own. We ensure that such transfers comply with applicable data protection 
@@ -237,12 +237,12 @@ const PrivacyPolicyPage = () => {
             </div>
 
             {/* Children's Privacy */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <Lock className="w-6 h-6 text-neon-gold-champagne" />
-                <h3 className="text-xl font-bold text-white">Children's Privacy</h3>
+                <h3 className="text-xl font-bold text-slate-900">Children's Privacy</h3>
               </div>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-600">
                 <p>
                   Our services are not intended for individuals under the age of 18. We do not 
                   knowingly collect personal information from children under 18. If you are a 
@@ -257,9 +257,9 @@ const PrivacyPolicyPage = () => {
             </div>
 
             {/* Changes to Policy */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Changes to This Policy</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Changes to This Policy</h3>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   We may update this Privacy Policy from time to time. We will notify you of 
                   any changes by posting the new Privacy Policy on this page and updating the 
@@ -277,9 +277,9 @@ const PrivacyPolicyPage = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Contact Us</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Contact Us</h3>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   If you have any questions about this Privacy Policy or our data practices, 
                   please contact us:

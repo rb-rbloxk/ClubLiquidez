@@ -17,7 +17,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       primary: 'button-primary text-black font-semibold',
       secondary: 'button-secondary text-neon-gold font-semibold',
       outline: 'border-2 border-neon-gold text-neon-gold hover:bg-neon-gold hover:text-black',
-      ghost: 'text-gray-300 hover:text-white hover:bg-white/10'
+      ghost: 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
     }
     
     const sizes = {
@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       >
         {loading ? (
           <div className="flex items-center space-x-2">
-            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            <div className="w-4 h-4 border-2 border-slate-600 border-t-transparent rounded-full animate-spin" />
             <span>Loading...</span>
           </div>
         ) : (

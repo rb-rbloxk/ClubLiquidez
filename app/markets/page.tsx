@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
@@ -99,7 +100,7 @@ const MarketsPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-slate-100 via-white to-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -108,10 +109,10 @@ const MarketsPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Global <span className="gradient-text">Markets</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
               Real-time market data across cryptocurrencies, stocks, and forex. 
               Track prices, analyze trends, and make informed trading decisions.
             </p>
@@ -119,13 +120,13 @@ const MarketsPage = () => {
             {/* Search and Filters */}
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search markets..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-dark-800 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-dark-800 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                 />
               </div>
               
@@ -152,11 +153,11 @@ const MarketsPage = () => {
           {/* Sort Controls */}
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 space-y-4 sm:space-y-0">
             <div className="flex items-center space-x-4">
-              <span className="text-gray-400">Sort by:</span>
+              <span className="text-slate-500">Sort by:</span>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-dark-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                className="bg-dark-800 border border-slate-200 rounded-lg px-4 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
               >
                 <option value="volume">Volume</option>
                 <option value="price">Price</option>
@@ -171,7 +172,7 @@ const MarketsPage = () => {
                 {sortOrder === 'asc' ? '↑' : '↓'}
               </Button>
             </div>
-            <div className="text-gray-400">
+            <div className="text-slate-500">
               {filteredMarkets.length} markets found
             </div>
           </div>
@@ -184,32 +185,32 @@ const MarketsPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-dark-800 rounded-2xl border border-gray-700 p-6 hover:border-neon-gold/50 transition-all duration-300 group"
+                className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <div className="flex items-center space-x-2 mb-2">
-                      <h3 className="text-lg font-bold text-white">{market.symbol}</h3>
-                      <Star className="w-4 h-4 text-gray-500 hover:text-yellow-400 cursor-pointer transition-colors" />
+                      <h3 className="text-lg font-bold text-slate-900">{market.symbol}</h3>
+                      <Star className="w-4 h-4 text-slate-500 hover:text-yellow-400 cursor-pointer transition-colors" />
                     </div>
-                    <p className="text-sm text-gray-400">{market.name}</p>
+                    <p className="text-sm text-slate-500">{market.name}</p>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Eye className="w-4 h-4 text-gray-500 hover:text-neon-gold cursor-pointer transition-colors" />
-                    <BarChart3 className="w-4 h-4 text-gray-500 hover:text-neon-gold cursor-pointer transition-colors" />
+                    <Eye className="w-4 h-4 text-slate-500 hover:text-neon-gold cursor-pointer transition-colors" />
+                    <BarChart3 className="w-4 h-4 text-slate-500 hover:text-neon-gold cursor-pointer transition-colors" />
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">Price</span>
-                    <span className="text-white font-semibold">
+                    <span className="text-slate-500 text-sm">Price</span>
+                    <span className="text-slate-900 font-semibold">
                       {market.category === 'forex' ? market.price.toFixed(4) : `$${market.price.toLocaleString()}`}
                     </span>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">24h Change</span>
+                    <span className="text-slate-500 text-sm">24h Change</span>
                     <div className="flex items-center space-x-1">
                       {market.changePercent >= 0 ? (
                         <TrendingUp className="w-4 h-4 text-neon-gold-champagne" />
@@ -225,22 +226,24 @@ const MarketsPage = () => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">Volume</span>
-                    <span className="text-white font-semibold">{formatNumber(market.volume)}</span>
+                    <span className="text-slate-500 text-sm">Volume</span>
+                    <span className="text-slate-900 font-semibold">{formatNumber(market.volume)}</span>
                   </div>
 
                   {market.marketCap > 0 && (
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm">Market Cap</span>
-                      <span className="text-white font-semibold">{formatNumber(market.marketCap)}</span>
+                      <span className="text-slate-500 text-sm">Market Cap</span>
+                      <span className="text-slate-900 font-semibold">{formatNumber(market.marketCap)}</span>
                     </div>
                   )}
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-gray-700">
-                  <Button variant="outline" size="sm" className="w-full">
-                    Trade Now
-                  </Button>
+                <div className="mt-6 pt-4 border-t border-slate-200">
+                  <Link href="/academy">
+                    <Button variant="outline" size="sm" className="w-full">
+                      View Courses
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -252,7 +255,7 @@ const MarketsPage = () => {
               animate={{ opacity: 1 }}
               className="text-center py-16"
             >
-              <div className="text-gray-400 text-lg">No markets found matching your criteria</div>
+              <div className="text-slate-500 text-lg">No markets found matching your criteria</div>
               <Button
                 variant="primary"
                 size="md"
