@@ -43,7 +43,7 @@ const AboutPage = () => {
             className="text-center"
           >
             <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              ClubLiquidez – <span className="gradient-text">Market Education Services</span>
+              ClubLiquidez – <span className="gradient-text">Market Educational Services</span>
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Education center in Kanchipuram, Tamil Nadu. We provide structured trading education — not investment advice, not signal selling, not get-rich marketing.

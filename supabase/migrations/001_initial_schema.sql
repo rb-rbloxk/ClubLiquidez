@@ -84,10 +84,13 @@ CREATE TABLE IF NOT EXISTS public.subscriptions (
     payment_method TEXT,
     metadata JSONB DEFAULT '{}'::jsonb,
     created_at TIMESTAMPTZ DEFAULT NOW(),
-    updated_at TIMESTAMPTZ DEFAULT NOW(),
-    CONSTRAINT unique_active_subscription UNIQUE (user_id, subscription_type, status) 
-        WHERE status = 'active'
+    updated_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+-- At most one "active" row per user and subscription type (partial unique index; not valid inside CREATE TABLE)
+CREATE UNIQUE INDEX IF NOT EXISTS subscriptions_one_active_per_type
+    ON public.subscriptions (user_id, subscription_type)
+    WHERE status = 'active';
 
 -- Enable Row Level Security
 ALTER TABLE public.subscriptions ENABLE ROW LEVEL SECURITY;

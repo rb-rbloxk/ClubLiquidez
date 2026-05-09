@@ -52,14 +52,21 @@ This directory contains the database migrations and schema for the ClubLiquidez 
 11. **notifications** - User notifications
     - Course updates, payment alerts, trade notifications, etc.
 
+12. **insights** - Blog / market insights (see `002_insights_blog.sql`)
+    - Categories match `Insight` in `lib/supabase/insights.ts`
+    - `increment_insight_views` RPC for public view counts
+    - RLS: anonymous users see **published** posts only; **authenticated** users can read/write all rows (suitable for a small admin team — add role checks for production)
+
 ## Installation
 
 ### Option 1: Using Supabase Dashboard
 
 1. Go to your Supabase project dashboard
 2. Navigate to **SQL Editor**
-3. Copy and paste the contents of `001_initial_schema.sql`
-4. Click **Run**
+3. Run migrations **in order**:
+   - `migrations/001_initial_schema.sql`
+   - `migrations/002_insights_blog.sql`
+4. Click **Run** for each file (or paste both in one session after confirming order)
 
 ### Option 2: Using Supabase CLI
 

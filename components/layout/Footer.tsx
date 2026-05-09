@@ -15,8 +15,11 @@ const Footer = () => {
       title: 'Learn',
       links: [
         { name: 'Programs', href: '/programs' },
+        { name: 'Algo Trading', href: '/algo-trading' },
+        { name: 'Copy Trading', href: '/copy-trading' },
         { name: 'Academy', href: '/academy' },
         { name: 'Insights', href: '/insights' },
+        { name: 'Markets', href: '/markets' },
       ],
     },
     {

@@ -7,10 +7,9 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { 
-  BookOpen, 
+import {
+  BookOpen,
   Clock,
-  DollarSign,
   CheckCircle2,
   ArrowRight,
   TrendingUp,
@@ -21,7 +20,9 @@ import {
   Award,
   PlayCircle,
   FileText,
-  Zap
+  Zap,
+  Sparkles,
+  Infinity,
 } from 'lucide-react'
 
 export default function AcademyPage() {
@@ -159,7 +160,10 @@ export default function AcademyPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl sm:text-2xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
-              Structured training in price action, risk management, and trading psychology. Online and offline batches. Limited seats. Live sessions and classroom in <span className="text-neon-gold">Kanchipuram</span>.
+              We have two learning options at Club Liquidez based on how deeply you want to be involved in your trading
+              journey—structured education or full club membership. Training covers price action, risk management, and
+              psychology with online and offline batches. Limited seats. Classroom and sessions in{' '}
+              <span className="text-neon-gold">Kanchipuram</span>.
             </motion.p>
 
             <motion.div
@@ -185,10 +189,119 @@ export default function AcademyPage() {
         </div>
       </section>
 
+      {/* Two learning paths */}
+      <section className="py-20 bg-dark-900 border-y border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="text-center max-w-3xl mx-auto mb-14"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+              Two ways to <span className="gradient-text">learn &amp; grow</span>
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              Choose the path that matches how much you want to stay involved—complete the program and trade on your own,
+              or stay inside the club for long-term access, live work, and advanced support.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-dark-800 rounded-2xl border border-slate-800 p-8 sm:p-10 flex flex-col h-full shadow-sm"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-xl bg-neon-gold/15 border border-neon-gold/30">
+                  <BookOpen className="w-7 h-7 text-neon-gold" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-neon-gold">Student Program</p>
+                  <p className="text-3xl sm:text-4xl font-bold text-slate-900">
+                    ₹21,000
+                  </p>
+                </div>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Structured trading education where you&apos;ll learn market basics, risk management, psychology,
+                execution, and practical market understanding step by step.
+              </p>
+              <ul className="space-y-3 text-slate-600 text-sm sm:text-base flex-1">
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-neon-gold shrink-0 mt-0.5" />
+                  <span>Clear progression through core skills—not random tips.</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-neon-gold shrink-0 mt-0.5" />
+                  <span>Built for traders who want to learn and trade independently after completing the program.</span>
+                </li>
+              </ul>
+            </motion.article>
+
+            <motion.article
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.08 }}
+              className="rounded-2xl border border-slate-800 bg-dark-950 p-8 sm:p-10 flex flex-col h-full shadow-lg shadow-brand-midnight/5"
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 rounded-xl bg-neon-gold/25 border border-neon-gold/40">
+                  <Sparkles className="w-7 h-7 text-neon-gold-dark" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wide text-neon-gold-dark">Club Membership</p>
+                  <p className="text-3xl sm:text-4xl font-bold text-slate-900">
+                    ₹56,000
+                  </p>
+                </div>
+              </div>
+              <p className="text-slate-700 leading-relaxed mb-4">
+                Our complete long-term ecosystem. Along with the full learning program, club members get continued access
+                to live trading sessions, advanced concepts, automated trading guidance, strategy building, premium algo
+                access, copy trading support, and guidance for building their own trading systems and algos.
+              </p>
+              <div className="flex items-start gap-2 mb-6 p-4 rounded-xl bg-dark-800/80 border border-neon-gold/20">
+                <Infinity className="w-5 h-5 text-neon-gold shrink-0 mt-0.5" />
+                <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  The club isn&apos;t &quot;study and leave.&quot; It&apos;s for traders who want to stay connected, grow
+                  continuously, and evolve with the market over time.
+                </p>
+              </div>
+              <ul className="space-y-2.5 text-slate-600 text-sm sm:text-base mt-auto">
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-neon-gold shrink-0 mt-0.5" />
+                  <span>Full program + ongoing live sessions and advanced topics</span>
+                </li>
+                <li className="flex gap-2">
+                  <CheckCircle2 className="w-5 h-5 text-neon-gold shrink-0 mt-0.5" />
+                  <span>Algo, automation, copy trading, and system-building support</span>
+                </li>
+              </ul>
+            </motion.article>
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-center text-slate-600 mt-12 max-w-2xl mx-auto text-lg leading-relaxed"
+          >
+            You can choose whichever model fits your goals and commitment level better.
+          </motion.p>
+        </div>
+      </section>
+
       {/* Course Overview */}
       <section className="py-20 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Duration */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -221,92 +334,7 @@ export default function AcademyPage() {
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-slate-500">Format</span>
-                  <span className="text-slate-900 font-semibold">Online & Offline (Kanchipuram)</span>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Fees */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-gradient-to-br from-neon-gold/20 to-neon-gold-champagne/20 rounded-2xl p-8 border border-neon-gold/30"
-            >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="p-4 bg-neon-gold rounded-xl">
-                  <DollarSign className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900">Zero Fees</h3>
-                  <p className="text-slate-600 text-sm">Investment in Your Future</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <div className="text-4xl font-bold text-neon-gold mb-2">$0</div>
-                  <p className="text-slate-600 text-sm">Zero Fees - Reach out to us for more details</p>
-                </div>
-                <div className="pt-4 border-t border-neon-gold/30 space-y-2">
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>All modules included</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>Lifetime access to materials</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>Community access</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>Certificate of completion</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-dark-800 rounded-2xl p-8 border border-slate-200"
-            >
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="p-4 bg-neon-gold rounded-xl">
-                  <DollarSign className="w-8 h-8 text-black" />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-slate-900">Course Fees</h3>
-                  <p className="text-slate-600 text-sm">Investment in Your Future</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <div>
-                  <div className="text-4xl font-bold text-neon-gold mb-2">$250</div>
-                  <p className="text-slate-600 text-sm">One-time payment</p>
-                </div>
-                <div className="pt-4 border-t border-neon-gold/30 space-y-2">
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>All modules included</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>Lifetime access to materials</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>Community access</span>
-                  </div>
-                  <div className="flex items-center space-x-2 text-sm text-slate-600">
-                    <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-                    <span>Certificate of completion</span>
-                  </div>
+                  <span className="text-slate-900 font-semibold">Online</span>
                 </div>
               </div>
             </motion.div>
