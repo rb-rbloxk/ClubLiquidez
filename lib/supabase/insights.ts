@@ -113,7 +113,7 @@ export async function updateInsight(id: string, updates: Partial<Insight>) {
     return { data: null, error: { message: 'Supabase not configured' } }
   }
 
-  const updateData: any = { ...updates }
+  const updateData: Record<string, unknown> = { ...updates }
   if (updates.published && !updates.published_at) {
     updateData.published_at = new Date().toISOString()
   }

@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import React, { useState, useEffect, useCallback } from 'react'
+import { useParams } from 'next/navigation'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
@@ -23,20 +24,13 @@ import { Button } from '@/components/ui/Button'
 
 const BlogPostPage = () => {
   const params = useParams()
-  const router = useRouter()
   const id = params.id as string
   
   const [insight, setInsight] = useState<Insight | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (id) {
-      loadInsight()
-    }
-  }, [id])
-
-  const loadInsight = async () => {
+  const loadInsight = useCallback(async () => {
     setLoading(true)
     setError(null)
     try {
@@ -47,7 +41,6 @@ const BlogPostPage = () => {
         console.error('Error fetching insight:', fetchError)
       } else if (data) {
         setInsight(data)
-        // Increment views when post is loaded
         await incrementInsightViews(id)
       } else {
         setError('Blog post not found')
@@ -58,7 +51,13 @@ const BlogPostPage = () => {
     } finally {
       setLoading(false)
     }
-  }
+  }, [id])
+
+  useEffect(() => {
+    if (id) {
+      void loadInsight()
+    }
+  }, [id, loadInsight])
 
   const handleShare = async () => {
     if (navigator.share && insight) {
@@ -68,8 +67,7 @@ const BlogPostPage = () => {
           text: insight.excerpt,
           url: window.location.href,
         })
-      } catch (err) {
-        // User cancelled or error occurred
+      } catch {
         console.log('Share cancelled')
       }
     } else {
@@ -177,11 +175,14 @@ const BlogPostPage = () => {
 
             {/* Cover Image */}
             {insight.cover_image_url && (
-              <div className="mb-8 rounded-2xl overflow-hidden">
-                <img 
-                  src={insight.cover_image_url} 
+              <div className="mb-8 relative aspect-[16/10] w-full rounded-2xl overflow-hidden">
+                <Image
+                  src={insight.cover_image_url}
                   alt={insight.title}
-                  className="w-full h-auto object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 896px) 100vw, 896px"
+                  unoptimized
                 />
               </div>
             )}

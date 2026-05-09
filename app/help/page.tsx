@@ -9,9 +9,8 @@ import { Button } from '@/components/ui/Button'
 import { 
   HelpCircle, 
   Search, 
-  BookOpen, 
+  BookOpen,
   Video,
-  MessageSquare,
   Phone,
   Mail,
   ChevronDown,

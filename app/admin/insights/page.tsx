@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
@@ -23,7 +23,6 @@ import {
   CheckCircle,
   Loader2,
   Search,
-  Filter
 } from 'lucide-react'
 
 const AdminInsightsPage = () => {
@@ -58,13 +57,7 @@ const AdminInsightsPage = () => {
     }
   }, [user, authLoading, router])
 
-  useEffect(() => {
-    if (user) {
-      loadInsights()
-    }
-  }, [user, filterCategory, filterPublished])
-
-  const loadInsights = async () => {
+  const loadInsights = useCallback(async () => {
     setLoading(true)
     try {
       const { data, error } = await getInsights({
@@ -84,7 +77,13 @@ const AdminInsightsPage = () => {
     } finally {
       setLoading(false)
     }
-  }
+  }, [filterCategory, filterPublished])
+
+  useEffect(() => {
+    if (user) {
+      void loadInsights()
+    }
+  }, [user, loadInsights])
 
   const handleCreate = () => {
     setIsCreating(true)
@@ -140,7 +139,7 @@ const AdminInsightsPage = () => {
     
     // Plain text - convert to HTML
     // First, escape HTML special characters
-    let escaped = text
+    const escaped = text
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
@@ -206,7 +205,7 @@ const AdminInsightsPage = () => {
       const htmlContent = convertTextToHTML(formData.content)
       
       if (isCreating) {
-        const { data, error } = await createInsight({
+        const { error } = await createInsight({
           ...formData,
           content: htmlContent,
           author_id: user?.id
@@ -235,7 +234,7 @@ const AdminInsightsPage = () => {
           loadInsights()
         }
       } else if (editingId) {
-        const { data, error } = await updateInsight(editingId, {
+        const { error } = await updateInsight(editingId, {
           ...formData,
           content: htmlContent
         })
@@ -468,7 +467,12 @@ const AdminInsightsPage = () => {
                     </label>
                     <select
                       value={formData.category}
-                      onChange={(e) => setFormData({ ...formData, category: e.target.value as any })}
+                      onChange={(e) =>
+                        setFormData({
+                          ...formData,
+                          category: e.target.value as Insight['category'],
+                        })
+                      }
                       className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
                     >
                       <option value="Forex Education">Forex Education</option>

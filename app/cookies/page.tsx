@@ -11,7 +11,6 @@ import {
   Shield, 
   CheckCircle,
   AlertTriangle,
-  Database
 } from 'lucide-react'
 
 const CookiePolicyPage = () => {
@@ -281,7 +280,7 @@ const CookiePolicyPage = () => {
                 </p>
                 <p>
                   We will notify you of any material changes by posting the updated policy on our 
-                  website and updating the "Last updated" date.
+                  website and updating the &quot;Last updated&quot; date.
                 </p>
                 <p>
                   Your continued use of our platform after any changes constitutes acceptance of 

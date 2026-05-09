@@ -5,30 +5,18 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import { Button } from '@/components/ui/Button'
-import { 
-  Calculator, 
-  BarChart3, 
-  Bell, 
-  TrendingUp, 
-  DollarSign,
-  Percent,
+import {
+  Calculator,
+  BarChart3,
+  Bell,
   Target,
-  Zap,
-  Settings,
-  Play,
-  Pause,
-  Square,
   Loader2,
-  AlertCircle
+  AlertCircle,
 } from 'lucide-react'
 
 const TradingToolsPage = () => {
-  const [calculatorType, setCalculatorType] = useState<'position' | 'risk' | 'profit'>('position')
   const [positionSize, setPositionSize] = useState('1')
-  const [entryPrice, setEntryPrice] = useState('100')
   const [stopLoss, setStopLoss] = useState('1')
-  const [takeProfit, setTakeProfit] = useState('110')
   const [riskPercentage, setRiskPercentage] = useState('1')
   const [accountSize, setAccountSize] = useState('100000')
   const [selectedCurrencyPair, setSelectedCurrencyPair] = useState('EUR/USD')
@@ -49,9 +37,6 @@ const TradingToolsPage = () => {
 
   const currencies = ['USD', 'EUR', 'GBP', 'JPY', 'CHF', 'AUD', 'CAD', 'NZD', 'BTC', 'ETH']
 
-  // Real-time calculation state
-  const [isCalculating, setIsCalculating] = useState(false)
-  
   // Exchange rate state for hybrid model
   const [exchangeRate, setExchangeRate] = useState<number | null>(null)
   const [isLoadingRate, setIsLoadingRate] = useState(false)
@@ -143,19 +128,6 @@ const TradingToolsPage = () => {
       setPositionSize('1')
     }
   }, [selectedCurrencyPair])
-
-  // Real-time calculation effect
-  React.useEffect(() => {
-    const timer = setTimeout(() => {
-      if (parseFloat(accountSize) > 0 && parseFloat(riskPercentage) > 0 && parseFloat(stopLoss) > 0) {
-        setIsCalculating(true)
-        // Small delay to show calculation animation
-        setTimeout(() => setIsCalculating(false), 300)
-      }
-    }, 100) // Debounce for 100ms
-
-    return () => clearTimeout(timer)
-  }, [accountSize, riskPercentage, stopLoss, selectedCurrencyPair, amountCurrency, exchangeRate])
 
   // Calculate position sizing based on risk and stop loss in pips
   const calculatePosition = () => {
@@ -486,24 +458,22 @@ const TradingToolsPage = () => {
                 {/* Action Buttons */}
                 <div className="flex items-center gap-4 mt-6">
                   <button
+                    type="button"
                     onClick={() => {
                       setAccountSize('50000')
                       setRiskPercentage('2')
                       setStopLoss('')
                       // Set default trade size based on currency pair
                       setPositionSize(selectedCurrencyPair === 'XAU/USD' ? '0.001' : '1')
-                      setEntryPrice('')
-                      setTakeProfit('')
                     }}
                     className="flex-1 px-6 py-3 bg-slate-200 hover:bg-slate-300 text-slate-900 rounded-lg font-medium transition-colors duration-200"
                   >
                     Reset
                   </button>
                   <button
+                    type="button"
                     onClick={() => {
-                      // Calculation happens automatically via calculatePosition
-                      setIsCalculating(true)
-                      setTimeout(() => setIsCalculating(false), 500)
+                      void calculatePosition()
                     }}
                     className="flex-1 px-6 py-3 bg-neon-gold hover:bg-neon-gold-champagne text-black rounded-lg font-medium transition-colors duration-200"
                   >

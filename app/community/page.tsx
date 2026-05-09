@@ -12,10 +12,6 @@ import {
   TrendingUp, 
   Star,
   ThumbsUp,
-  Share2,
-  Bookmark,
-  User,
-  Clock,
   Eye
 } from 'lucide-react'
 

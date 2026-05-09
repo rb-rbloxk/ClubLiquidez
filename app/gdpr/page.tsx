@@ -6,11 +6,9 @@ import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { 
-  Shield, 
-  User, 
-  Database, 
+  Shield,
+  Database,
   CheckCircle,
-  AlertTriangle,
   Eye,
   Download,
   Trash2

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
@@ -8,13 +8,11 @@ import Footer from '@/components/layout/Footer'
 import { Button } from '@/components/ui/Button'
 import { format } from 'date-fns'
 import { getInsights, type Insight } from '@/lib/supabase/insights'
-import { 
-  TrendingUp, 
-  BookOpen, 
-  BarChart3, 
+import {
+  TrendingUp,
+  BookOpen,
   Calendar,
   User,
-  Tag,
   ArrowRight,
   Eye,
   Clock,
@@ -45,12 +43,7 @@ const InsightsPage = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   
-  useEffect(() => {
-    setMounted(true)
-    loadInsights()
-  }, [selectedCategory])
-
-  const loadInsights = async () => {
+  const loadInsights = useCallback(async () => {
     setLoading(true)
     setError(null)
     try {
@@ -62,10 +55,8 @@ const InsightsPage = () => {
       if (fetchError) {
         setError('Failed to load insights')
         console.error('Error fetching insights:', fetchError)
-        // Fallback to empty array or default data
         setArticles([])
       } else if (data) {
-        // Transform database insights to Article format
         const transformedArticles: Article[] = data.map((insight: Insight) => ({
           id: insight.id,
           title: insight.title,
@@ -90,7 +81,12 @@ const InsightsPage = () => {
     } finally {
       setLoading(false)
     }
-  }
+  }, [selectedCategory])
+
+  useEffect(() => {
+    setMounted(true)
+    void loadInsights()
+  }, [loadInsights])
 
   const handleArticleClick = (articleId: string) => {
     // Navigate to full blog post page
@@ -130,7 +126,7 @@ const InsightsPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-slate-100 via-white to-dark-900">
+      <section className="pt-32 pb-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -165,7 +161,9 @@ const InsightsPage = () => {
                     key={category.id}
                     variant={selectedCategory === category.id ? 'primary' : 'outline'}
                     size="sm"
-                    onClick={() => setSelectedCategory(category.id as any)}
+                    onClick={() =>
+                      setSelectedCategory(category.id as Insight['category'] | 'all')
+                    }
                   >
                     {category.name} ({category.count})
                   </Button>
@@ -178,7 +176,7 @@ const InsightsPage = () => {
 
       {/* Featured Articles */}
       {featuredArticles.length > 0 && (
-        <section className="py-16">
+        <section className="py-16 bg-dark-850">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -244,7 +242,7 @@ const InsightsPage = () => {
       )}
 
       {/* All Articles */}
-      <section className="py-16 bg-dark-900">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -373,13 +371,13 @@ const InsightsPage = () => {
       </section>
 
       {/* Trending Ticker */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="bg-dark-800 rounded-2xl border border-slate-200 p-8"
+            className="bg-dark-800 rounded-2xl border border-slate-800 p-8"
           >
             <div className="flex items-center space-x-3 mb-6">
               <TrendingUp className="w-6 h-6 text-neon-gold-champagne" />

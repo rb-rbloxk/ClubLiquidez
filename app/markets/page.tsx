@@ -7,11 +7,10 @@ import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import { Button } from '@/components/ui/Button'
-import { 
-  TrendingUp, 
-  TrendingDown, 
-  Search, 
-  Filter,
+import {
+  TrendingUp,
+  TrendingDown,
+  Search,
   Star,
   Eye,
   BarChart3
@@ -57,9 +56,8 @@ const MarketsPage = () => {
     setFilteredMarkets(mockData)
   }, [])
 
-  // Filter and sort markets
   useEffect(() => {
-    let filtered = markets.filter(market => {
+    const filtered = markets.filter(market => {
       const matchesSearch = market.symbol.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            market.name.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesCategory = selectedCategory === 'all' || market.category === selectedCategory
@@ -68,8 +66,8 @@ const MarketsPage = () => {
 
     // Sort markets
     filtered.sort((a, b) => {
-      let aValue = a[sortBy]
-      let bValue = b[sortBy]
+      const aValue = a[sortBy]
+      const bValue = b[sortBy]
       
       if (sortOrder === 'asc') {
         return aValue - bValue
@@ -100,7 +98,7 @@ const MarketsPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-slate-100 via-white to-dark-900">
+      <section className="pt-32 pb-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -136,7 +134,9 @@ const MarketsPage = () => {
                     key={category.id}
                     variant={selectedCategory === category.id ? 'primary' : 'outline'}
                     size="sm"
-                    onClick={() => setSelectedCategory(category.id as any)}
+                    onClick={() =>
+                      setSelectedCategory(category.id as typeof selectedCategory)
+                    }
                   >
                     {category.name}
                   </Button>
@@ -148,7 +148,7 @@ const MarketsPage = () => {
       </section>
 
       {/* Markets Table */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Sort Controls */}
           <div className="flex flex-col sm:flex-row justify-between items-center mb-8 space-y-4 sm:space-y-0">
@@ -156,7 +156,9 @@ const MarketsPage = () => {
               <span className="text-slate-500">Sort by:</span>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                onChange={(e) =>
+                  setSortBy(e.target.value as typeof sortBy)
+                }
                 className="bg-dark-800 border border-slate-200 rounded-lg px-4 py-2 text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
               >
                 <option value="volume">Volume</option>
@@ -185,7 +187,7 @@ const MarketsPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 group"
+                className="bg-dark-800 rounded-2xl border border-slate-800 p-6 hover:border-neon-gold/50 transition-all duration-300 group"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div>

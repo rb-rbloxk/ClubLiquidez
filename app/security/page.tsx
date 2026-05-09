@@ -15,8 +15,6 @@ import {
   Server,
   Database,
   Zap,
-  Award,
-  Phone
 } from 'lucide-react'
 
 const SecurityPage = () => {

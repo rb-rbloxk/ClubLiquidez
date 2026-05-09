@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Navbar from '@/components/layout/Navbar'
@@ -16,7 +16,6 @@ import {
   TrendingUp,
   Shield,
   Brain,
-  Target,
   BarChart3,
   Users,
   Award,
@@ -325,7 +324,7 @@ export default function AcademyPage() {
                   <BookOpen className="w-8 h-8 text-neon-blue" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-slate-900">What You'll Learn</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">What You&apos;ll Learn</h3>
                   <p className="text-slate-500 text-sm">Key Outcomes</p>
                 </div>
               </div>
