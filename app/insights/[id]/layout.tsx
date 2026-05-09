@@ -1,7 +1,8 @@
 // Server component layout to handle generateStaticParams
 import { createClient } from '@supabase/supabase-js'
 
-export const dynamicParams = true
+/** Required for `output: 'export'` (Next.js 15+). Only IDs from generateStaticParams are served. */
+export const dynamicParams = false
 
 export async function generateStaticParams() {
   try {

@@ -119,15 +119,14 @@ export default function AcademyPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-dark-950">
       <Navbar />
       
       {/* Hero Section */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-dark-900"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.03),transparent_60%)]"></div>
-        
+        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -150,7 +149,7 @@ export default function AcademyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6"
+              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-6"
             >
               Master <span className="gradient-text">Trading Course</span>
             </motion.h1>
@@ -159,7 +158,7 @@ export default function AcademyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
+              className="text-xl sm:text-2xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed"
             >
               Structured training in price action, risk management, and trading psychology. Online and offline batches. Limited seats. Live sessions and classroom in <span className="text-neon-gold">Kanchipuram</span>.
             </motion.p>
@@ -168,7 +167,7 @@ export default function AcademyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex flex-wrap items-center justify-center gap-6 text-gray-400"
+              className="flex flex-wrap items-center justify-center gap-6 text-slate-500"
             >
               <div className="flex items-center space-x-2">
                 <Clock className="w-5 h-5 text-neon-gold" />
@@ -188,7 +187,7 @@ export default function AcademyPage() {
       </section>
 
       {/* Course Overview */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-20 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Duration */}
@@ -197,33 +196,33 @@ export default function AcademyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-dark-800 rounded-2xl p-8 border border-gray-700"
+              className="bg-dark-800 rounded-2xl p-8 border border-slate-200"
             >
               <div className="flex items-center space-x-4 mb-6">
                 <div className="p-4 bg-neon-gold/20 rounded-xl border border-neon-gold/30">
                   <Clock className="w-8 h-8 text-neon-gold" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Duration</h3>
-                  <p className="text-gray-400 text-sm">Total Course Length</p>
+                  <h3 className="text-2xl font-bold text-slate-900">Duration</h3>
+                  <p className="text-slate-500 text-sm">Total Course Length</p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-400">Total Duration</span>
-                  <span className="text-white font-semibold text-lg">30 + 30 Days</span>
+                  <span className="text-slate-500">Total Duration</span>
+                  <span className="text-slate-900 font-semibold text-lg">30 + 30 Days</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-400">Course Sessions</span>
-                  <span className="text-white font-semibold">30 Days</span>
+                  <span className="text-slate-500">Course Sessions</span>
+                  <span className="text-slate-900 font-semibold">30 Days</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-400">Live Market Sessions</span>
-                  <span className="text-white font-semibold">30 Days</span>
+                  <span className="text-slate-500">Live Market Sessions</span>
+                  <span className="text-slate-900 font-semibold">30 Days</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-400">Format</span>
-                  <span className="text-white font-semibold">Online & Offline (Kanchipuram)</span>
+                  <span className="text-slate-500">Format</span>
+                  <span className="text-slate-900 font-semibold">Online & Offline (Kanchipuram)</span>
                 </div>
               </div>
             </motion.div>
@@ -241,29 +240,29 @@ export default function AcademyPage() {
                   <DollarSign className="w-8 h-8 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Zero Fees</h3>
-                  <p className="text-gray-300 text-sm">Investment in Your Future</p>
+                  <h3 className="text-2xl font-bold text-slate-900">Zero Fees</h3>
+                  <p className="text-slate-600 text-sm">Investment in Your Future</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div>
                   <div className="text-4xl font-bold text-neon-gold mb-2">$0</div>
-                  <p className="text-gray-300 text-sm">Zero Fees - Reach out to us for more details</p>
+                  <p className="text-slate-600 text-sm">Zero Fees - Reach out to us for more details</p>
                 </div>
                 <div className="pt-4 border-t border-neon-gold/30 space-y-2">
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>All modules included</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>Lifetime access to materials</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>Community access</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>Certificate of completion</span>
                   </div>
@@ -276,36 +275,36 @@ export default function AcademyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-dark-800 rounded-2xl p-8 border border-gray-700"
+              className="bg-dark-800 rounded-2xl p-8 border border-slate-200"
             >
               <div className="flex items-center space-x-4 mb-6">
                 <div className="p-4 bg-neon-gold rounded-xl">
                   <DollarSign className="w-8 h-8 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Course Fees</h3>
-                  <p className="text-gray-300 text-sm">Investment in Your Future</p>
+                  <h3 className="text-2xl font-bold text-slate-900">Course Fees</h3>
+                  <p className="text-slate-600 text-sm">Investment in Your Future</p>
                 </div>
               </div>
               <div className="space-y-4">
                 <div>
                   <div className="text-4xl font-bold text-neon-gold mb-2">$250</div>
-                  <p className="text-gray-300 text-sm">One-time payment</p>
+                  <p className="text-slate-600 text-sm">One-time payment</p>
                 </div>
                 <div className="pt-4 border-t border-neon-gold/30 space-y-2">
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>All modules included</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>Lifetime access to materials</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>Community access</span>
                   </div>
-                  <div className="flex items-center space-x-2 text-sm text-gray-300">
+                  <div className="flex items-center space-x-2 text-sm text-slate-600">
                     <CheckCircle2 className="w-4 h-4 text-neon-gold" />
                     <span>Certificate of completion</span>
                   </div>
@@ -319,22 +318,22 @@ export default function AcademyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-dark-800 rounded-2xl p-8 border border-gray-700"
+              className="bg-dark-800 rounded-2xl p-8 border border-slate-200"
             >
               <div className="flex items-center space-x-4 mb-6">
                 <div className="p-4 bg-neon-blue/20 rounded-xl border border-neon-blue/30">
                   <BookOpen className="w-8 h-8 text-neon-blue" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">What You'll Learn</h3>
-                  <p className="text-gray-400 text-sm">Key Outcomes</p>
+                  <h3 className="text-2xl font-bold text-slate-900">What You'll Learn</h3>
+                  <p className="text-slate-500 text-sm">Key Outcomes</p>
                 </div>
               </div>
               <div className="space-y-3">
                 {learningOutcomes.map((outcome, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <outcome.icon className="w-5 h-5 text-neon-gold mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-300 text-sm">{outcome.text}</span>
+                    <span className="text-slate-600 text-sm">{outcome.text}</span>
                   </div>
                 ))}
               </div>
@@ -344,7 +343,7 @@ export default function AcademyPage() {
       </section>
 
       {/* Course Syllabus */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-dark-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -364,10 +363,10 @@ export default function AcademyPage() {
               <span className="text-sm text-neon-gold font-medium">Complete Curriculum</span>
             </motion.div>
 
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Course <span className="gradient-text">Syllabus</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               A comprehensive 5-module program designed to transform you into a master trader
             </p>
           </motion.div>
@@ -382,7 +381,7 @@ export default function AcademyPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="group"
               >
-                <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8 hover:border-neon-gold/50 transition-all duration-300 hover:shadow-xl hover:shadow-neon-gold/10">
+                <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8 hover:border-neon-gold/50 transition-all duration-300 hover:shadow-xl hover:shadow-neon-gold/10">
                   <div className="flex flex-col lg:flex-row gap-8">
                     {/* Module Header */}
                     <div className="lg:w-1/3">
@@ -402,19 +401,19 @@ export default function AcademyPage() {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
-                            <span className="text-sm font-medium text-gray-400">Module {module.id}</span>
-                            <span className="text-sm text-gray-500">•</span>
-                            <span className="text-sm text-gray-400">{module.duration}</span>
+                            <span className="text-sm font-medium text-slate-500">Module {module.id}</span>
+                            <span className="text-sm text-slate-500">•</span>
+                            <span className="text-sm text-slate-500">{module.duration}</span>
                           </div>
-                          <h3 className="text-2xl font-bold text-white mb-2">{module.title}</h3>
-                          <p className="text-gray-300 leading-relaxed">{module.description}</p>
+                          <h3 className="text-2xl font-bold text-slate-900 mb-2">{module.title}</h3>
+                          <p className="text-slate-600 leading-relaxed">{module.description}</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Topics List */}
                     <div className="lg:w-2/3">
-                      <h4 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
+                      <h4 className="text-lg font-semibold text-slate-900 mb-4 flex items-center space-x-2">
                         <PlayCircle className="w-5 h-5 text-neon-gold" />
                         <span>Topics Covered</span>
                       </h4>
@@ -427,7 +426,7 @@ export default function AcademyPage() {
                               module.color === 'neon-gold-dark' ? 'text-neon-gold-dark' :
                               'text-neon-amber'
                             }`} />
-                            <span className="text-gray-300 text-sm">{topic}</span>
+                            <span className="text-slate-600 text-sm">{topic}</span>
                           </div>
                         ))}
                       </div>
@@ -450,10 +449,10 @@ export default function AcademyPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Learning <span className="gradient-text">Formats</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Multiple ways to learn and engage with the material
             </p>
           </motion.div>
@@ -491,7 +490,7 @@ export default function AcademyPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-dark-800 rounded-2xl p-6 border border-gray-700 text-center hover:border-neon-gold/50 transition-all duration-300"
+                className="bg-dark-800 rounded-2xl p-6 border border-slate-200 text-center hover:border-neon-gold/50 transition-all duration-300"
               >
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-xl flex items-center justify-center ${
                   format.color === 'neon-gold' ? 'bg-neon-gold/20 border border-neon-gold/30' :
@@ -506,8 +505,8 @@ export default function AcademyPage() {
                     'text-neon-amber'
                   }`} />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{format.title}</h3>
-                <p className="text-gray-400 text-sm">{format.description}</p>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">{format.title}</h3>
+                <p className="text-slate-500 text-sm">{format.description}</p>
               </motion.div>
             ))}
           </div>
@@ -515,7 +514,7 @@ export default function AcademyPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-black via-dark-900 to-black relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-slate-100 via-white to-dark-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.1),transparent_70%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.05),transparent_60%)]" />
         
@@ -542,7 +541,7 @@ export default function AcademyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6"
             >
               Ready to Join the <span className="gradient-text">Course</span>?
             </motion.h2>
@@ -552,7 +551,7 @@ export default function AcademyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl sm:text-2xl text-gray-300 mb-8 leading-relaxed"
+              className="text-xl sm:text-2xl text-slate-600 mb-8 leading-relaxed"
             >
               Gain clarity, structure, and confidence. Enroll in the next batch or book a free session to learn more.
             </motion.p>
@@ -587,7 +586,7 @@ export default function AcademyPage() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-400"
+              className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-slate-500"
             >
               <div className="flex items-center space-x-2">
                 <CheckCircle2 className="w-4 h-4 text-neon-gold" />

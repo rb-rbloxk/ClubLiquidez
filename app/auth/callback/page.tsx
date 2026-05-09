@@ -52,7 +52,7 @@ export default function AuthCallbackPage() {
     <div className="min-h-screen bg-dark-950 flex items-center justify-center">
       <div className="text-center">
         <Loader2 className="w-8 h-8 text-neon-gold animate-spin mx-auto mb-4" />
-        <p className="text-gray-400">Completing authentication...</p>
+        <p className="text-slate-500">Completing authentication...</p>
       </div>
     </div>
   )

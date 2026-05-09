@@ -174,7 +174,7 @@ const AuthPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -185,11 +185,11 @@ const AuthPage = () => {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Shield className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
                 Welcome to <span className="gradient-text">ClubLiquidez</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Join thousands of traders worldwide and start your journey to financial success.
             </p>
           </motion.div>
@@ -197,13 +197,13 @@ const AuthPage = () => {
       </section>
 
       {/* Auth Form */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="bg-dark-800 rounded-2xl border border-gray-700 p-8"
+            className="bg-dark-800 rounded-2xl border border-slate-800 p-8"
           >
             {!forgotPassword ? (
               <>
@@ -214,7 +214,7 @@ const AuthPage = () => {
                     className={`flex-1 py-3 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                       isLogin 
                         ? 'bg-neon-gold text-black' 
-                        : 'text-gray-400 hover:text-white'
+                        : 'text-slate-500 hover:text-slate-900'
                     }`}
                   >
                     Sign In
@@ -224,56 +224,28 @@ const AuthPage = () => {
                     className={`flex-1 py-3 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
                       !isLogin 
                         ? 'bg-neon-gold text-black' 
-                        : 'text-gray-400 hover:text-white'
+                        : 'text-slate-500 hover:text-slate-900'
                     }`}
                   >
                     Sign Up
                   </button>
                 </div>
 
-                {/* Social Sign-in */}
-                {/* <div className="space-y-4 mb-8">
-                  <p className="text-center text-gray-400 text-sm">Continue with</p>
-                  <div className="grid grid-cols-3 gap-3">
-                    {socialProviders.map((provider) => (
-                      <motion.button
-                        key={provider.name}
-                        type="button"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => handleSocialSignIn(provider.provider)}
-                        className={`${provider.color} text-white py-3 px-4 rounded-lg flex items-center justify-center transition-colors`}
-                        title={`Sign in with ${provider.name}`}
-                      >
-                        <provider.icon className="w-5 h-5" />
-                      </motion.button>
-                    ))}
-                  </div>
-                  <div className="relative">
-                    <div className="absolute inset-0 flex items-center">
-                      <div className="w-full border-t border-gray-600" />
-                    </div>
-                    <div className="relative flex justify-center text-sm">
-                      <span className="px-2 bg-dark-800 text-gray-400">or</span>
-                    </div>
-                  </div>
-                </div> */}
-
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {!isLogin && (
                     <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-slate-600 mb-2">
                         Full Name
                       </label>
                       <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
                         <input
                           type="text"
                           required
                           value={fullName}
                           onChange={(e) => setFullName(e.target.value)}
-                          className="w-full pl-10 pr-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                          className="w-full pl-10 pr-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                           placeholder="Enter your full name"
                         />
                       </div>
@@ -281,40 +253,40 @@ const AuthPage = () => {
                   )}
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-slate-600 mb-2">
                       Email Address
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
                       <input
                         type="email"
                         required
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                         placeholder="Enter your email"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-slate-600 mb-2">
                       Password
                     </label>
                     <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
                       <input
                         type={showPassword ? 'text' : 'password'}
                         required
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="w-full pl-10 pr-12 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                        className="w-full pl-10 pr-12 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                         placeholder="Enter your password"
                       />
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-500 hover:text-slate-900"
                       >
                         {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                       </button>
@@ -322,12 +294,12 @@ const AuthPage = () => {
                     {!isLogin && password && (
                       <div className="mt-2">
                         <div className="flex items-center space-x-2 text-xs">
-                          <div className={`flex-1 h-1 rounded ${password.length >= 8 ? 'bg-green-500' : 'bg-gray-600'}`} />
-                          <div className={`flex-1 h-1 rounded ${/[A-Z]/.test(password) ? 'bg-green-500' : 'bg-gray-600'}`} />
-                          <div className={`flex-1 h-1 rounded ${/[a-z]/.test(password) ? 'bg-green-500' : 'bg-gray-600'}`} />
-                          <div className={`flex-1 h-1 rounded ${/[0-9]/.test(password) ? 'bg-green-500' : 'bg-gray-600'}`} />
+                          <div className={`flex-1 h-1 rounded ${password.length >= 8 ? 'bg-green-500' : 'bg-slate-300'}`} />
+                          <div className={`flex-1 h-1 rounded ${/[A-Z]/.test(password) ? 'bg-green-500' : 'bg-slate-300'}`} />
+                          <div className={`flex-1 h-1 rounded ${/[a-z]/.test(password) ? 'bg-green-500' : 'bg-slate-300'}`} />
+                          <div className={`flex-1 h-1 rounded ${/[0-9]/.test(password) ? 'bg-green-500' : 'bg-slate-300'}`} />
                         </div>
-                        <p className="mt-1 text-xs text-gray-500">
+                        <p className="mt-1 text-xs text-slate-500">
                           Must be at least 8 characters with uppercase, lowercase, and number
                         </p>
                       </div>
@@ -339,9 +311,9 @@ const AuthPage = () => {
                       <label className="flex items-center">
                         <input
                           type="checkbox"
-                          className="w-4 h-4 text-neon-gold bg-dark-700 border-gray-600 rounded focus:ring-neon-gold focus:ring-2"
+                          className="w-4 h-4 text-neon-gold bg-dark-700 border-slate-300 rounded focus:ring-neon-gold focus:ring-2"
                         />
-                        <span className="ml-2 text-sm text-gray-400">Remember me</span>
+                        <span className="ml-2 text-sm text-slate-500">Remember me</span>
                       </label>
                       <button
                         type="button"
@@ -358,9 +330,9 @@ const AuthPage = () => {
                       <input
                         type="checkbox"
                         required
-                        className="w-4 h-4 text-neon-gold bg-dark-700 border-gray-600 rounded focus:ring-neon-gold focus:ring-2 mt-1"
+                        className="w-4 h-4 text-neon-gold bg-dark-700 border-slate-300 rounded focus:ring-neon-gold focus:ring-2 mt-1"
                       />
-                      <label className="ml-2 text-sm text-gray-400">
+                      <label className="ml-2 text-sm text-slate-500">
                         I agree to the{' '}
                         <a href="/terms" className="text-neon-gold hover:text-neon-gold/80">
                           Terms of Service
@@ -387,7 +359,7 @@ const AuthPage = () => {
 
                 {/* Switch Mode */}
                 <div className="mt-8 text-center">
-                  <p className="text-gray-400">
+                  <p className="text-slate-500">
                     {isLogin ? "Don't have an account?" : "Already have an account?"}{' '}
                     <button
                       onClick={() => setIsLogin(!isLogin)}
@@ -401,23 +373,23 @@ const AuthPage = () => {
             ) : (
               <>
                 <div className="text-center mb-8">
-                  <h2 className="text-2xl font-bold text-white mb-2">Reset Password</h2>
-                  <p className="text-gray-400">Enter your email to receive a password reset link</p>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">Reset Password</h2>
+                  <p className="text-slate-500">Enter your email to receive a password reset link</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <label className="block text-sm font-medium text-slate-600 mb-2">
                       Email Address
                     </label>
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
                       <input
                         type="email"
                         required
                         value={resetEmail}
                         onChange={(e) => setResetEmail(e.target.value)}
-                        className="w-full pl-10 pr-4 py-3 bg-dark-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                        className="w-full pl-10 pr-4 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
                         placeholder="Enter your email"
                       />
                     </div>

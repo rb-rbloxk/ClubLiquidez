@@ -44,7 +44,7 @@ export default function ProfilePage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-dark-800 rounded-2xl border border-gray-700 p-8"
+            className="bg-dark-800 rounded-2xl border border-slate-200 p-8"
           >
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-20 h-20 bg-neon-gold rounded-full flex items-center justify-center">
@@ -53,28 +53,28 @@ export default function ProfilePage() {
                 </span>
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white">
+                <h1 className="text-3xl font-bold text-slate-900">
                   {user.user_metadata?.full_name || 'User Profile'}
                 </h1>
-                <p className="text-gray-400">{user.email}</p>
+                <p className="text-slate-500">{user.email}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-dark-700 rounded-lg p-6 border border-gray-600">
+              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <Mail className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-white">Email</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">Email</h3>
                 </div>
-                <p className="text-gray-300">{user.email}</p>
+                <p className="text-slate-600">{user.email}</p>
               </div>
 
-              <div className="bg-dark-700 rounded-lg p-6 border border-gray-600">
+              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <Calendar className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-white">Member Since</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">Member Since</h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-slate-600">
                   {mounted && user.created_at 
                     ? format(new Date(user.created_at), 'MMM dd, yyyy')
                     : user.created_at 
@@ -83,22 +83,22 @@ export default function ProfilePage() {
                 </p>
               </div>
 
-              <div className="bg-dark-700 rounded-lg p-6 border border-gray-600">
+              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <Shield className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-white">Account Status</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">Account Status</h3>
                 </div>
-                <p className="text-gray-300">
+                <p className="text-slate-600">
                   {user.email_confirmed_at ? 'Verified' : 'Pending Verification'}
                 </p>
               </div>
 
-              <div className="bg-dark-700 rounded-lg p-6 border border-gray-600">
+              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <User className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-white">User ID</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">User ID</h3>
                 </div>
-                <p className="text-gray-300 text-sm font-mono truncate">{user.id}</p>
+                <p className="text-slate-600 text-sm font-mono truncate">{user.id}</p>
               </div>
             </div>
           </motion.div>

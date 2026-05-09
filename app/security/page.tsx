@@ -84,7 +84,7 @@ const SecurityPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -95,11 +95,11 @@ const SecurityPage = () => {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Shield className="w-8 h-8 text-neon-gold-champagne" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
                 Security <span className="gradient-text">First</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
               Your security is our top priority. We employ industry-leading security measures 
               to protect your assets and personal information.
             </p>
@@ -112,14 +112,14 @@ const SecurityPage = () => {
       </section>
 
       {/* Security Features */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Security Features</h2>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Security Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {securityFeatures.map((feature, index) => (
                 <motion.div
@@ -127,15 +127,15 @@ const SecurityPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6 hover:border-neon-gold/50 transition-all duration-300"
+                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300"
                 >
                   <div className="flex items-center space-x-4 mb-4">
                     <div className="p-3 bg-dark-700 rounded-lg">
                       <feature.icon className={`w-6 h-6 ${feature.color}`} />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-slate-900">{feature.title}</h3>
                   </div>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-slate-600">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -144,14 +144,14 @@ const SecurityPage = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-16 bg-dark-900">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Security Standards & Compliance</h2>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Security Standards & Compliance</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {certifications.map((cert, index) => (
                 <motion.div
@@ -159,18 +159,18 @@ const SecurityPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6"
+                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <cert.icon className="w-6 h-6 text-neon-gold" />
-                      <h3 className="text-lg font-bold text-white">{cert.name}</h3>
+                      <h3 className="text-lg font-bold text-slate-900">{cert.name}</h3>
                     </div>
                     <span className="px-3 py-1 bg-neon-gold-champagne/20 text-neon-gold-champagne rounded-full text-sm font-medium">
                       {cert.status}
                     </span>
                   </div>
-                  <p className="text-gray-300">{cert.description}</p>
+                  <p className="text-slate-600">{cert.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -179,17 +179,17 @@ const SecurityPage = () => {
       </section>
 
       {/* Security Measures */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Security Measures</h2>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Security Measures</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Infrastructure Security</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-6">Infrastructure Security</h3>
                 <div className="space-y-4">
                   {[
                     'Secure data centers with redundant systems',
@@ -207,14 +207,14 @@ const SecurityPage = () => {
                       className="flex items-center space-x-3"
                     >
                       <CheckCircle className="w-5 h-5 text-neon-gold-champagne" />
-                      <span className="text-gray-300">{item}</span>
+                      <span className="text-slate-600">{item}</span>
                     </motion.div>
                   ))}
                 </div>
               </div>
               
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Application Security</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-6">Application Security</h3>
                 <div className="space-y-4">
                   {[
                     'Secure coding practices and code reviews',
@@ -232,7 +232,7 @@ const SecurityPage = () => {
                       className="flex items-center space-x-3"
                     >
                       <CheckCircle className="w-5 h-5 text-neon-gold-champagne" />
-                      <span className="text-gray-300">{item}</span>
+                      <span className="text-slate-600">{item}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -243,14 +243,14 @@ const SecurityPage = () => {
       </section>
 
       {/* Security Best Practices */}
-      <section className="py-16 bg-dark-900">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Security Best Practices</h2>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Security Best Practices</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -274,11 +274,11 @@ const SecurityPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6 text-center"
+                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 text-center"
                 >
                   <practice.icon className="w-12 h-12 text-neon-gold mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-white mb-3">{practice.title}</h3>
-                  <p className="text-gray-300">{practice.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">{practice.title}</h3>
+                  <p className="text-slate-600">{practice.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -287,7 +287,7 @@ const SecurityPage = () => {
       </section>
 
       {/* Incident Response */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -295,28 +295,28 @@ const SecurityPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-8">Incident Response</h2>
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8 max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Incident Response</h2>
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8 max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">24/7 Security Team</h3>
-                  <p className="text-gray-300 mb-4">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">24/7 Security Team</h3>
+                  <p className="text-slate-600 mb-4">
                     Our dedicated security team monitors our systems around the clock and 
                     responds immediately to any security incidents.
                   </p>
-                  <ul className="space-y-2 text-sm text-gray-400">
+                  <ul className="space-y-2 text-sm text-slate-500">
                     <li>• Real-time threat detection</li>
                     <li>• Automated incident response</li>
                     <li>• Security team escalation</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Transparent Communication</h3>
-                  <p className="text-gray-300 mb-4">
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">Transparent Communication</h3>
+                  <p className="text-slate-600 mb-4">
                     We believe in transparency and will communicate any security incidents 
                     to our users promptly and clearly.
                   </p>
-                  <ul className="space-y-2 text-sm text-gray-400">
+                  <ul className="space-y-2 text-sm text-slate-500">
                     <li>• Immediate incident notification</li>
                     <li>• Regular status updates</li>
                     <li>• Post-incident reports</li>
@@ -329,7 +329,7 @@ const SecurityPage = () => {
       </section>
 
       {/* Contact Security */}
-      <section className="py-16 bg-dark-900">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -337,20 +337,17 @@ const SecurityPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-6">Security Concerns?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Security Concerns?</h2>
+            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
               If you have security concerns or suspect suspicious activity, 
               please contact our security team immediately.
             </p>
             <div className="space-y-4">
               <div className="flex items-center justify-center space-x-2">
                 <AlertTriangle className="w-5 h-5 text-neon-amber" />
-                <span className="text-neon-amber font-semibold">security@clubliquidez.com</span>
+                <span className="text-neon-amber font-semibold">support@clubliquidez.com</span>
               </div>
-              <div className="flex items-center justify-center space-x-2">
-                <Phone className="w-5 h-5 text-neon-gold" />
-                <span className="text-neon-gold font-semibold">+1 (555) 123-4567</span>
-              </div>
+             
             </div>
           </motion.div>
         </div>

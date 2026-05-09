@@ -56,7 +56,7 @@ const GDPRPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -67,14 +67,14 @@ const GDPRPage = () => {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Shield className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
                 GDPR <span className="gradient-text">Compliance</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-6">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
               Your data protection rights under the General Data Protection Regulation (GDPR).
             </p>
-            <div className="text-gray-400">
+            <div className="text-slate-500">
               Last updated: {lastUpdated}
             </div>
           </motion.div>
@@ -82,7 +82,7 @@ const GDPRPage = () => {
       </section>
 
       {/* GDPR Content */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -91,9 +91,9 @@ const GDPRPage = () => {
             className="space-y-12"
           >
             {/* Introduction */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">GDPR Overview</h2>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">GDPR Overview</h2>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   The General Data Protection Regulation (GDPR) is a comprehensive data protection 
                   law that applies to organizations operating within the European Union (EU) and 
@@ -112,7 +112,7 @@ const GDPRPage = () => {
 
             {/* Data Subject Rights */}
             <div>
-              <h2 className="text-3xl font-bold text-white text-center mb-8">Your Data Subject Rights</h2>
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-8">Your Data Subject Rights</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {dataSubjectRights.map((right, index) => (
                   <motion.div
@@ -120,44 +120,44 @@ const GDPRPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-dark-800 rounded-2xl border border-gray-700 p-6"
+                    className="bg-dark-800 rounded-2xl border border-slate-200 p-6"
                   >
                     <div className="flex items-center space-x-3 mb-4">
                       <div className={`p-3 bg-dark-700 rounded-lg`}>
                         <right.icon className={`w-6 h-6 ${right.color}`} />
                       </div>
-                      <h3 className="text-lg font-bold text-white">{right.title}</h3>
+                      <h3 className="text-lg font-bold text-slate-900">{right.title}</h3>
                     </div>
-                    <p className="text-gray-300 text-sm">{right.description}</p>
+                    <p className="text-slate-600 text-sm">{right.description}</p>
                   </motion.div>
                 ))}
               </div>
             </div>
 
             {/* Additional Rights */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Additional Rights</h3>
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Additional Rights</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Right to Restrict Processing</h4>
-                      <p className="text-sm text-gray-400">Request limitation of data processing</p>
+                      <h4 className="text-slate-900 font-semibold">Right to Restrict Processing</h4>
+                      <p className="text-sm text-slate-500">Request limitation of data processing</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Right to Object</h4>
-                      <p className="text-sm text-gray-400">Object to processing of your data</p>
+                      <h4 className="text-slate-900 font-semibold">Right to Object</h4>
+                      <p className="text-sm text-slate-500">Object to processing of your data</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Right to Withdraw Consent</h4>
-                      <p className="text-sm text-gray-400">Withdraw consent at any time</p>
+                      <h4 className="text-slate-900 font-semibold">Right to Withdraw Consent</h4>
+                      <p className="text-sm text-slate-500">Withdraw consent at any time</p>
                     </div>
                   </div>
                 </div>
@@ -165,22 +165,22 @@ const GDPRPage = () => {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Right to Lodge Complaint</h4>
-                      <p className="text-sm text-gray-400">Complain to supervisory authority</p>
+                      <h4 className="text-slate-900 font-semibold">Right to Lodge Complaint</h4>
+                      <p className="text-sm text-slate-500">Complain to supervisory authority</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Right to Compensation</h4>
-                      <p className="text-sm text-gray-400">Seek compensation for damages</p>
+                      <h4 className="text-slate-900 font-semibold">Right to Compensation</h4>
+                      <p className="text-sm text-slate-500">Seek compensation for damages</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Right to Representation</h4>
-                      <p className="text-sm text-gray-400">Appoint a representative</p>
+                      <h4 className="text-slate-900 font-semibold">Right to Representation</h4>
+                      <p className="text-sm text-slate-500">Appoint a representative</p>
                     </div>
                   </div>
                 </div>
@@ -188,40 +188,40 @@ const GDPRPage = () => {
             </div>
 
             {/* Legal Basis */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Legal Basis for Processing</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Legal Basis for Processing</h3>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   We process your personal data based on the following legal grounds:
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                   <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-white font-semibold mb-2">Contract Performance</h4>
-                    <p className="text-sm text-gray-400">To provide our trading services</p>
+                    <h4 className="text-slate-900 font-semibold mb-2">Contract Performance</h4>
+                    <p className="text-sm text-slate-500">To provide our trading services</p>
                   </div>
                   <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-white font-semibold mb-2">Legal Obligation</h4>
-                    <p className="text-sm text-gray-400">To comply with financial regulations</p>
+                    <h4 className="text-slate-900 font-semibold mb-2">Legal Obligation</h4>
+                    <p className="text-sm text-slate-500">To comply with financial regulations</p>
                   </div>
                   <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-white font-semibold mb-2">Legitimate Interest</h4>
-                    <p className="text-sm text-gray-400">To improve our services</p>
+                    <h4 className="text-slate-900 font-semibold mb-2">Legitimate Interest</h4>
+                    <p className="text-sm text-slate-500">To improve our services</p>
                   </div>
                   <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-white font-semibold mb-2">Consent</h4>
-                    <p className="text-sm text-gray-400">For marketing communications</p>
+                    <h4 className="text-slate-900 font-semibold mb-2">Consent</h4>
+                    <p className="text-sm text-slate-500">For marketing communications</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Data Transfers */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <Database className="w-6 h-6 text-neon-gold" />
-                <h3 className="text-xl font-bold text-white">International Data Transfers</h3>
+                <h3 className="text-xl font-bold text-slate-900">International Data Transfers</h3>
               </div>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-slate-600">
                 <p>
                   Your personal data may be transferred to and processed in countries outside the 
                   European Economic Area (EEA). We ensure that such transfers comply with GDPR 
@@ -241,17 +241,15 @@ const GDPRPage = () => {
             </div>
 
             {/* Data Protection Officer */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Data Protection Officer</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Data Protection Officer</h3>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   We have appointed a Data Protection Officer (DPO) to oversee our GDPR compliance 
                   and handle data protection matters:
                 </p>
                 <div className="space-y-2">
-                  <p><strong>Email:</strong> dpo@clubliquidez.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                  <p><strong>Address:</strong> 350 5th Avenue, New York, NY 10118</p>
+                  <p><strong>Email:</strong> support@clubliquidez.com</p>
                 </div>
                 <p>
                   You can contact our DPO directly with any questions about your data protection 
@@ -261,9 +259,9 @@ const GDPRPage = () => {
             </div>
 
             {/* Exercising Your Rights */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Exercising Your Rights</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Exercising Your Rights</h3>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   To exercise your GDPR rights, you can:
                 </p>
@@ -271,17 +269,17 @@ const GDPRPage = () => {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Submit a Request</h4>
-                      <p className="text-sm text-gray-400">
-                        Contact us at privacy@clubliquidez.com with your request
+                      <h4 className="text-slate-900 font-semibold">Submit a Request</h4>
+                      <p className="text-sm text-slate-500">
+                        Contact us at support@clubliquidez.com with your request
                       </p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Provide Identification</h4>
-                      <p className="text-sm text-gray-400">
+                      <h4 className="text-slate-900 font-semibold">Provide Identification</h4>
+                      <p className="text-sm text-slate-500">
                         We may need to verify your identity before processing requests
                       </p>
                     </div>
@@ -289,8 +287,8 @@ const GDPRPage = () => {
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="text-white font-semibold">Response Timeline</h4>
-                      <p className="text-sm text-gray-400">
+                      <h4 className="text-slate-900 font-semibold">Response Timeline</h4>
+                      <p className="text-sm text-slate-500">
                         We will respond to your request within 30 days
                       </p>
                     </div>
@@ -300,16 +298,14 @@ const GDPRPage = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
-              <div className="space-y-4 text-gray-300">
+            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Contact Information</h3>
+              <div className="space-y-4 text-slate-600">
                 <p>
                   For GDPR-related inquiries, please contact us:
                 </p>
                 <div className="space-y-2">
-                  <p><strong>Email:</strong> privacy@clubliquidez.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                  <p><strong>Address:</strong> 350 5th Avenue, New York, NY 10118</p>
+                  <p><strong>Email:</strong> support@clubliquidez.com</p>
                 </div>
                 <p>
                   You also have the right to lodge a complaint with your local data protection 

@@ -34,7 +34,7 @@ const AboutPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -43,10 +43,10 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               ClubLiquidez – <span className="gradient-text">Market Education Services</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Education center in Kanchipuram, Tamil Nadu. We provide structured trading education — not investment advice, not signal selling, not get-rich marketing.
             </p>
           </motion.div>
@@ -63,8 +63,8 @@ const AboutPage = () => {
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
             <div>
-              <h2 className="text-4xl font-bold text-white mb-6">Our Story</h2>
-              <div className="space-y-6 text-gray-300">
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Our Story</h2>
+              <div className="space-y-6 text-slate-600">
                 <p>
                   ClubLiquidez is a market education center based in Kanchipuram, Tamil Nadu. 
                   We focus on structured trading education: Forex, Gold (XAUUSD), price action, 
@@ -83,23 +83,23 @@ const AboutPage = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-dark-800 rounded-2xl border border-gray-700 p-8">
+              <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
                 <div className="flex items-center space-x-3 mb-6">
                   <Award className="w-8 h-8 text-neon-gold" />
-                  <h3 className="text-2xl font-bold text-white">Our Mission</h3>
+                  <h3 className="text-2xl font-bold text-slate-900">Our Mission</h3>
                 </div>
-                <p className="text-gray-300 mb-6">
+                <p className="text-slate-600 mb-6">
                   To provide structured, professional trading education so every student can build discipline, 
                   understand risk, and trade with clarity. We focus on education — not signals, not fund management, not get-rich promises.
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-dark-700 rounded-lg">
-                    <div className="text-2xl font-bold text-neon-gold">2022</div>
-                    <div className="text-sm text-gray-400">Founded</div>
+                    <div className="text-2xl font-bold text-neon-gold">2021</div>
+                    <div className="text-sm text-slate-500">Founded</div>
                   </div>
                   <div className="text-center p-4 bg-dark-700 rounded-lg">
-                    <div className="text-2xl font-bold text-neon-gold-champagne">2023</div>
-                    <div className="text-sm text-gray-400">Launched</div>
+                    <div className="text-2xl font-bold text-neon-gold-champagne">2026</div>
+                    <div className="text-sm text-slate-500">Established</div>
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const AboutPage = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Why Us</h2>
+            <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">Why Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {achievements.map((achievement, index) => (
                 <motion.div
@@ -128,12 +128,12 @@ const AboutPage = () => {
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-dark-800 rounded-2xl border border-gray-700 mb-6 group-hover:border-neon-gold/50 transition-colors"
+                    className="inline-flex items-center justify-center w-16 h-16 bg-dark-800 rounded-2xl border border-slate-200 mb-6 group-hover:border-neon-gold/50 transition-colors"
                   >
                     <achievement.icon className="w-8 h-8 text-neon-gold" />
                   </motion.div>
-                  <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
-                  <div className="text-gray-400">{achievement.label}</div>
+                  <div className="text-3xl font-bold text-slate-900 mb-2">{achievement.value}</div>
+                  <div className="text-slate-500">{achievement.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -150,13 +150,13 @@ const AboutPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-8">Our Approach</h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+            <h2 className="text-4xl font-bold text-slate-900 mb-8">Our Approach</h2>
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
               We are educators first. Our focus is on structured curriculum, small batches, live and offline sessions, 
               and 1:1 mentorship. We do not sell signals, we do not manage client funds, and we do not promise returns. 
               We teach discipline, psychology, and risk — so you can trade with clarity on your own.
             </p>
-            <p className="text-gray-400">
+            <p className="text-slate-500">
               Education center in Kanchipuram, Tamil Nadu. Online and offline batches available.
             </p>
           </motion.div>
@@ -173,9 +173,9 @@ const AboutPage = () => {
           >
             <div className="flex items-center space-x-3 mb-8">
               <Shield className="w-8 h-8 text-neon-gold-champagne" />
-              <h2 className="text-4xl font-bold text-white">What We Stand For</h2>
+              <h2 className="text-4xl font-bold text-slate-900">What We Stand For</h2>
             </div>
-            <p className="text-gray-300 mb-8">
+            <p className="text-slate-600 mb-8">
               We provide educational services only. We do not provide investment advice or manage funds. 
               Trading involves risk; past educational outcomes do not guarantee future results.
             </p>
@@ -189,7 +189,7 @@ const AboutPage = () => {
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-5 h-5 text-neon-gold-champagne" />
-                  <span className="text-gray-300">{item}</span>
+                  <span className="text-slate-600">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -205,7 +205,7 @@ const AboutPage = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Our Values</h2>
+            <h2 className="text-4xl font-bold text-slate-900 text-center mb-12">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -233,12 +233,12 @@ const AboutPage = () => {
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-dark-800 rounded-2xl border border-gray-700 mb-6 group-hover:border-neon-gold/50 transition-colors"
+                    className="inline-flex items-center justify-center w-16 h-16 bg-dark-800 rounded-2xl border border-slate-200 mb-6 group-hover:border-neon-gold/50 transition-colors"
                   >
                     <value.icon className="w-8 h-8 text-neon-gold" />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-400">{value.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{value.title}</h3>
+                  <p className="text-slate-500">{value.description}</p>
                 </motion.div>
               ))}
             </div>

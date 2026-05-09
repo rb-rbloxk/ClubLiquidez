@@ -86,7 +86,7 @@ const BlogPostPage = () => {
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
             <Loader2 className="w-12 h-12 text-neon-gold animate-spin mx-auto mb-4" />
-            <p className="text-gray-400">Loading blog post...</p>
+            <p className="text-slate-500">Loading blog post...</p>
           </div>
         </div>
         <Footer />
@@ -100,9 +100,9 @@ const BlogPostPage = () => {
         <Navbar />
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center max-w-md mx-auto px-4">
-            <AlertCircle className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-            <h1 className="text-2xl font-bold text-white mb-2">Blog Post Not Found</h1>
-            <p className="text-gray-400 mb-6">{error || 'The blog post you are looking for does not exist.'}</p>
+            <AlertCircle className="w-16 h-16 text-slate-600 mx-auto mb-4" />
+            <h1 className="text-2xl font-bold text-slate-900 mb-2">Blog Post Not Found</h1>
+            <p className="text-slate-500 mb-6">{error || 'The blog post you are looking for does not exist.'}</p>
             <Link href="/insights">
               <Button variant="primary" size="md">
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -121,7 +121,7 @@ const BlogPostPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-12 bg-gradient-to-br from-slate-100 via-white to-dark-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -147,16 +147,16 @@ const BlogPostPage = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
               {insight.title}
             </h1>
 
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
               {insight.excerpt}
             </p>
 
             {/* Meta Information */}
-            <div className="flex flex-wrap items-center gap-6 text-gray-400 mb-8">
+            <div className="flex flex-wrap items-center gap-6 text-slate-500 mb-8">
               <div className="flex items-center space-x-2">
                 <User className="w-5 h-5" />
                 <span>{insight.author}</span>
@@ -192,7 +192,7 @@ const BlogPostPage = () => {
                 {insight.tags.map((tag) => (
                   <span 
                     key={tag}
-                    className="inline-flex items-center space-x-1 px-3 py-1 bg-dark-800 border border-gray-700 rounded-full text-sm text-gray-400"
+                    className="inline-flex items-center space-x-1 px-3 py-1 bg-dark-800 border border-slate-200 rounded-full text-sm text-slate-500"
                   >
                     <Tag className="w-3 h-3" />
                     <span>{tag}</span>
@@ -205,7 +205,7 @@ const BlogPostPage = () => {
             <div className="flex items-center space-x-4">
               <button
                 onClick={handleShare}
-                className="flex items-center space-x-2 px-4 py-2 bg-dark-800 border border-gray-700 rounded-lg text-gray-300 hover:text-white hover:border-neon-gold/50 transition-colors"
+                className="flex items-center space-x-2 px-4 py-2 bg-dark-800 border border-slate-200 rounded-lg text-slate-600 hover:text-slate-900 hover:border-neon-gold/50 transition-colors"
               >
                 <Share2 className="w-4 h-4" />
                 <span>Share</span>
@@ -222,19 +222,19 @@ const BlogPostPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="prose prose-invert prose-lg max-w-none
-              prose-headings:text-white font-lexend
-              prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-4
+            className="prose prose-lg max-w-none
+              prose-headings:text-slate-900 font-lexend
+              prose-p:text-slate-600 prose-p:leading-relaxed prose-p:mb-4
               prose-a:text-neon-gold hover:prose-a:text-neon-gold-champagne
-              prose-strong:text-white
+              prose-strong:text-slate-900
               prose-code:text-neon-gold
-              prose-pre:bg-dark-800
-              prose-blockquote:border-l-4 prose-blockquote:border-neon-gold prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-400
-              prose-ul:text-gray-300
-              prose-ol:text-gray-300
-              prose-li:text-gray-300
+              prose-pre:bg-slate-100
+              prose-blockquote:border-l-4 prose-blockquote:border-neon-gold prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-slate-500
+              prose-ul:text-slate-600
+              prose-ol:text-slate-600
+              prose-li:text-slate-600
               prose-img:rounded-xl
-              prose-img:border prose-img:border-gray-700"
+              prose-img:border prose-img:border-slate-200"
             dangerouslySetInnerHTML={{ __html: insight.content }}
           />
         </div>
@@ -244,8 +244,8 @@ const BlogPostPage = () => {
       <section className="py-16 bg-dark-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">More Insights</h2>
-            <p className="text-gray-400">Explore more articles from Club Liquidez</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">More Insights</h2>
+            <p className="text-slate-500">Explore more articles from Club Liquidez</p>
           </div>
           <div className="text-center">
             <Link href="/insights">

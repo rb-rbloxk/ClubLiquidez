@@ -1,24 +1,39 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Outfit, Spectral } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider } from '@/contexts/AuthContext'
 
-const inter = Inter({ subsets: ['latin'] })
+const outfit = Outfit({
+  subsets: ['latin'],
+  variable: '--font-outfit',
+  display: 'swap',
+})
+
+const spectral = Spectral({
+  subsets: ['latin'],
+  weight: ['500', '600', '700'],
+  variable: '--font-spectral',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'ClubLiquidez - Professional Forex & Gold Trading Academy',
-  description: 'Master the markets with structured trading education. Professional training in price action, risk management, and trading psychology — online and offline. Education center in Kanchipuram, Tamil Nadu.',
-  keywords: 'trading academy, forex education, gold trading course, trading psychology, risk management, ClubLiquidez, market education, Kanchipuram, mentorship',
-  authors: [{ name: 'ClubLiquidez Team' }],
+  metadataBase: new URL('https://clubliquidez.com'),
+  title: 'ClubLiquidez — Gold Trading Education (XAUUSD) | Courses & Mentorship',
+  description:
+    'Specialist gold trading education: XAUUSD structure, session playbook, risk sizing for metals, and psychology — taught in small batches with live mentorship. Classroom in Kanchipuram; online options. Educational services only.',
+  keywords:
+    'gold trading course, XAUUSD education, bullion trading training, gold futures education, trading psychology, risk management gold, ClubLiquidez, Kanchipuram trading academy',
+  authors: [{ name: 'ClubLiquidez' }],
   icons: {
     icon: '/LC.png',
     shortcut: '/LC.png',
     apple: '/LC.png',
   },
   openGraph: {
-    title: 'ClubLiquidez - Professional Forex & Gold Trading Academy',
-    description: 'Structured trading education in price action, risk management, and psychology. Online and offline batches. Market Educational Services.',
+    title: 'ClubLiquidez — Gold Trading Education',
+    description:
+      'Structured XAUUSD curriculum: sessions, risk, and discipline — not signals. Small batches, live labs, and mentorship.',
     url: 'https://clubliquidez.com',
     siteName: 'ClubLiquidez',
     images: [
@@ -26,7 +41,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ClubLiquidez Trading Academy',
+        alt: 'ClubLiquidez Gold Trading Education',
       },
     ],
     locale: 'en_US',
@@ -34,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ClubLiquidez - Professional Forex & Gold Trading Academy',
-    description: 'Structured trading education in price action, risk management, and psychology. Online and offline batches.',
+    title: 'ClubLiquidez — Gold Trading Education',
+    description: 'XAUUSD-focused courses, live labs, and mentorship. Education only.',
     images: ['/og-image.jpg'],
   },
   robots: {
@@ -60,19 +75,24 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-dark-950 text-white antialiased`}>
+    <html lang="en">
+      <body
+        className={`${outfit.variable} ${spectral.variable} font-sans bg-dark-950 text-slate-900 antialiased`}
+      >
         <AuthProvider>
-          <p className="sr-only">We provide educational services only. We do not provide investment advice or manage funds.</p>
+          <p className="sr-only">
+            Educational services only. We do not provide investment advice, portfolio management, or trade
+            signals.
+          </p>
           {children}
           <Toaster
             position="top-right"
             toastOptions={{
               duration: 4000,
               style: {
-                background: '#1e293b',
-                color: '#fff',
-                border: '1px solid #334155',
+                background: '#ffffff',
+                color: '#0f172a',
+                border: '1px solid #e8dfd0',
               },
             }}
           />
@@ -80,4 +100,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-} 
+}

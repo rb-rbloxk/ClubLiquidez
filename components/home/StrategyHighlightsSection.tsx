@@ -3,15 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { 
-  Target, 
-  TrendingUp, 
-  Shield, 
-  Zap,
-  BarChart3,
-  Lock,
-  CheckCircle2
-} from 'lucide-react'
+import { Layers, BookMarked, Headphones, LineChart, ClipboardList, GraduationCap } from 'lucide-react'
 
 const StrategyHighlightsSection = () => {
   const [ref, inView] = useInView({
@@ -21,142 +13,130 @@ const StrategyHighlightsSection = () => {
 
   const highlights = [
     {
-      icon: Target,
-      title: 'Precision Timing',
-      description: 'Our algorithms identify optimal entry and exit points with millisecond precision, maximizing profit potential while minimizing risk exposure.',
-      stat: '99.7%',
-      statLabel: 'Accuracy Rate'
+      icon: Layers,
+      title: 'Stacked learning path',
+      description:
+        'Foundations → session craft → risk engineering → capstone review. No random playlist of videos.',
+      stat: '6+',
+      statLabel: 'Core modules',
     },
     {
-      icon: TrendingUp,
-      title: 'Proven Performance',
-      description: 'Backed by 12+ years of historical data and real-world trading results. Our strategies have consistently outperformed market averages.',
-      stat: '2.4x',
-      statLabel: 'Avg Returns'
+      icon: BookMarked,
+      title: 'Living playbook',
+      description:
+        'Templates for bias, invalidation, and review—updated as markets evolve, archived for alumni.',
+      stat: '40+',
+      statLabel: 'Drill assets',
     },
     {
-      icon: Shield,
-      title: 'Risk Management',
-      description: 'Multi-layered risk controls including stop-loss automation, position sizing algorithms, and real-time exposure monitoring.',
-      stat: '87%',
-      statLabel: 'Win Rate'
+      icon: Headphones,
+      title: 'Office-hour cadence',
+      description:
+        'Scheduled mentor blocks each week—bring charts, journals, or psychology questions.',
+      stat: 'Weekly',
+      statLabel: 'Live access',
     },
     {
-      icon: Zap,
-      title: 'Lightning Execution',
-      description: 'Ultra-low latency execution engine ensures you never miss an opportunity. Trades execute in under 10ms from signal to market.',
-      stat: '<10ms',
-      statLabel: 'Execution Time'
+      icon: LineChart,
+      title: 'Volatility gyms',
+      description:
+        'Labs simulate widening spreads and violent corrections so muscle memory forms offline.',
+      stat: '12',
+      statLabel: 'Scenario labs / yr',
     },
     {
-      icon: BarChart3,
-      title: 'Advanced Analytics',
-      description: 'Real-time performance tracking, comprehensive backtesting suite, and detailed analytics to optimize your trading strategy.',
-      stat: '24/7',
-      statLabel: 'Monitoring'
+      icon: ClipboardList,
+      title: 'Journal scoring',
+      description:
+        'Rubrics focus on process KPIs—risk adherence, setup quality—not vanity P&L screenshots.',
+      stat: '360°',
+      statLabel: 'Feedback loop',
     },
     {
-      icon: Lock,
-      title: 'Secure & Compliant',
-      description: 'Bank-level security, enterprise-grade infrastructure, and full regulatory compliance. Your funds and data are always protected.',
-      stat: '100%',
-      statLabel: 'Secure'
-    }
+      icon: GraduationCap,
+      title: 'Credential mindset',
+      description:
+        'Assignments mirror desk expectations: prep notes, scenario logs, post-trade audits.',
+      stat: 'Cohort',
+      statLabel: 'Capstone',
+    },
+  ]
+
+  const summary = [
+    { label: 'Educators', value: 'Senior mentors' },
+    { label: 'Focus asset', value: 'XAUUSD' },
+    { label: 'Seat policy', value: 'Capped' },
+    { label: 'Support', value: 'Community + DM hours' },
   ]
 
   return (
-    <section className="py-24 bg-black relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(201,165,92,0.08),transparent_60%)]" />
-      
+    <section className="py-24 md:py-28 relative overflow-hidden">
+      <div className="absolute inset-0" />
+
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.65 }}
+          className="text-center mb-14"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold/30 mb-6"
-          >
-            <CheckCircle2 className="w-4 h-4 text-neon-gold" />
-            <span className="text-sm text-neon-gold font-medium">Strategy Excellence</span>
-          </motion.div>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 mb-5 shadow-sm">
+            <GraduationCap className="w-4 h-4 text-brand-gold" />
+            <span className="text-sm font-medium text-slate-700">Curriculum architecture</span>
+          </div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
-          >
-            Highlights of Our <span className="gradient-text">Strategy</span>
-          </motion.h2>
+          <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 mb-5">
+            Highlights of our <span className="gradient-text">gold program</span>
+          </h2>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
-            Built on years of research, testing, and real-world application. Every feature is designed 
-            to give you a competitive edge in the markets.
-          </motion.p>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Built like a professional desk onboarding—not a content funnel. Every artifact ties back to disciplined bullion
+            trading education.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {highlights.map((highlight, index) => (
             <motion.div
               key={highlight.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 22 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+              transition={{ duration: 0.5, delay: 0.05 * index }}
               className="group"
             >
-              <div className="h-full bg-dark-800 rounded-2xl border border-gray-700 p-8 hover:border-neon-gold/50 transition-all duration-300 hover:shadow-xl hover:shadow-neon-gold/10 hover:-translate-y-1">
-                <div className="flex items-start justify-between mb-6">
-                  <div className="p-4 bg-neon-gold/20 rounded-xl border border-neon-gold/30 group-hover:scale-110 transition-transform">
+              <div className="h-full bg-white rounded-2xl border border-slate-200 p-8 hover:border-brand-gold/35 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
+                <div className="flex items-start justify-between gap-4 mb-5">
+                  <div className="p-4 bg-neon-gold/12 rounded-xl border border-neon-gold/25 group-hover:scale-[1.03] transition-transform">
                     <highlight.icon className="w-8 h-8 text-neon-gold" />
                   </div>
                   <div className="text-right">
-                    <div className="text-3xl font-bold text-neon-gold mb-1">{highlight.stat}</div>
-                    <div className="text-sm text-gray-400">{highlight.statLabel}</div>
+                    <div className="text-2xl font-spectral font-semibold text-brand-gold-dark">{highlight.stat}</div>
+                    <div className="text-xs text-slate-500 uppercase tracking-wide">{highlight.statLabel}</div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-3">{highlight.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{highlight.description}</p>
+                <h3 className="font-spectral text-lg font-semibold text-slate-900 mb-2">{highlight.title}</h3>
+                <p className="text-slate-600 leading-relaxed text-sm">{highlight.description}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4"
         >
-          {[
-            { label: 'Years of Experience', value: '12+' },
-            { label: 'Active Members', value: '50K+' },
-            { label: 'Trades Executed', value: '10M+' },
-            { label: 'Success Rate', value: '87%' }
-          ].map((item, index) => (
-            <motion.div
+          {summary.map((item) => (
+            <div
               key={item.label}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 1.1 + index * 0.1 }}
-              className="text-center p-6 bg-dark-800 rounded-xl border border-gray-700"
+              className="text-center p-5 bg-white rounded-xl border border-slate-200 shadow-sm"
             >
-              <div className="text-3xl font-bold text-neon-gold mb-2">{item.value}</div>
-              <div className="text-sm text-gray-400">{item.label}</div>
-            </motion.div>
+              <div className="text-lg font-spectral font-semibold text-slate-900 mb-1">{item.value}</div>
+              <div className="text-xs text-slate-500 uppercase tracking-wide">{item.label}</div>
+            </div>
           ))}
         </motion.div>
       </div>
@@ -165,4 +145,3 @@ const StrategyHighlightsSection = () => {
 }
 
 export default StrategyHighlightsSection
-

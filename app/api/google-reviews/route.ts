@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server'
 
+/** Required for `output: 'export'` (Next.js 15+). */
+export const dynamic = 'force-static'
+
 /**
  * Fetches Google Place reviews via Places API (New).
  * Set GOOGLE_PLACES_API_KEY and GOOGLE_PLACE_ID in .env.local.

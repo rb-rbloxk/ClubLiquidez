@@ -5,272 +5,203 @@ import { motion } from 'framer-motion'
 import { gsap } from 'gsap'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
-import { ArrowRight, GraduationCap, BookOpen, Users } from 'lucide-react'
+import { ArrowRight, Clock, Shield, Sparkles } from 'lucide-react'
 
 const HeroSection = () => {
   const chartRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (chartRef.current) {
-      // Animated candlestick chart
       const tl = gsap.timeline({ repeat: -1, yoyo: true })
-      
-      tl.to(chartRef.current, {
-        duration: 2,
-        scale: 1.05,
-        ease: "power2.inOut"
-      })
-      
-      // Add floating animation
+      tl.to(chartRef.current, { duration: 2, scale: 1.04, ease: 'power2.inOut' })
       gsap.to(chartRef.current, {
-        y: -20,
+        y: -16,
         duration: 3,
-        ease: "power2.inOut",
+        ease: 'power2.inOut',
         yoyo: true,
-        repeat: -1
+        repeat: -1,
       })
     }
   }, [])
 
   const features = [
     {
-      icon: GraduationCap,
-      title: 'Structured Programs',
-      description: 'Beginner to advanced curriculum'
+      icon: Clock,
+      title: 'London · NY overlap',
+      description: 'How we map liquidity windows for XAUUSD',
     },
     {
-      icon: BookOpen,
-      title: 'Live & Offline Batches',
-      description: 'Online and classroom in Kanchipuram'
+      icon: Shield,
+      title: 'Risk built for metals',
+      description: 'Ticks, spread & position sizing for gold',
     },
     {
-      icon: Users,
-      title: '1:1 Mentorship',
-      description: 'Personal guidance from experienced educators'
-    }
+      icon: Sparkles,
+      title: 'Live lab + mentorship',
+      description: 'Walkthroughs, reviews, no copy-trading',
+    },
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-0">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-dark-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.1),transparent_50%)]" />
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16 md:pt-20 md:pb-0">
+      <div className="absolute inset-0 bg-hero-aurum" />
+      <div className="absolute inset-0" />
+
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-20 left-20 w-48 h-48 md:w-72 md:h-72 bg-neon-gold rounded-full blur-3xl opacity-30"
+          animate={{ scale: [1, 1.15, 1], opacity: [0.25, 0.45, 0.25] }}
+          transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-10 -left-10 w-72 h-72 md:w-96 md:h-96 rounded-full bg-brand-gold/25 blur-3xl"
         />
         <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.7, 0.4],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute bottom-20 right-20 w-64 h-64 md:w-96 md:h-96 bg-neon-gold-champagne rounded-full blur-3xl opacity-30"
+          animate={{ scale: [1.1, 1, 1.1], opacity: [0.3, 0.55, 0.3] }}
+          transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute bottom-0 right-0 w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full bg-brand-navy/80 blur-3xl"
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-8 md:pt-0">
-          {/* Left Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.75 }}
             className="space-y-8"
           >
-            <div className="space-y-4">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold/20"
-              >
-                <div className="w-2 h-2 bg-neon-gold rounded-full animate-pulse" />
-                <span className="text-sm text-neon-gold">Market Educational Services</span>
-              </motion.div>
-              
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight"
-              >
-                Professional Trading Academy
-              </motion.h1>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-lg sm:text-xl text-gray-300 max-w-lg"
-              >
-                Structured training in price action, risk management, and trading psychology — online and offline.
-              </motion.p>
-              
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45 }}
-                className="text-base sm:text-lg text-gray-400 max-w-lg"
-              >
-                Education center in Kanchipuram. Learn with small batches, live sessions, and dedicated mentorship.
-              </motion.p>
-            </div>
-
-            {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.15 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/5 backdrop-blur-sm"
+            >
+              <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
+              <span className="text-sm text-brand-gold-bright font-medium tracking-wide">
+                XAUUSD · Educational programs only
+              </span>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="font-spectral text-5xl sm:text-6xl lg:text-[4.25rem] xl:text-7xl font-semibold leading-[1.08] text-slate-50"
+            >
+              Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold-bright via-brand-gold to-brand-gold-deep">gold</span>{' '}
+              with structure.
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.28 }}
+              className="text-lg sm:text-xl text-slate-300 max-w-xl leading-relaxed"
+            >
+              ClubLiquidez teaches how institutional-grade traders <em className="text-slate-200 not-italic">read</em>{' '}
+              bullion: sessions, volatility regimes, risk for leveraged metals, and the psychology to stay consistent.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.34 }}
+              className="text-base text-slate-400 max-w-xl leading-relaxed border-l-2 border-brand-gold/50 pl-4"
+            >
+              Small cohorts · Live drills · Optional classroom days in Kanchipuram · No signals · No managed accounts
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4"
             >
               <Link href="/contact">
-                <Button variant="primary" size="lg" className="group">
-                  Enroll Now
+                <Button variant="primary" size="lg" className="group shadow-lg shadow-brand-gold/20">
+                  Book an intake call
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               <Link href="/academy">
-                <Button variant="secondary" size="lg">
-                  View Courses
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="!border-white/30 !text-slate-100 hover:!bg-white/10 hover:!border-white/50"
+                >
+                  Gold curriculum
                 </Button>
               </Link>
             </motion.div>
 
-            {/* Features */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8"
+              transition={{ delay: 0.48 }}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4"
             >
-              {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 + index * 0.1 }}
-                  className="flex items-center space-x-3"
-                >
-                  <div className="p-2 bg-dark-800 rounded-lg border border-neon-gold/20">
-                    <feature.icon className="w-5 h-5 text-neon-gold" />
+              {features.map((feature) => (
+                <div key={feature.title} className="flex gap-3">
+                  <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 h-fit">
+                    <feature.icon className="w-5 h-5 text-brand-gold" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white">{feature.title}</h3>
-                    <p className="text-sm text-gray-400">{feature.description}</p>
+                    <h3 className="font-semibold text-slate-100 text-sm">{feature.title}</h3>
+                    <p className="text-xs text-slate-400 leading-snug mt-0.5">{feature.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Animated Chart */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.75, delay: 0.1 }}
             className="relative"
           >
             <div
               ref={chartRef}
-              className="relative w-full h-96 bg-dark-800 rounded-2xl border border-gray-700 overflow-hidden"
+              className="relative w-full h-[22rem] sm:h-96 rounded-2xl border border-white/10 bg-brand-navy/90 backdrop-blur-md overflow-hidden shadow-2xl shadow-black/40"
             >
-              {/* Chart Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-dark-800 to-dark-900" />
-              
-              {/* Animated Candlesticks */}
-              <div className="absolute inset-0 p-6">
-                <div className="flex items-end justify-between h-full space-x-1">
-                  {[...Array(20)].map((_, i) => (
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-midnight/50 to-brand-navy/90" />
+
+              <div className="absolute top-4 left-4 right-4 flex items-start justify-between z-10">
+                <div>
+                  <p className="text-xs uppercase tracking-wider text-slate-400">Spot gold · teaching chart</p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="w-2.5 h-2.5 rounded-full bg-brand-gold" />
+                    <span className="text-slate-100 font-semibold">XAU/USD</span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-slate-500 text-xs">Illustrative</p>
+                  <p className="text-xl font-spectral text-slate-50">2,648.20</p>
+                  <p className="text-sm text-brand-gold-bright">+0.42%</p>
+                </div>
+              </div>
+
+              <div className="absolute inset-0 top-20 px-5 pb-6">
+                <div className="flex items-end justify-between h-full gap-1">
+                  {[...Array(24)].map((_, i) => (
                     <motion.div
                       key={i}
                       initial={{ height: 0 }}
-                      animate={{ height: Math.random() * 100 + 20 }}
-                      transition={{
-                        duration: 1,
-                        delay: i * 0.1,
-                        ease: "easeOut"
-                      }}
-                      className={`w-2 rounded-sm ${
-                        Math.random() > 0.5 ? 'bg-neon-gold-champagne' : 'bg-neon-gold'
+                      animate={{ height: `${22 + ((i * 17) % 65)}%` }}
+                      transition={{ duration: 0.9, delay: i * 0.04, ease: 'easeOut' }}
+                      className={`flex-1 max-w-[10px] rounded-sm ${
+                        i % 4 === 0 ? 'bg-brand-gold/90' : 'bg-brand-gold-deep/80'
                       }`}
                     />
                   ))}
                 </div>
               </div>
 
-              {/* Chart Overlay */}
-              <div className="absolute top-4 left-4 right-4">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-neon-gold rounded-full" />
-                    <span className="text-sm text-white font-medium">XAU/USD</span>
-                  </div>
-                  <div className="text-right">
-                    <div className="text-lg font-bold text-white">$4,320.00</div>
-                    <div className="text-sm text-neon-gold-champagne">+2.45%</div>
-                  </div>
-                </div>
+              <div className="absolute bottom-4 left-4 right-4 z-10 rounded-lg bg-black/35 border border-white/10 px-4 py-3">
+                <p className="text-xs text-slate-300">
+                  <span className="text-brand-gold font-medium">Session lab:</span> mark liquidity, define invalidation,
+                  size for volatility — before you touch a platform.
+                </p>
               </div>
-
-              {/* Floating Elements */}
-              <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                  opacity: [0.5, 1, 0.5],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute top-1/2 left-1/4 w-2 h-2 bg-neon-gold rounded-full"
-              />
-              <motion.div
-                animate={{
-                  y: [0, 10, 0],
-                  opacity: [0.3, 0.8, 0.3],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="absolute bottom-1/4 right-1/3 w-1 h-1 bg-neon-gold-champagne rounded-full"
-              />
             </div>
-
-            {/* Partner Logos */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="mt-8 text-center"
-            >
-              {/* <p className="text-sm text-gray-400 mb-4">Trusted by leading exchanges</p>
-              <div className="flex items-center justify-center space-x-8 opacity-60">
-                {['Binance', 'Coinbase', 'Kraken', 'FTX'].map((exchange) => (
-                  <div key={exchange} className="text-gray-500 font-medium text-sm">
-                    {exchange}
-                  </div>
-                ))}
-              </div> */}
-            </motion.div>
           </motion.div>
         </div>
       </div>
@@ -278,4 +209,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection 
+export default HeroSection

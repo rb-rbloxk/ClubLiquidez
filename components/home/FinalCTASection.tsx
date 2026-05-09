@@ -10,61 +10,51 @@ import { ArrowRight } from 'lucide-react'
 const FinalCTASection = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0.12,
   })
 
   return (
-    <section className="py-24 bg-gradient-to-b from-black via-dark-900 to-black relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.15),transparent_50%)]" />
-      
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-24 md:py-28 relative overflow-hidden">
+      <div className="absolute inset-0" />
+
+      <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 26 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.65 }}
           className="space-y-8"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-4"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
-              <span className="gradient-text">Precision.</span> <span className="text-white">Discipline.</span> <span className="gradient-text">Growth.</span>
+          <div className="space-y-4">
+            <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 leading-tight">
+              Ready to treat gold like a <span className="gradient-text">craft</span>—not a gamble?
             </h2>
-            <p className="text-xl sm:text-2xl text-gray-300">
-              This is structured trading education.
+            <p className="text-xl text-slate-600">
+              Tell us where you are on the learning curve—we&apos;ll map the right cohort, schedule, and mentor fit.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-lg text-gray-400 max-w-2xl mx-auto"
-          >
-            If you're ready to learn with structure instead of chasing shortcuts…
-          </motion.p>
+          <p className="text-base text-slate-500 max-w-xl mx-auto">
+            Share goals, risk tolerance, and availability. Our team replies with straight answers—no enrollment pressure
+            tactics.
+          </p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.55, delay: 0.12 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link href="/contact">
-              <Button variant="primary" size="lg" className="group">
-                Enroll Now
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button variant="primary" size="lg" className="group shadow-lg shadow-brand-gold/15">
+                Talk to admissions
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </Link>
             <Link href="/programs">
               <Button variant="secondary" size="lg" className="group">
-                View Programs
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                Compare programs
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </Link>
           </motion.div>
@@ -75,4 +65,3 @@ const FinalCTASection = () => {
 }
 
 export default FinalCTASection
-

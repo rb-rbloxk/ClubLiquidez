@@ -83,8 +83,8 @@ export default function ProgramsPage() {
 
       {/* Hero */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-black to-dark-900" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(201,165,92,0.1),transparent_50%)]" />
+        <div className="absolute inset-0" />
+        <div className="absolute inset-0" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -97,10 +97,10 @@ export default function ProgramsPage() {
               <div className="w-2 h-2 bg-neon-gold rounded-full animate-pulse" />
               <span className="text-sm text-neon-gold">Programs & Batches</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
               Our <span className="gradient-text">Programs</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Beginner to advanced. Weekend, online live, and offline classroom batches. Limited seats per batch.
             </p>
           </motion.div>
@@ -108,7 +108,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* Program Cards */}
-      <section className="py-20 bg-dark-900">
+      <section className="py-20 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, index) => (
@@ -118,7 +118,7 @@ export default function ProgramsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="bg-dark-800 rounded-2xl border border-gray-700 p-6 hover:border-neon-gold/50 transition-all duration-300 flex flex-col"
+                className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 flex flex-col"
               >
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
@@ -135,8 +135,8 @@ export default function ProgramsPage() {
                     'text-neon-amber'
                   }`} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{program.title}</h3>
-                <p className="text-gray-400 flex-1 mb-6">{program.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{program.title}</h3>
+                <p className="text-slate-500 flex-1 mb-6">{program.description}</p>
                 <Link href={program.href}>
                   <Button variant="secondary" size="md" className="w-full group">
                     {program.cta}
@@ -150,9 +150,9 @@ export default function ProgramsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-dark-950 border-t border-gray-800">
+      <section className="py-16 bg-dark-950 border-t border-slate-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-300 mb-6">
+          <p className="text-slate-600 mb-6">
             Not sure which program fits? Book a free session and we’ll help you choose.
           </p>
           <Link href="/contact">

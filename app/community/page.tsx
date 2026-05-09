@@ -98,7 +98,7 @@ const CommunityPage = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-black via-black to-dark-900">
+      <section className="pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -109,11 +109,11 @@ const CommunityPage = () => {
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Users className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-white">
+              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
                 Trading <span className="gradient-text">Community</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
               Connect with fellow traders, share strategies, and learn from the community. 
               Join thousands of traders worldwide.
             </p>
@@ -131,7 +131,7 @@ const CommunityPage = () => {
       </section>
 
       {/* Community Stats */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -154,12 +154,12 @@ const CommunityPage = () => {
                 >
                   <motion.div
                     whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center justify-center w-16 h-16 bg-dark-800 rounded-2xl border border-gray-700 mb-6 group-hover:border-neon-gold/50 transition-colors"
+                    className="inline-flex items-center justify-center w-16 h-16 bg-dark-800 rounded-2xl border border-slate-200 mb-6 group-hover:border-neon-gold/50 transition-colors"
                   >
                     <stat.icon className="w-8 h-8 text-neon-gold" />
                   </motion.div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-3xl font-bold text-slate-900 mb-2">{stat.value}</div>
+                  <div className="text-slate-500">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -168,7 +168,7 @@ const CommunityPage = () => {
       </section>
 
       {/* Categories and Discussions */}
-      <section className="py-16 bg-dark-900">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -195,19 +195,19 @@ const CommunityPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6 hover:border-neon-gold/50 transition-all duration-300 cursor-pointer"
+                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-neon rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">{discussion.avatar}</span>
+                        <span className="text-slate-900 font-bold text-sm">{discussion.avatar}</span>
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-2 mb-2">
-                          <h3 className="text-lg font-bold text-white">{discussion.title}</h3>
+                          <h3 className="text-lg font-bold text-slate-900">{discussion.title}</h3>
                           {discussion.featured && <Star className="w-4 h-4 text-yellow-400" />}
                         </div>
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
+                        <div className="flex items-center space-x-4 text-sm text-slate-500">
                           <span>by {discussion.author}</span>
                           <span>•</span>
                           <span>{discussion.time}</span>
@@ -216,7 +216,7 @@ const CommunityPage = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center space-x-4 text-sm text-slate-500">
                       <div className="flex items-center space-x-1">
                         <MessageSquare className="w-4 h-4" />
                         <span>{discussion.replies}</span>
@@ -239,14 +239,14 @@ const CommunityPage = () => {
       </section>
 
       {/* Top Contributors */}
-      <section className="py-16">
+      <section className="py-16 bg-dark-850">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Top Contributors</h2>
+            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Top Contributors</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {topContributors.map((contributor, index) => (
                 <motion.div
@@ -254,13 +254,13 @@ const CommunityPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6 text-center hover:border-neon-gold/50 transition-all duration-300"
+                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 text-center hover:border-neon-gold/50 transition-all duration-300"
                 >
                   <div className="w-16 h-16 bg-gradient-neon rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">{contributor.avatar}</span>
+                    <span className="text-slate-900 font-bold text-lg">{contributor.avatar}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">{contributor.name}</h3>
-                  <div className="space-y-2 text-sm text-gray-400">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{contributor.name}</h3>
+                  <div className="space-y-2 text-sm text-slate-500">
                     <div>{contributor.posts} posts</div>
                     <div>{contributor.reputation} reputation</div>
                   </div>
@@ -280,7 +280,7 @@ const CommunityPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-white mb-8">Community Guidelines</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Community Guidelines</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -301,10 +301,10 @@ const CommunityPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-gray-700 p-6"
+                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6"
                 >
-                  <h3 className="text-xl font-bold text-white mb-4">{guideline.title}</h3>
-                  <p className="text-gray-300">{guideline.description}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4">{guideline.title}</h3>
+                  <p className="text-slate-600">{guideline.description}</p>
                 </motion.div>
               ))}
             </div>
