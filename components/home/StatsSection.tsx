@@ -12,7 +12,7 @@ const StatsSection = () => {
 
   const stats = [
     { label: 'Learners coached', value: '500+' },
-    { label: 'Gold-first curriculum', value: 'XAUUSD' },
+    { label: 'Market-first curriculum', value: 'Market' },
     { label: 'Mentor ratio', value: '1:12' },
     { label: 'Live hours / cohort', value: '30+' },
   ]

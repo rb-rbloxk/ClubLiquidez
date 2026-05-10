@@ -7,7 +7,7 @@ import { Calendar, TrendingUp, BookOpen, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 
-const GoldCycleSection = () => {
+const MarketCycleSection = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -46,7 +46,7 @@ const GoldCycleSection = () => {
           </div>
 
           <h2 className="font-spectral text-4xl sm:text-5xl font-semibold text-slate-900 mb-4">
-            Gold rewards students who <span className="gradient-text">respect calendars</span>
+            The market rewards students who <span className="gradient-text">respect calendars</span>
           </h2>
 
           <p className="text-lg text-slate-600 mb-3">
@@ -108,7 +108,7 @@ const GoldCycleSection = () => {
               </p>
               <Link href="/programs">
                 <Button variant="primary" size="md" className="w-full group">
-                  View gold programs
+                  View market programs
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-0.5 transition-transform" />
                 </Button>
               </Link>
@@ -161,4 +161,4 @@ const GoldCycleSection = () => {
   )
 }
 
-export default GoldCycleSection
+export default MarketCycleSection

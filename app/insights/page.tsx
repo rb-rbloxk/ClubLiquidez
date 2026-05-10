@@ -104,15 +104,25 @@ const InsightsPage = () => {
   const categories = [
     { id: 'all', name: 'All Insights', count: displayArticles.length },
     { id: 'Forex Education', name: 'Forex Education', count: displayArticles.filter(a => a.category === 'Forex Education').length },
-    { id: 'Gold Strategy', name: 'Gold Strategy', count: displayArticles.filter(a => a.category === 'Gold Strategy').length },
+    {
+      id: 'Market Strategy',
+      name: 'Market Strategy',
+      count: displayArticles.filter(
+        (a) => a.category === 'Market Strategy' || a.category === 'Gold Strategy'
+      ).length,
+    },
     { id: 'Risk Management', name: 'Risk Management', count: displayArticles.filter(a => a.category === 'Risk Management').length },
     { id: 'Trading Psychology', name: 'Trading Psychology', count: displayArticles.filter(a => a.category === 'Trading Psychology').length },
     { id: 'Market Breakdown', name: 'Market Breakdown', count: displayArticles.filter(a => a.category === 'Market Breakdown').length },
     { id: 'Technical Analysis', name: 'Technical Analysis', count: displayArticles.filter(a => a.category === 'Technical Analysis').length }
   ]
 
-  const filteredArticles = displayArticles.filter(article => {
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory
+  const filteredArticles = displayArticles.filter((article) => {
+    const matchesCategory =
+      selectedCategory === 'all' ||
+      article.category === selectedCategory ||
+      (selectedCategory === 'Market Strategy' &&
+        (article.category === 'Market Strategy' || article.category === 'Gold Strategy'))
     const matchesSearch = article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          article.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -139,7 +149,7 @@ const InsightsPage = () => {
               Market <span className="gradient-text">Insights</span>
             </h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-              Educational blog for traders. Forex education, Gold strategy, risk management, trading psychology, and market breakdowns. No signal service — just learning.
+              Educational blog for traders. Forex education, market strategy, risk management, trading psychology, and market breakdowns. No signal service — just learning.
             </p>
             
             {/* Search and Filters */}
@@ -196,7 +206,7 @@ const InsightsPage = () => {
                   >
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-3 py-1 bg-neon-gold/20 text-neon-gold rounded-full text-sm font-medium">
-                        {article.category}
+                        {article.category === 'Gold Strategy' ? 'Market Strategy' : article.category}
                       </span>
                       <Star className="w-5 h-5 text-yellow-400" />
                     </div>
@@ -281,12 +291,12 @@ const InsightsPage = () => {
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       article.category === 'Forex Education' ? 'bg-neon-gold/20 text-neon-gold' :
-                      article.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
+                      article.category === 'Market Strategy' || article.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
                       article.category === 'Risk Management' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
                       article.category === 'Trading Psychology' ? 'bg-neon-amber/20 text-neon-amber' :
                       'bg-neon-gold/20 text-neon-gold'
                     }`}>
-                      {article.category}
+                      {article.category === 'Gold Strategy' ? 'Market Strategy' : article.category}
                     </span>
                     {article.featured && <Star className="w-4 h-4 text-yellow-400" />}
                   </div>

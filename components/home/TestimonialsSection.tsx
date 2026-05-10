@@ -20,11 +20,11 @@ type Testimonial = {
 const FALLBACK_TESTIMONIALS: Testimonial[] = [
   {
     name: 'Ananya R.',
-    role: 'Cohort 12 · XAU focus',
+    role: 'Cohort 12 · Market focus',
     location: 'Chennai, IN',
     image: 'AR',
     rating: 5,
-    text: 'The session map alone changed how I plan my week. I finally understand when gold is “breathing” vs. trending.',
+    text: 'The session map alone changed how I plan my week. I finally understand when the market is “breathing” vs. trending.',
     highlight: 'Session structure',
   },
   {
@@ -51,7 +51,7 @@ const FALLBACK_TESTIMONIALS: Testimonial[] = [
     location: 'Singapore',
     image: 'WL',
     rating: 5,
-    text: 'Gold fundamentals lectures tied cleanly into charts. No astrology—just frameworks I can reuse.',
+    text: 'Market fundamentals lectures tied cleanly into charts. No astrology—just frameworks I can reuse.',
     highlight: 'Macro literacy',
   },
   {

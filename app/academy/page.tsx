@@ -49,15 +49,15 @@ export default function AcademyPage() {
     },
     {
       id: 2,
-      title: 'Gold (XAUUSD) Strategy',
+      title: 'Market Strategy',
       icon: TrendingUp,
-      description: 'Specialized focus on Gold: price action, key levels, and strategy tailored to XAUUSD.',
+      description: 'Specialized focus on the market: price action, key levels, and strategy tailored to live conditions.',
       topics: [
-        'Gold market drivers',
+        'Market drivers',
         'Key support and resistance',
-        'Gold-specific patterns',
-        'Session-based Gold behavior',
-        'Risk parameters for Gold'
+        'Market-specific patterns',
+        'Session-based market behavior',
+        'Risk parameters for the market'
       ],
       duration: '3 weeks',
       color: 'neon-gold-champagne'
@@ -110,7 +110,7 @@ export default function AcademyPage() {
   ]
 
   const learningOutcomes = [
-    { icon: CheckCircle2, text: 'Understand Forex and Gold (XAUUSD) from basics to strategy' },
+    { icon: CheckCircle2, text: 'Understand Forex and the market from basics to strategy' },
     { icon: CheckCircle2, text: 'Apply price action and key level analysis' },
     { icon: CheckCircle2, text: 'Implement professional risk management systems' },
     { icon: CheckCircle2, text: 'Build discipline and trading psychology' },
@@ -142,7 +142,7 @@ export default function AcademyPage() {
               className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold-deep/30 mb-8"
             >
               <Award className="w-4 h-4 text-neon-gold" />
-              <span className="text-sm text-neon-gold font-medium">Professional Forex & Gold Trading Academy</span>
+              <span className="text-sm text-neon-gold font-medium">Professional Forex & Market Trading Academy</span>
             </motion.div>
             
             <motion.h1

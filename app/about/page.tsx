@@ -66,7 +66,7 @@ const AboutPage = () => {
               <div className="space-y-6 text-slate-600">
                 <p>
                   ClubLiquidez is a market education center based in Kanchipuram, Tamil Nadu. 
-                  We focus on structured trading education: Forex, Gold (XAUUSD), price action, 
+                  We focus on structured trading education: Forex, market structure, price action, 
                   risk management, and trading psychology.
                 </p>
                 <p>

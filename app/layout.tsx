@@ -19,11 +19,11 @@ const spectral = Spectral({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://clubliquidez.com'),
-  title: 'ClubLiquidez — Gold Trading Education (XAUUSD) | Courses & Mentorship',
+  title: 'ClubLiquidez — Market Trading Education | Courses & Mentorship',
   description:
-    'Specialist gold trading education: XAUUSD structure, session playbook, risk sizing for metals, and psychology — taught in small batches with live mentorship. Classroom in Kanchipuram; online options. Educational services only.',
+    'Specialist market trading education: structure, session playbook, risk sizing for metals, and psychology — taught in small batches with live mentorship. Classroom in Kanchipuram; online options. Educational services only.',
   keywords:
-    'gold trading course, XAUUSD education, bullion trading training, gold futures education, trading psychology, risk management gold, ClubLiquidez, Kanchipuram trading academy',
+    'market trading course, market education, bullion trading training, futures education, trading psychology, risk management market, ClubLiquidez, Kanchipuram trading academy',
   authors: [{ name: 'ClubLiquidez' }],
   icons: {
     icon: '/LC.png',
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     apple: '/LC.png',
   },
   openGraph: {
-    title: 'ClubLiquidez — Gold Trading Education',
+    title: 'ClubLiquidez — Market Trading Education',
     description:
-      'Structured XAUUSD curriculum: sessions, risk, and discipline — not signals. Small batches, live labs, and mentorship.',
+      'Structured market curriculum: sessions, risk, and discipline — not signals. Small batches, live labs, and mentorship.',
     url: 'https://clubliquidez.com',
     siteName: 'ClubLiquidez',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ClubLiquidez Gold Trading Education',
+        alt: 'ClubLiquidez Market Trading Education',
       },
     ],
     locale: 'en_US',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ClubLiquidez — Gold Trading Education',
-    description: 'XAUUSD-focused courses, live labs, and mentorship. Education only.',
+    title: 'ClubLiquidez — Market Trading Education',
+    description: 'Market-focused courses, live labs, and mentorship. Education only.',
     images: ['/og-image.jpg'],
   },
   robots: {

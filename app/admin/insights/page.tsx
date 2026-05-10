@@ -114,7 +114,7 @@ const AdminInsightsPage = () => {
       excerpt: insight.excerpt,
       content: plainTextContent,
       author: insight.author,
-      category: insight.category,
+      category: insight.category === 'Gold Strategy' ? 'Market Strategy' : insight.category,
       tags: insight.tags || [],
       featured: insight.featured,
       published: insight.published,
@@ -476,7 +476,7 @@ const AdminInsightsPage = () => {
                       className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
                     >
                       <option value="Forex Education">Forex Education</option>
-                      <option value="Gold Strategy">Gold Strategy</option>
+                      <option value="Market Strategy">Market Strategy</option>
                       <option value="Risk Management">Risk Management</option>
                       <option value="Trading Psychology">Trading Psychology</option>
                       <option value="Market Breakdown">Market Breakdown</option>
@@ -609,12 +609,12 @@ const AdminInsightsPage = () => {
                       <div className="flex items-center space-x-3 mb-2">
                         <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                           insight.category === 'Forex Education' ? 'bg-neon-gold/20 text-neon-gold' :
-                          insight.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
+                          insight.category === 'Market Strategy' || insight.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
                           insight.category === 'Risk Management' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
                           insight.category === 'Trading Psychology' ? 'bg-neon-amber/20 text-neon-amber' :
                           'bg-neon-gold/20 text-neon-gold'
                         }`}>
-                          {insight.category}
+                          {insight.category === 'Gold Strategy' ? 'Market Strategy' : insight.category}
                         </span>
                         {insight.featured && (
                           <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs flex items-center space-x-1">

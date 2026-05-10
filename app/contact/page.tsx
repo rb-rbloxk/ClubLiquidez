@@ -367,7 +367,7 @@ const ContactPage = () => {
                 },
                 {
                   question: 'What is included in the course?',
-                  answer: 'Structured curriculum (Forex, Gold, Price Action, Risk Management, Psychology), live sessions, study materials, and mentorship. We do not provide investment advice or manage funds.'
+                  answer: 'Structured curriculum (Forex, Market, Price Action, Risk Management, Psychology), live sessions, study materials, and mentorship. We do not provide investment advice or manage funds.'
                 },
                 {
                   question: 'Do you offer customer support?',

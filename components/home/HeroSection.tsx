@@ -28,12 +28,12 @@ const HeroSection = () => {
     {
       icon: Clock,
       title: 'London · NY overlap',
-      description: 'How we map liquidity windows for XAUUSD',
+      description: 'How we map liquidity windows for the market',
     },
     {
       icon: Shield,
       title: 'Risk built for metals',
-      description: 'Ticks, spread & position sizing for gold',
+      description: 'Ticks, spread & position sizing for the market',
     },
     {
       icon: Sparkles,
@@ -76,7 +76,7 @@ const HeroSection = () => {
             >
               <span className="w-2 h-2 rounded-full bg-brand-gold animate-pulse" />
               <span className="text-sm text-brand-gold-bright font-medium tracking-wide">
-                XAUUSD · Educational programs only
+                Market · Educational programs only
               </span>
             </motion.div>
 
@@ -86,7 +86,7 @@ const HeroSection = () => {
               transition={{ delay: 0.2 }}
               className="font-spectral text-5xl sm:text-6xl lg:text-[4.25rem] xl:text-7xl font-semibold leading-[1.08] text-slate-50"
             >
-              Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold-bright via-brand-gold to-brand-gold-deep">gold</span>{' '}
+              Master <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold-bright via-brand-gold to-brand-gold-deep">Market</span>{' '}
               with structure.
             </motion.h1>
 
@@ -127,7 +127,7 @@ const HeroSection = () => {
                   size="lg"
                   className="!border-white/30 !text-slate-100 hover:!bg-white/10 hover:!border-white/50"
                 >
-                  Gold curriculum
+                  Market curriculum
                 </Button>
               </Link>
             </motion.div>
@@ -166,10 +166,10 @@ const HeroSection = () => {
 
               <div className="absolute top-4 left-4 right-4 flex items-start justify-between z-10">
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-slate-400">Spot gold · teaching chart</p>
+                  <p className="text-xs uppercase tracking-wider text-slate-400">Spot market · teaching chart</p>
                   <div className="flex items-center gap-2 mt-1">
                     <span className="w-2.5 h-2.5 rounded-full bg-brand-gold" />
-                    <span className="text-slate-100 font-semibold">XAU/USD</span>
+                    <span className="text-slate-100 font-semibold">XAUUSD</span>
                   </div>
                 </div>
                 <div className="text-right">
