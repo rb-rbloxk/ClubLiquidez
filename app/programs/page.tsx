@@ -37,10 +37,10 @@ const programs = [
     color: 'neon-gold-champagne',
   },
   {
-    id: 'gold',
-    title: 'Gold Specialist Program',
+    id: 'market',
+    title: 'Market Specialist Program',
     icon: BookOpen,
-    description: 'Focused on XAUUSD (Gold): price action, key levels, session-based behavior, and Gold-specific risk parameters.',
+    description: 'Focused on the market: price action, key levels, session-based behavior, and market-specific risk parameters.',
     cta: 'Enroll',
     href: '/contact',
     color: 'neon-gold-dark',

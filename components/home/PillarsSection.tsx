@@ -16,9 +16,9 @@ const PillarsSection = () => {
   const firstThreePillars = [
     {
       icon: GraduationCap,
-      title: 'XAUUSD Core Curriculum',
+      title: 'Market Core Curriculum',
       description:
-        'From tick behaviour to higher-timeframe narrative—learn how gold prices absorb news, sessions, and flows.',
+        'From tick behaviour to higher-timeframe narrative—learn how market prices absorb news, sessions, and flows.',
       features: [
         'Liquidity & volatility regimes',
         'Chart frameworks used in live labs',
@@ -33,7 +33,7 @@ const PillarsSection = () => {
       icon: Shield,
       title: 'Risk Architecture for Metals',
       description:
-        'Position sizing, spread awareness, and drawdown planning tailored to gold—not generic FX templates.',
+        'Position sizing, spread awareness, and drawdown planning tailored to the market—not generic FX templates.',
       features: ['Ticks, points & contract logic', 'Stops that respect volatility', 'Journal metrics we actually grade'],
       href: '/tools',
       color: 'neon-gold-champagne',
@@ -66,7 +66,7 @@ const PillarsSection = () => {
       icon: Crown,
       title: 'Programs & Cohorts',
       description:
-        'Rolling intakes for beginners, intensive gold specialist weekends, and hybrid online + classroom tracks.',
+        'Rolling intakes for beginners, intensive market specialist weekends, and hybrid online + classroom tracks.',
       features: ['Seat caps per cohort', 'Kanchipuram classroom days', 'Partner-friendly schedules'],
       href: '/programs',
       color: 'neon-gold',
@@ -159,7 +159,7 @@ const PillarsSection = () => {
           </div>
 
           <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4">
-            Built for <span className="gradient-text">serious gold students</span>
+            Built for <span className="gradient-text">serious market students</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Five pillars. One mandate: teach durable process for trading education—not adrenaline-driven clicks.

@@ -27,7 +27,7 @@ const FinalCTASection = () => {
         >
           <div className="space-y-4">
             <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 leading-tight">
-              Ready to treat gold like a <span className="gradient-text">craft</span>—not a gamble?
+              Ready to treat the market like a <span className="gradient-text">craft</span>—not a gamble?
             </h2>
             <p className="text-xl text-slate-600">
               Tell us where you are on the learning curve—we&apos;ll map the right cohort, schedule, and mentor fit.

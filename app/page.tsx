@@ -5,7 +5,7 @@ import HeroSection from '@/components/home/HeroSection'
 import BrandIntroSection from '@/components/home/BrandIntroSection'
 import PillarsSection from '@/components/home/PillarsSection'
 import TrustSection from '@/components/home/TrustSection'
-import GoldCycleSection from '@/components/home/GoldCycleSection'
+import MarketCycleSection from '@/components/home/MarketCycleSection'
 import StrategyHighlightsSection from '@/components/home/StrategyHighlightsSection'
 import TestimonialsSection from '@/components/home/TestimonialsSection'
 import StatsSection from '@/components/home/StatsSection'
@@ -19,7 +19,7 @@ export default function HomePage() {
       <BrandIntroSection />
       <PillarsSection />
       <TrustSection />
-      <GoldCycleSection />
+      <MarketCycleSection />
       <StrategyHighlightsSection />
       <TestimonialsSection />
       <StatsSection />

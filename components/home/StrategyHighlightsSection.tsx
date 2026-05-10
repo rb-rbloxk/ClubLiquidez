@@ -87,12 +87,12 @@ const StrategyHighlightsSection = () => {
           </div>
 
           <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 mb-5">
-            Highlights of our <span className="gradient-text">gold program</span>
+            Highlights of our <span className="gradient-text">market program</span>
           </h2>
 
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Built like a professional desk onboarding—not a content funnel. Every artifact ties back to disciplined bullion
-            trading education.
+            Built like a professional desk onboarding—not a content funnel. Every artifact ties back to disciplined
+            market trading education.
           </p>
         </motion.div>
 

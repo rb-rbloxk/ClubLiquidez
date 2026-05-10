@@ -56,7 +56,7 @@ const Footer = () => {
   ]
 
   const trustBadges = [
-    { name: 'Gold-first syllabus', icon: BookOpen },
+    { name: 'Market-first syllabus', icon: BookOpen },
     { name: 'Educational charter', icon: Shield },
     { name: 'Small cohort promise', icon: Users },
   ]
@@ -78,7 +78,7 @@ const Footer = () => {
                 </div>
               </Link>
               <p className="text-slate-400 max-w-md text-sm leading-relaxed">
-                Specialist gold trading education for serious learners—session craft, metals risk, psychology, and mentor-led
+                Specialist market trading education for serious learners—session craft, metals risk, psychology, and mentor-led
                 labs. Based in Kanchipuram with hybrid delivery worldwide.
               </p>
 
@@ -128,7 +128,7 @@ const Footer = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
-              <h3 className="text-lg font-spectral font-semibold text-slate-100 mb-2">Gold market briefing list</h3>
+              <h3 className="text-lg font-spectral font-semibold text-slate-100 mb-2">Market briefing list</h3>
               <p className="text-slate-500 text-sm">
                 Session notes, enrollment windows, and educator essays—no spam, unsubscribe anytime.
               </p>

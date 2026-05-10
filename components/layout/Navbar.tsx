@@ -44,7 +44,7 @@ const Navbar = () => {
               <div className="relative h-6 md:h-8 w-auto drop-shadow-sm">
                 <Image
                   src="/LCP.png"
-                  alt="ClubLiquidez — Gold Trading Education"
+                  alt="ClubLiquidez — Market Trading Education"
                   width={200}
                   height={32}
                   className="object-contain h-full w-auto"

@@ -29,7 +29,7 @@ const BrandIntroSection = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-8"
           >
             <Compass className="w-4 h-4 text-brand-gold" />
-            <span className="text-sm font-medium text-slate-700">Why gold education — why now</span>
+            <span className="text-sm font-medium text-slate-700">Why market education — why now</span>
           </motion.div>
 
           <h2 className="font-spectral text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 leading-tight">
@@ -37,12 +37,12 @@ const BrandIntroSection = () => {
           </h2>
 
           <p className="text-lg sm:text-xl text-slate-600 mb-5 leading-relaxed">
-            Gold trades differently than indices or FX pairs: wider swings, session personalities, and macro headlines
+            The market trades differently than indices or FX pairs: wider swings, session personalities, and macro headlines
             that move tape fast. Most retail curriculum glosses over that. We don&apos;t.
           </p>
 
           <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed max-w-3xl mx-auto">
-            ClubLiquidez is built around <strong className="text-slate-800">XAUUSD mechanics</strong>: how liquidity
+            ClubLiquidez is built around <strong className="text-slate-800">market mechanics</strong>: how liquidity
             builds through London and New York, how to normalize risk when spreads widen, and how to journal trades so
             improvement compounds. Education only—we never execute trades for you or sell alerts.
           </p>

@@ -81,7 +81,7 @@ const TrustSection = () => {
             Why learners pick <span className="gradient-text">ClubLiquidez</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Gold education needs friction—in the right places.
+            Market education needs friction—in the right places.
           </p>
         </motion.div>
 
@@ -152,7 +152,7 @@ const TrustSection = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-slate-600 mt-12 font-medium max-w-2xl mx-auto"
         >
-          If you want entertainment trading content, there are faster feeds. If you want syllabus-grade rigor for gold,
+          If you want entertainment trading content, there are faster feeds. If you want syllabus-grade rigor for the market,
           stay here.
         </motion.p>
       </div>

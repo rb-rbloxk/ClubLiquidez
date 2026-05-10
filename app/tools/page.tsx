@@ -203,7 +203,7 @@ const TradingToolsPage = () => {
     let microLot = 1000
     
     if (isXAU) {
-      standardLot = 100 // Gold: 100 oz = 1 standard lot
+      standardLot = 100 // Market (XAU): 100 oz = 1 standard lot
       miniLot = 10 // 10 oz = 1 mini lot
       microLot = 1 // 1 oz = 1 micro lot
     } else if (isBTC) {
@@ -221,7 +221,7 @@ const TradingToolsPage = () => {
     let lotType = ''
     
     if (isXAU) {
-      // For gold, show lot size (standard, mini, or micro lots)
+      // For market (XAU), show lot size (standard, mini, or micro lots)
       if (standardLots >= 1) {
         lotSizeDisplay = standardLots.toFixed(3)
         lotType = 'Standard Lots'
