@@ -78,13 +78,11 @@ export default function ProgramsPage() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 })
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
 
       {/* Hero */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0" />
-        <div className="absolute inset-0" />
+      <section className="relative py-24 bg-white border-b border-neutral-200">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -93,14 +91,14 @@ export default function ProgramsPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold/20 mb-8">
-              <div className="w-2 h-2 bg-neon-gold rounded-full animate-pulse" />
-              <span className="text-sm text-neon-gold">Programs & Batches</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-100 rounded-full border border-neutral-200 mb-8">
+              <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse" />
+              <span className="text-sm text-neutral-800 font-medium">Programs &amp; Batches</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Our <span className="gradient-text">Programs</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
+              Our <span className="text-[#b89428]">Programs</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto">
               Beginner to advanced. Weekend, online live, and offline classroom batches. Limited seats per batch.
             </p>
           </motion.div>
@@ -108,7 +106,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* Program Cards */}
-      <section className="py-20 bg-dark-850">
+      <section className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, index) => (
@@ -118,25 +116,13 @@ export default function ProgramsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.08 }}
-                className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 flex flex-col"
+                className="bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-gold transition-all duration-300 flex flex-col shadow-sm"
               >
-                <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                    program.color === 'neon-gold' ? 'bg-neon-gold/20' :
-                    program.color === 'neon-gold-champagne' ? 'bg-neon-gold-champagne/20' :
-                    program.color === 'neon-gold-dark' ? 'bg-neon-gold-dark/20' :
-                    'bg-neon-amber/20'
-                  }`}
-                >
-                  <program.icon className={`w-6 h-6 ${
-                    program.color === 'neon-gold' ? 'text-neon-gold' :
-                    program.color === 'neon-gold-champagne' ? 'text-neon-gold-champagne' :
-                    program.color === 'neon-gold-dark' ? 'text-neon-gold-dark' :
-                    'text-neon-amber'
-                  }`} />
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-neutral-100 border border-neutral-200">
+                  <program.icon className="w-6 h-6 text-[#b89428]" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">{program.title}</h3>
-                <p className="text-slate-500 flex-1 mb-6">{program.description}</p>
+                <h3 className="text-xl font-bold text-black mb-3">{program.title}</h3>
+                <p className="text-neutral-600 flex-1 mb-6">{program.description}</p>
                 <Link href={program.href}>
                   <Button variant="primary" size="md" className="w-full group">
                     {program.cta}
@@ -150,10 +136,10 @@ export default function ProgramsPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-dark-950 border-t border-slate-200">
+      <section className="py-16 bg-neutral-50 border-t border-neutral-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-slate-600 mb-6">
-            Not sure which program fits? Book a free session and we’ll help you choose.
+          <p className="text-neutral-700 text-lg mb-6">
+            Not sure which program fits? Book a free session and we&apos;ll help you choose.
           </p>
           <Link href="/contact">
             <Button variant="primary" size="lg" className="group">

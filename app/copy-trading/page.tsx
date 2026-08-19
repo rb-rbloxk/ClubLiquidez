@@ -10,30 +10,27 @@ import Link from 'next/link'
 
 const CopyTradingPage = () => {
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden bg-dark-900">
-        <div className="absolute inset-0" />
-        <div className="absolute inset-0" />
-
+      <section className="relative py-24 bg-white border-b border-neutral-200">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold-champagne/20 mb-8">
-              <div className="w-2 h-2 bg-neon-gold-champagne rounded-full animate-pulse" />
-              <span className="text-sm text-neon-gold-champagne">Mentorship Program</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-100 rounded-full border border-neutral-200 mb-8">
+              <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse" />
+              <span className="text-sm text-neutral-800 font-medium">Mentorship Program</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Personal <span className="gradient-text">Trading Mentorship</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
+              Personal <span className="text-[#b89428]">Trading Mentorship</span>
             </h1>
 
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-4">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto mb-4 leading-relaxed">
               1:1 and group mentorship. We guide you through structured feedback and disciplined thinking — we teach you how to trade, we do not copy trades for you.
             </p>
 
-            <p className="text-lg text-slate-500 max-w-3xl mx-auto">
+            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
               Professional Trading Mentorship. One-to-One trading Mentorship. Live Market Practical Sessions.
             </p>
           </div>
@@ -41,13 +38,13 @@ const CopyTradingPage = () => {
       </section>
 
       {/* What You Get */}
-      <section className="py-20 bg-dark-850">
+      <section className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              How <span className="gradient-text">Mentorship</span> Works
+            <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+              How <span className="text-[#b89428]">Mentorship</span> Works
             </h2>
-            <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
               Structured guidance. No trade copying. You learn, you decide, you execute.
             </p>
           </div>
@@ -65,21 +62,21 @@ const CopyTradingPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-dark-800 rounded-2xl p-6 border border-slate-200"
+                className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-sm"
               >
-                <item.icon className="w-10 h-10 text-neon-gold mb-4" />
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-slate-500 text-sm">{item.desc}</p>
+                <item.icon className="w-10 h-10 text-[#b89428] mb-4" />
+                <h3 className="text-lg font-semibold text-black mb-2">{item.title}</h3>
+                <p className="text-neutral-600 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
 
           <div className="max-w-4xl mx-auto space-y-12">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-                For <span className="gradient-text">whom?</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+                For <span className="text-[#b89428]">whom?</span>
               </h2>
-              <ul className="space-y-3 text-slate-600 text-lg">
+              <ul className="space-y-3 text-neutral-700 text-lg">
                 <li>– Traders who want structured guidance, not signals</li>
                 <li>– Working professionals who want to learn with accountability</li>
                 <li>– Beginners who want a clear path and feedback</li>
@@ -88,10 +85,10 @@ const CopyTradingPage = () => {
             </div>
 
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-                Why <span className="gradient-text">mentorship?</span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+                Why <span className="text-[#b89428]">mentorship?</span>
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed">
+              <p className="text-neutral-700 text-lg leading-relaxed">
                 We do not manage your account or copy trades for you. We teach you how to think, plan, and execute with discipline. Your capital stays in your control; our role is to guide your learning and hold you accountable to your own rules.
               </p>
             </div>
@@ -100,13 +97,13 @@ const CopyTradingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark-850">
+      <section className="py-20 bg-neutral-50 border-t border-neutral-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-            Ready for <span className="gradient-text">Structured Guidance?</span>
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+            Ready for <span className="text-[#b89428]">Structured Guidance?</span>
           </h2>
 
-          <p className="text-slate-600 text-lg">
+          <p className="text-neutral-700 text-lg">
             Limited mentorship slots. Book a free session to see if we&apos;re a fit.
           </p>
 

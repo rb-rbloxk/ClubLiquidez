@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Compass } from 'lucide-react'
+import { Compass, Sparkles } from 'lucide-react'
 
 const BrandIntroSection = () => {
   const [ref, inView] = useInView({
@@ -12,42 +12,40 @@ const BrandIntroSection = () => {
   })
 
   return (
-    <section className="relative py-24 md:py-28 bg-dark-950 overflow-hidden border-y border-slate-200/60">
-      <div className="absolute inset-0" />
-
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-20 bg-white text-black border-y border-neutral-200">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 28 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-8"
+            initial={{ scale: 0.95 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-neutral-100 border border-neutral-200 mb-6"
           >
-            <Compass className="w-4 h-4 text-brand-gold" />
-            <span className="text-sm font-medium text-slate-700">Why market education — why now</span>
+            <Sparkles className="w-4 h-4 text-brand-gold" />
+            <span className="text-sm font-medium text-neutral-800">Why market education — why now</span>
           </motion.div>
 
-          <h2 className="font-spectral text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 mb-6 leading-tight">
-            Bullion rewards <span className="gradient-text">preparation</span>—not adrenaline.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-black mb-6 leading-tight">
+            Bullion rewards <span className="text-[#b89428]">preparation</span>—not adrenaline.
           </h2>
 
-          <p className="text-lg sm:text-xl text-slate-600 mb-5 leading-relaxed">
+          <p className="text-lg sm:text-xl text-neutral-600 mb-5 leading-relaxed tracking-tight">
             The market trades differently than indices or FX pairs: wider swings, session personalities, and macro headlines
             that move tape fast. Most retail curriculum glosses over that. We don&apos;t.
           </p>
 
-          <p className="text-base sm:text-lg text-slate-500 mb-8 leading-relaxed max-w-3xl mx-auto">
-            ClubLiquidez is built around <strong className="text-slate-800">market mechanics</strong>: how liquidity
+          <p className="text-base sm:text-lg text-neutral-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+            ClubLiquidez is built around <strong className="text-black font-semibold">market mechanics</strong>: how liquidity
             builds through London and New York, how to normalize risk when spreads widen, and how to journal trades so
             improvement compounds. Education only—we never execute trades for you or sell alerts.
           </p>
 
-          <p className="text-lg font-spectral text-brand-gold-dark font-medium border-t border-slate-200 pt-8 max-w-2xl mx-auto">
+          <p className="text-lg font-semibold tracking-tight text-[#b89428] border-t border-neutral-200 pt-8 max-w-2xl mx-auto">
             Structured drills. Honest feedback. No get-rich narrative.
           </p>
         </motion.div>

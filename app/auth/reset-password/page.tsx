@@ -105,17 +105,17 @@ function ResetPasswordForm() {
 
   if (!isValidLink) {
     return (
-      <main className="min-h-screen bg-dark-950">
+      <main className="min-h-screen bg-white text-black">
         <Navbar />
-        <section className="pt-32 pb-16 bg-gradient-to-br from-slate-100 via-white to-dark-900">
+        <section className="pt-32 pb-16 bg-white border-b border-neutral-200">
           <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-dark-800 rounded-2xl border border-slate-200 p-8 text-center"
+              className="bg-neutral-50 rounded-2xl border border-neutral-200 p-8 text-center shadow-sm"
             >
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Invalid Reset Link</h2>
-              <p className="text-slate-500 mb-6">
+              <h2 className="text-2xl font-bold text-black mb-2">Invalid Reset Link</h2>
+              <p className="text-neutral-600 mb-6 text-sm leading-relaxed">
                 This password reset link is invalid or has expired. Please request a new one.
               </p>
               <Button
@@ -137,22 +137,22 @@ function ResetPasswordForm() {
 
   if (isSuccess) {
     return (
-      <main className="min-h-screen bg-dark-950">
+      <main className="min-h-screen bg-white text-black">
         <Navbar />
-        <section className="pt-32 pb-16 bg-gradient-to-br from-slate-100 via-white to-dark-900">
+        <section className="pt-32 pb-16 bg-white border-b border-neutral-200">
           <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              className="bg-dark-800 rounded-2xl border border-slate-200 p-8 text-center"
+              className="bg-neutral-50 rounded-2xl border border-neutral-200 p-8 text-center shadow-sm"
             >
               <div className="flex justify-center mb-4">
-                <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-green-500" />
+                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center border border-green-500/30">
+                  <CheckCircle className="w-8 h-8 text-green-600" />
                 </div>
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Password Reset Successful!</h2>
-              <p className="text-slate-500 mb-6">
+              <h2 className="text-2xl font-bold text-black mb-2">Password Reset Successful!</h2>
+              <p className="text-neutral-600 mb-6 text-sm leading-relaxed">
                 Your password has been updated. You can now sign in with your new password.
               </p>
               <Button
@@ -173,11 +173,11 @@ function ResetPasswordForm() {
   }
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-slate-100 via-white to-dark-900">
+      <section className="pt-32 pb-16 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -186,12 +186,12 @@ function ResetPasswordForm() {
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <Lock className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
-                Reset Your <span className="gradient-text">Password</span>
+              <Lock className="w-8 h-8 text-[#b89428]" />
+              <h1 className="text-5xl lg:text-6xl font-bold text-black">
+                Reset Your <span className="text-[#b89428]">Password</span>
               </h1>
             </div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
               Enter your new password below. Make sure it&apos;s strong and secure.
             </p>
           </motion.div>
@@ -199,60 +199,60 @@ function ResetPasswordForm() {
       </section>
 
       {/* Reset Form */}
-      <section className="py-16">
+      <section className="py-16 bg-neutral-50">
         <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-dark-800 rounded-2xl border border-slate-200 p-8"
+            className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm"
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-slate-600 mb-2">
+                <label className="block text-sm font-semibold text-neutral-700 mb-2">
                   New Password
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
                   <input
                     type={showPassword ? 'text' : 'password'}
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full pl-10 pr-12 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                    className="w-full pl-10 pr-12 py-3 bg-white border border-neutral-300 rounded-xl text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent text-sm font-medium"
                     placeholder="Enter your new password"
                   />
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-500 hover:text-slate-900"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-black"
                   >
                     {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>
                 </div>
-                <p className="mt-2 text-xs text-slate-500">
+                <p className="mt-2 text-xs text-neutral-500 font-medium">
                   Must be at least 8 characters with uppercase, lowercase, number, and special character
                 </p>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-slate-600 mb-2">
+                <label className="block text-sm font-semibold text-neutral-700 mb-2">
                   Confirm New Password
                 </label>
                 <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
+                  <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
                   <input
                     type={showConfirmPassword ? 'text' : 'password'}
                     required
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    className="w-full pl-10 pr-12 py-3 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                    className="w-full pl-10 pr-12 py-3 bg-white border border-neutral-300 rounded-xl text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent text-sm font-medium"
                     placeholder="Confirm your new password"
                   />
                   <button
                     type="button"
                     onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-500 hover:text-slate-900"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-neutral-400 hover:text-black"
                   >
                     {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                   </button>
@@ -273,7 +273,7 @@ function ResetPasswordForm() {
               <button
                 type="button"
                 onClick={() => router.push('/auth')}
-                className="w-full text-center text-neon-gold hover:text-neon-gold/80 font-medium text-sm"
+                className="w-full text-center text-[#b89428] hover:underline font-bold text-sm"
               >
                 Back to Sign In
               </button>
@@ -290,10 +290,10 @@ function ResetPasswordForm() {
 export default function ResetPasswordPage() {
   return (
     <Suspense fallback={
-      <main className="min-h-screen bg-dark-950">
+      <main className="min-h-screen bg-white text-black">
         <Navbar />
         <div className="flex items-center justify-center min-h-screen">
-          <div className="w-8 h-8 border-2 border-neon-gold border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin" />
         </div>
         <Footer />
       </main>

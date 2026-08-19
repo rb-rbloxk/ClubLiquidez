@@ -312,10 +312,10 @@ const AdminInsightsPage = () => {
 
   if (authLoading || !user) {
     return (
-      <main className="min-h-screen bg-dark-950">
+      <main className="min-h-screen bg-white text-black">
         <Navbar />
         <div className="flex items-center justify-center min-h-screen">
-          <Loader2 className="w-8 h-8 text-neon-gold animate-spin" />
+          <Loader2 className="w-8 h-8 text-[#b89428] animate-spin" />
         </div>
         <Footer />
       </main>
@@ -323,18 +323,18 @@ const AdminInsightsPage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
       
       {/* Header */}
-      <section className="pt-32 pb-8 bg-gradient-to-br from-slate-100 via-white to-dark-900">
+      <section className="pt-32 pb-8 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-2">
-                Insights <span className="gradient-text">Admin</span>
+              <h1 className="text-4xl lg:text-5xl font-bold text-black mb-2">
+                Insights <span className="text-[#b89428]">Admin</span>
               </h1>
-              <p className="text-slate-500">Manage market insights and articles</p>
+              <p className="text-neutral-600 font-medium">Manage market insights and articles</p>
             </div>
             <Button
               variant="primary"
@@ -350,23 +350,23 @@ const AdminInsightsPage = () => {
       </section>
 
       {/* Filters and Search */}
-      <section className="py-6 bg-dark-900 border-b border-slate-200">
+      <section className="py-6 bg-neutral-50 border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search insights..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-dark-800 border border-slate-200 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                className="w-full pl-10 pr-4 py-2 bg-white border border-neutral-300 rounded-lg text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
               />
             </div>
             <select
               value={filterCategory}
               onChange={(e) => setFilterCategory(e.target.value)}
-              className="px-4 py-2 bg-dark-800 border border-slate-200 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+              className="px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
             >
               <option value="all">All Categories</option>
               <option value="Technical Analysis">Technical Analysis</option>
@@ -377,7 +377,7 @@ const AdminInsightsPage = () => {
             <select
               value={filterPublished}
               onChange={(e) => setFilterPublished(e.target.value)}
-              className="px-4 py-2 bg-dark-800 border border-slate-200 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+              className="px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
             >
               <option value="all">All Status</option>
               <option value="published">Published</option>
@@ -389,18 +389,18 @@ const AdminInsightsPage = () => {
 
       {/* Create/Edit Form */}
       {(isCreating || editingId) && (
-        <section className="py-8 bg-dark-900 border-b border-slate-200">
+        <section className="py-8 bg-white border-b border-neutral-200">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-6">
+            <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-6 shadow-sm">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold text-slate-900">
+                <h2 className="text-2xl font-bold text-black">
                   {isCreating ? 'Create New Insight' : 'Edit Insight'}
                 </h2>
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={handleCancel}
-                  className="text-slate-500 hover:text-slate-900"
+                  className="text-neutral-500 hover:text-black"
                 >
                   <X className="w-5 h-5" />
                 </Button>
@@ -409,60 +409,60 @@ const AdminInsightsPage = () => {
               <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-2">
+                    <label className="block text-sm font-semibold text-neutral-700 mb-2">
                       Title *
                     </label>
                     <input
                       type="text"
                       value={formData.title}
                       onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                      className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                      className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                       placeholder="Article title"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-2">
+                    <label className="block text-sm font-semibold text-neutral-700 mb-2">
                       Author *
                     </label>
                     <input
                       type="text"
                       value={formData.author}
                       onChange={(e) => setFormData({ ...formData, author: e.target.value })}
-                      className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                      className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                       placeholder="Author name"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-600 mb-2">
+                  <label className="block text-sm font-semibold text-neutral-700 mb-2">
                     Excerpt *
                   </label>
                   <textarea
                     value={formData.excerpt}
                     onChange={(e) => setFormData({ ...formData, excerpt: e.target.value })}
                     rows={3}
-                    className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                    className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                     placeholder="Short description"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-600 mb-2">
+                  <label className="block text-sm font-semibold text-neutral-700 mb-2">
                     Content *
                   </label>
                   <textarea
                     value={formData.content}
                     onChange={(e) => setFormData({ ...formData, content: e.target.value })}
                     rows={10}
-                    className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold font-mono text-sm"
+                    className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold font-mono text-sm"
                     placeholder="Full article content"
                   />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-2">
+                    <label className="block text-sm font-semibold text-neutral-700 mb-2">
                       Category *
                     </label>
                     <select
@@ -473,7 +473,7 @@ const AdminInsightsPage = () => {
                           category: e.target.value as Insight['category'],
                         })
                       }
-                      className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                      className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                     >
                       <option value="Forex Education">Forex Education</option>
                       <option value="Market Strategy">Market Strategy</option>
@@ -483,33 +483,33 @@ const AdminInsightsPage = () => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-2">
+                    <label className="block text-sm font-semibold text-neutral-700 mb-2">
                       Read Time (minutes)
                     </label>
                     <input
                       type="number"
                       value={formData.read_time}
                       onChange={(e) => setFormData({ ...formData, read_time: parseInt(e.target.value) || 5 })}
-                      className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                      className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                       min="1"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-2">
+                    <label className="block text-sm font-semibold text-neutral-700 mb-2">
                       Cover Image URL
                     </label>
                     <input
                       type="url"
                       value={formData.cover_image_url}
                       onChange={(e) => setFormData({ ...formData, cover_image_url: e.target.value })}
-                      className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                      className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                       placeholder="https://..."
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-600 mb-2">
+                  <label className="block text-sm font-semibold text-neutral-700 mb-2">
                     Tags (comma-separated)
                   </label>
                   <input
@@ -524,19 +524,19 @@ const AdminInsightsPage = () => {
                         }
                       }
                     }}
-                    className="w-full px-4 py-2 bg-dark-700 border border-slate-300 rounded-lg text-slate-900 focus:outline-none focus:ring-2 focus:ring-neon-gold"
+                    className="w-full px-4 py-2 bg-white border border-neutral-300 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-brand-gold text-sm font-medium"
                     placeholder="Press Enter to add tag"
                   />
                   <div className="flex flex-wrap gap-2 mt-2">
                     {formData.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-neon-gold/20 text-neon-gold rounded-full text-sm flex items-center space-x-2"
+                        className="px-3 py-1 bg-neutral-200 border border-neutral-300 text-black rounded-full text-xs font-semibold flex items-center space-x-2"
                       >
                         <span>{tag}</span>
                         <button
                           onClick={() => removeTag(tag)}
-                          className="hover:text-red-400"
+                          className="hover:text-red-600"
                         >
                           <X className="w-3 h-3" />
                         </button>
@@ -551,18 +551,18 @@ const AdminInsightsPage = () => {
                       type="checkbox"
                       checked={formData.featured}
                       onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
-                      className="w-4 h-4 text-neon-gold bg-dark-700 border-slate-300 rounded focus:ring-neon-gold"
+                      className="w-4 h-4 text-[#b89428] bg-white border-neutral-300 rounded focus:ring-brand-gold"
                     />
-                    <span className="text-slate-600">Featured</span>
+                    <span className="text-neutral-700 font-semibold text-sm">Featured</span>
                   </label>
                   <label className="flex items-center space-x-2 cursor-pointer">
                     <input
                       type="checkbox"
                       checked={formData.published}
                       onChange={(e) => setFormData({ ...formData, published: e.target.checked })}
-                      className="w-4 h-4 text-neon-gold bg-dark-700 border-slate-300 rounded focus:ring-neon-gold"
+                      className="w-4 h-4 text-[#b89428] bg-white border-neutral-300 rounded focus:ring-brand-gold"
                     />
-                    <span className="text-slate-600">Published</span>
+                    <span className="text-neutral-700 font-semibold text-sm">Published</span>
                   </label>
                 </div>
 
@@ -589,11 +589,11 @@ const AdminInsightsPage = () => {
       )}
 
       {/* Insights List */}
-      <section className="py-8">
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {loading ? (
             <div className="flex items-center justify-center py-16">
-              <Loader2 className="w-8 h-8 text-neon-gold animate-spin" />
+              <Loader2 className="w-8 h-8 text-[#b89428] animate-spin" />
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-4">
@@ -602,52 +602,46 @@ const AdminInsightsPage = () => {
                   key={insight.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-dark-800 rounded-xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all"
+                  className="bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:border-brand-gold transition-all shadow-sm"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                          insight.category === 'Forex Education' ? 'bg-neon-gold/20 text-neon-gold' :
-                          insight.category === 'Market Strategy' || insight.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
-                          insight.category === 'Risk Management' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
-                          insight.category === 'Trading Psychology' ? 'bg-neon-amber/20 text-neon-amber' :
-                          'bg-neon-gold/20 text-neon-gold'
-                        }`}>
+                        <span className="px-3 py-1 bg-neutral-200 border border-neutral-300 text-black rounded-full text-xs font-semibold">
                           {insight.category === 'Gold Strategy' ? 'Market Strategy' : insight.category}
                         </span>
                         {insight.featured && (
-                          <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 rounded text-xs flex items-center space-x-1">
-                            <TrendingUp className="w-3 h-3" />
+                          <span className="px-2 py-1 bg-amber-100 border border-amber-300 text-amber-800 rounded text-xs font-semibold flex items-center space-x-1">
+                            <TrendingUp className="w-3 h-3 text-amber-600" />
                             <span>Featured</span>
                           </span>
                         )}
                         {insight.published ? (
-                          <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded text-xs flex items-center space-x-1">
-                            <CheckCircle className="w-3 h-3" />
+                          <span className="px-2 py-1 bg-green-100 border border-green-300 text-green-800 rounded text-xs font-semibold flex items-center space-x-1">
+                            <CheckCircle className="w-3 h-3 text-green-600" />
                             <span>Published</span>
                           </span>
                         ) : (
-                          <span className="px-2 py-1 bg-gray-500/20 text-slate-500 rounded text-xs flex items-center space-x-1">
-                            <AlertCircle className="w-3 h-3" />
+                          <span className="px-2 py-1 bg-neutral-200 border border-neutral-300 text-neutral-600 rounded text-xs font-semibold flex items-center space-x-1">
+                            <AlertCircle className="w-3 h-3 text-neutral-500" />
                             <span>Draft</span>
                           </span>
                         )}
                       </div>
-                      <h3 className="text-xl font-bold text-slate-900 mb-2">{insight.title}</h3>
-                      <p className="text-slate-500 mb-4 line-clamp-2">{insight.excerpt}</p>
-                      <div className="flex items-center space-x-4 text-sm text-slate-500">
+                      <h3 className="text-xl font-bold text-black mb-2">{insight.title}</h3>
+                      <p className="text-neutral-600 mb-4 line-clamp-2 text-sm leading-relaxed">{insight.excerpt}</p>
+                      <div className="flex items-center space-x-4 text-sm text-neutral-600 font-medium">
                         <span className="flex items-center space-x-1">
-                          <FileText className="w-4 h-4" />
+                          <FileText className="w-4 h-4 text-neutral-400" />
                           <span>{insight.author}</span>
                         </span>
                         <span className="flex items-center space-x-1">
-                          <Eye className="w-4 h-4" />
+                          <Eye className="w-4 h-4 text-neutral-400" />
                           <span>{insight.views} views</span>
                         </span>
                         {insight.tags && insight.tags.length > 0 && (
                           <span className="flex items-center space-x-1">
-                            <BookOpen className="w-4 h-4" />
+                            <BookOpen className="w-4 h-4 text-neutral-400" />
                             <span>{insight.tags.length} tags</span>
                           </span>
                         )}
@@ -667,7 +661,7 @@ const AdminInsightsPage = () => {
                         variant="ghost"
                         size="sm"
                         onClick={() => handleDelete(insight.id)}
-                        className="text-red-400 hover:text-red-300 hover:bg-red-500/10"
+                        className="text-red-600 hover:text-red-700 hover:bg-red-50 border border-neutral-300"
                       >
                         <Trash2 className="w-4 h-4" />
                       </Button>
@@ -680,8 +674,8 @@ const AdminInsightsPage = () => {
 
           {!loading && filteredInsights.length === 0 && (
             <div className="text-center py-16">
-              <BookOpen className="w-16 h-16 text-slate-600 mx-auto mb-4" />
-              <p className="text-slate-500 text-lg">No insights found</p>
+              <BookOpen className="w-16 h-16 text-neutral-400 mx-auto mb-4" />
+              <p className="text-neutral-600 text-lg font-medium">No insights found</p>
               <Button
                 variant="primary"
                 size="md"

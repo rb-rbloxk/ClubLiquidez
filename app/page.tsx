@@ -13,7 +13,7 @@ import FinalCTASection from '@/components/home/FinalCTASection'
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-dark-950 selection:bg-brand-gold/25 selection:text-brand-midnight">
+    <main className="min-h-screen bg-white text-black selection:bg-brand-gold/25 selection:text-black">
       <Navbar />
       <HeroSection />
       <BrandIntroSection />

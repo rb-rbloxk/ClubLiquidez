@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { Outfit, Spectral } from 'next/font/google'
+import { Roboto, Spectral } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'react-hot-toast'
 import { AuthProvider } from '@/contexts/AuthContext'
 
-const outfit = Outfit({
+const roboto = Roboto({
   subsets: ['latin'],
-  variable: '--font-outfit',
+  weight: ['400', '500', '700'],
+  variable: '--font-roboto',
   display: 'swap',
 })
 
@@ -77,7 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} ${spectral.variable} font-sans bg-dark-950 text-slate-900 antialiased`}
+        className={`${roboto.variable} ${spectral.variable} font-sans bg-white text-black antialiased`}
       >
         <AuthProvider>
           <p className="sr-only">

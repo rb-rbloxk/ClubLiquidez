@@ -171,8 +171,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   if (!mounted || loading) {
     return (
       <AuthContext.Provider value={value}>
-        <div className="min-h-screen bg-dark-950 flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-neon-gold border-t-transparent rounded-full animate-spin" />
+        <div className="min-h-screen bg-white flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin" />
         </div>
       </AuthContext.Provider>
     )

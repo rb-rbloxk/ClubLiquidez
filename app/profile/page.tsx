@@ -20,10 +20,10 @@ export default function ProfilePage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-dark-950">
+      <main className="min-h-screen bg-white text-black">
         <Navbar />
         <div className="flex items-center justify-center min-h-screen">
-          <div className="w-8 h-8 border-2 border-neon-gold border-t-transparent rounded-full animate-spin" />
+          <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin" />
         </div>
         <Footer />
       </main>
@@ -36,45 +36,45 @@ export default function ProfilePage() {
   }
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
       
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="bg-dark-800 rounded-2xl border border-slate-200 p-8"
+            className="bg-neutral-50 rounded-2xl border border-neutral-200 p-8 shadow-sm"
           >
             <div className="flex items-center space-x-4 mb-8">
-              <div className="w-20 h-20 bg-neon-gold rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 bg-brand-gold rounded-full flex items-center justify-center border border-neutral-200 shadow-sm">
                 <span className="text-black font-bold text-2xl">
                   {user.email?.charAt(0).toUpperCase() || 'U'}
                 </span>
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-slate-900">
+                <h1 className="text-3xl font-bold text-black">
                   {user.user_metadata?.full_name || 'User Profile'}
                 </h1>
-                <p className="text-slate-500">{user.email}</p>
+                <p className="text-neutral-600 font-medium">{user.email}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
+              <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm">
                 <div className="flex items-center space-x-3 mb-4">
-                  <Mail className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-slate-900">Email</h3>
+                  <Mail className="w-5 h-5 text-[#b89428]" />
+                  <h3 className="text-lg font-bold text-black">Email</h3>
                 </div>
-                <p className="text-slate-600">{user.email}</p>
+                <p className="text-neutral-600 font-medium">{user.email}</p>
               </div>
 
-              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
+              <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm">
                 <div className="flex items-center space-x-3 mb-4">
-                  <Calendar className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-slate-900">Member Since</h3>
+                  <Calendar className="w-5 h-5 text-[#b89428]" />
+                  <h3 className="text-lg font-bold text-black">Member Since</h3>
                 </div>
-                <p className="text-slate-600">
+                <p className="text-neutral-600 font-medium">
                   {mounted && user.created_at 
                     ? format(new Date(user.created_at), 'MMM dd, yyyy')
                     : user.created_at 
@@ -83,22 +83,22 @@ export default function ProfilePage() {
                 </p>
               </div>
 
-              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
+              <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm">
                 <div className="flex items-center space-x-3 mb-4">
-                  <Shield className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-slate-900">Account Status</h3>
+                  <Shield className="w-5 h-5 text-[#b89428]" />
+                  <h3 className="text-lg font-bold text-black">Account Status</h3>
                 </div>
-                <p className="text-slate-600">
+                <p className="text-neutral-600 font-medium">
                   {user.email_confirmed_at ? 'Verified' : 'Pending Verification'}
                 </p>
               </div>
 
-              <div className="bg-dark-700 rounded-lg p-6 border border-slate-300">
+              <div className="bg-white rounded-xl p-6 border border-neutral-200 shadow-sm">
                 <div className="flex items-center space-x-3 mb-4">
-                  <User className="w-5 h-5 text-neon-gold" />
-                  <h3 className="text-lg font-semibold text-slate-900">User ID</h3>
+                  <User className="w-5 h-5 text-[#b89428]" />
+                  <h3 className="text-lg font-bold text-black">User ID</h3>
                 </div>
-                <p className="text-slate-600 text-sm font-mono truncate">{user.id}</p>
+                <p className="text-neutral-600 text-sm font-mono truncate">{user.id}</p>
               </div>
             </div>
           </motion.div>

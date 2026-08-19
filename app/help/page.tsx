@@ -163,11 +163,11 @@ const HelpCenterPage = () => {
   ]
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -177,25 +177,25 @@ const HelpCenterPage = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <HelpCircle className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
-                Help <span className="gradient-text">Center</span>
+              <HelpCircle className="w-8 h-8 text-[#b89428]" />
+              <h1 className="text-5xl lg:text-6xl font-bold text-black">
+                Help <span className="text-[#b89428]">Center</span>
               </h1>
             </div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto mb-8 leading-relaxed">
               Find answers to your questions, learn how to use our platform, and get the support you need.
             </p>
             
             {/* Search */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search for help articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-dark-800 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-white border border-neutral-300 rounded-xl text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent shadow-sm"
                 />
               </div>
             </div>
@@ -204,14 +204,14 @@ const HelpCenterPage = () => {
       </section>
 
       {/* Quick Actions */}
-      <section className="py-16">
+      <section className="py-16 bg-neutral-50 border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Get Help Quickly</h2>
+            <h2 className="text-3xl font-bold text-black text-center mb-12">Get Help Quickly</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {quickActions.map((action, index) => (
                 <motion.div
@@ -219,15 +219,15 @@ const HelpCenterPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 group cursor-pointer"
+                  className="bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-gold transition-all duration-300 shadow-sm group cursor-pointer"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-3 bg-dark-700 rounded-lg group-hover:bg-neon-gold/20 transition-colors">
-                      <action.icon className="w-6 h-6 text-neon-gold" />
+                    <div className="p-3 bg-neutral-100 rounded-xl border border-neutral-200 group-hover:border-brand-gold transition-colors">
+                      <action.icon className="w-6 h-6 text-[#b89428]" />
                     </div>
-                    <h3 className="text-lg font-bold text-slate-900">{action.title}</h3>
+                    <h3 className="text-lg font-bold text-black">{action.title}</h3>
                   </div>
-                  <p className="text-slate-500 mb-4">{action.description}</p>
+                  <p className="text-neutral-600 mb-4 text-sm leading-relaxed">{action.description}</p>
                   <Button variant="outline" size="sm" className="w-full">
                     {action.action}
                   </Button>
@@ -239,14 +239,14 @@ const HelpCenterPage = () => {
       </section>
 
       {/* Help Categories */}
-      <section className="py-16 bg-dark-850">
+      <section className="py-16 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Help Categories</h2>
+            <h2 className="text-3xl font-bold text-black text-center mb-12">Help Categories</h2>
             <div className="space-y-6">
               {helpCategories.map((category, index) => (
                 <motion.div
@@ -254,20 +254,20 @@ const HelpCenterPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-slate-200 overflow-hidden"
+                  className="bg-neutral-50 rounded-2xl border border-neutral-200 overflow-hidden shadow-sm"
                 >
                   <button
                     onClick={() => setExpandedCategory(expandedCategory === category.id ? null : category.id)}
-                    className="w-full p-6 flex items-center justify-between hover:bg-slate-100 transition-colors"
+                    className="w-full p-6 flex items-center justify-between hover:bg-neutral-100 transition-colors text-left"
                   >
                     <div className="flex items-center space-x-4">
-                      <category.icon className="w-6 h-6 text-neon-gold" />
-                      <h3 className="text-xl font-bold text-slate-900">{category.title}</h3>
+                      <category.icon className="w-6 h-6 text-[#b89428]" />
+                      <h3 className="text-xl font-bold text-black">{category.title}</h3>
                     </div>
                     {expandedCategory === category.id ? (
-                      <ChevronDown className="w-5 h-5 text-slate-500" />
+                      <ChevronDown className="w-5 h-5 text-neutral-500" />
                     ) : (
-                      <ChevronRight className="w-5 h-5 text-slate-500" />
+                      <ChevronRight className="w-5 h-5 text-neutral-500" />
                     )}
                   </button>
                   
@@ -276,25 +276,25 @@ const HelpCenterPage = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="border-t border-slate-200"
+                      className="border-t border-neutral-200 bg-white"
                     >
                       <div className="p-6 space-y-4">
                         {category.articles.map((article, articleIndex) => (
-                          <div key={articleIndex} className="flex items-center justify-between p-4 bg-dark-700 rounded-lg hover:bg-slate-200 transition-colors cursor-pointer">
+                          <div key={articleIndex} className="flex items-center justify-between p-4 bg-neutral-50 border border-neutral-200 rounded-xl hover:border-brand-gold transition-colors cursor-pointer">
                             <div className="flex items-center space-x-3">
                               {article.video ? (
-                                <Play className="w-4 h-4 text-neon-gold" />
+                                <Play className="w-4 h-4 text-[#b89428]" />
                               ) : (
-                                <FileText className="w-4 h-4 text-neon-gold-champagne" />
+                                <FileText className="w-4 h-4 text-[#b89428]" />
                               )}
                               <div>
-                                <h4 className="text-slate-900 font-semibold">{article.title}</h4>
-                                <p className="text-sm text-slate-500">{article.content}</p>
+                                <h4 className="text-black font-semibold">{article.title}</h4>
+                                <p className="text-sm text-neutral-600">{article.content}</p>
                               </div>
                             </div>
                             <div className="flex items-center space-x-2">
-                              <span className="text-xs text-slate-500">{article.readTime}</span>
-                              <ChevronRight className="w-4 h-4 text-slate-500" />
+                              <span className="text-xs text-neutral-500 font-medium">{article.readTime}</span>
+                              <ChevronRight className="w-4 h-4 text-neutral-400" />
                             </div>
                           </div>
                         ))}
@@ -309,14 +309,14 @@ const HelpCenterPage = () => {
       </section>
 
       {/* Popular Articles */}
-      <section className="py-16">
+      <section className="py-16 bg-neutral-50 border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Popular Articles</h2>
+            <h2 className="text-3xl font-bold text-black text-center mb-12">Popular Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularArticles.map((article, index) => (
                 <motion.div
@@ -324,15 +324,15 @@ const HelpCenterPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 cursor-pointer group"
+                  className="bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-gold transition-all duration-300 cursor-pointer group shadow-sm"
                 >
                   <div className="flex items-center space-x-3 mb-4">
-                    <BookOpen className="w-5 h-5 text-neon-gold" />
-                    <h3 className="text-slate-900 font-semibold group-hover:text-neon-gold transition-colors">
+                    <BookOpen className="w-5 h-5 text-[#b89428]" />
+                    <h3 className="text-black font-semibold group-hover:text-[#b89428] transition-colors">
                       {article}
                     </h3>
                   </div>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-neutral-600 text-sm leading-relaxed">
                     Quick guide to help you get started with this feature.
                   </p>
                 </motion.div>
@@ -343,7 +343,7 @@ const HelpCenterPage = () => {
       </section>
 
       {/* Contact Support */}
-      <section className="py-16 bg-dark-900">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -351,13 +351,12 @@ const HelpCenterPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Still Need Help?</h2>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-black mb-6">Still Need Help?</h2>
+            <p className="text-xl text-neutral-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               Our support team is available 24/7 to help you with any questions or issues you may have.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="lg">
-                
                 WhatsApp Support
               </Button>
               <Button variant="secondary" size="lg">

@@ -83,50 +83,28 @@ const PillarsSection = () => {
       className="group relative"
     >
       <div
-        className={`h-full bg-white rounded-2xl border border-slate-200 p-8 shadow-sm hover:shadow-lg hover:border-brand-gold/40 transition-all duration-300`}
+        className="h-full bg-neutral-50 rounded-2xl border border-neutral-200 p-8 hover:border-brand-gold transition-all duration-300 flex flex-col justify-between shadow-sm"
       >
-        <div className="flex items-start gap-4 mb-6">
-          <div
-            className={`p-4 rounded-xl border group-hover:scale-[1.03] transition-transform ${
-              pillar.color === 'neon-gold'
-                ? 'bg-neon-gold/15 border-neon-gold/25'
-                : pillar.color === 'neon-gold-champagne'
-                  ? 'bg-neon-gold-champagne/15 border-neon-gold-champagne/25'
-                  : pillar.color === 'neon-gold-dark'
-                    ? 'bg-neon-gold-dark/15 border-neon-gold-dark/25'
-                    : pillar.color === 'neon-amber'
-                      ? 'bg-neon-amber/15 border-neon-amber/25'
-                      : 'bg-neon-gold/15 border-neon-gold/25'
-            }`}
-          >
-            <pillar.icon
-              className={`w-8 h-8 ${
-                pillar.color === 'neon-gold'
-                  ? 'text-neon-gold'
-                  : pillar.color === 'neon-gold-champagne'
-                    ? 'text-neon-gold-champagne'
-                    : pillar.color === 'neon-gold-dark'
-                      ? 'text-neon-gold-dark'
-                      : pillar.color === 'neon-amber'
-                        ? 'text-neon-amber'
-                        : 'text-neon-gold'
-              }`}
-            />
+        <div>
+          <div className="flex items-start gap-4 mb-6">
+            <div className="p-4 rounded-xl border border-neutral-200 bg-white group-hover:border-brand-gold transition-colors shadow-sm">
+              <pillar.icon className="w-8 h-8 text-[#b89428]" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl font-bold tracking-tight text-black mb-2">{pillar.title}</h3>
+              <p className="text-neutral-600 leading-relaxed text-sm sm:text-base">{pillar.description}</p>
+            </div>
           </div>
-          <div className="flex-1 min-w-0">
-            <h3 className="font-spectral text-xl font-semibold text-slate-900 mb-2">{pillar.title}</h3>
-            <p className="text-slate-600 leading-relaxed text-sm sm:text-base">{pillar.description}</p>
-          </div>
-        </div>
 
-        <ul className="space-y-2.5 mb-8">
-          {pillar.features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-2 text-slate-500 text-sm">
-              <Sparkles className="w-3.5 h-3.5 text-brand-gold shrink-0 mt-0.5" />
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
+          <ul className="space-y-2.5 mb-8">
+            {pillar.features.map((feature, idx) => (
+              <li key={idx} className="flex items-start gap-2 text-neutral-600 text-sm">
+                <Sparkles className="w-3.5 h-3.5 text-[#b89428] shrink-0 mt-0.5" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <Link href={pillar.href}>
           <Button variant="secondary" size="md" className="w-full group justify-center">
@@ -139,12 +117,7 @@ const PillarsSection = () => {
   )
 
   return (
-    <section className="py-24 md:py-28 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.07] pointer-events-none">
-        <div className="absolute top-0 left-0 w-[28rem] h-[28rem] bg-brand-gold rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-brand-navy rounded-full blur-3xl" />
-      </div>
-
+    <section className="py-24 relative overflow-hidden bg-white text-black border-y border-neutral-200">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -153,15 +126,15 @@ const PillarsSection = () => {
           transition={{ duration: 0.65 }}
           className="text-center mb-14 md:mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-100 border border-neutral-200 mb-5">
             <Shield className="w-4 h-4 text-brand-gold" />
-            <span className="text-sm font-medium text-slate-700">What you get inside ClubLiquidez</span>
+            <span className="text-sm font-medium text-neutral-800">What you get inside ClubLiquidez</span>
           </div>
 
-          <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 mb-4">
-            Built for <span className="gradient-text">serious market students</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-4">
+            Built for <span className="text-[#b89428]">serious market students</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-700 max-w-2xl mx-auto">
             Five pillars. One mandate: teach durable process for trading education—not adrenaline-driven clicks.
           </p>
         </motion.div>

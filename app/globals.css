@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 247, 243, 234;
-  --background-end-rgb: 247, 243, 234;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
   --color-primary-gold: #d4af37;
-  --color-deep-gold: #9a7b2e;
-  --color-light-gold: #f0d78c;
-  --color-soft-white: #f7f3ea;
-  --color-dark-black: #0a1628;
-  --color-charcoal: #132f4a;
+  --color-deep-gold: #b89428;
+  --color-light-gold: #d4af37;
+  --color-soft-white: #ffffff;
+  --color-dark-black: #000000;
+  --color-charcoal: #f5f5f5;
 }
 
 * {
@@ -24,6 +24,9 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", var(--font-roboto), Roboto, "Segoe UI", system-ui, sans-serif;
 }
 
 body {
@@ -37,16 +40,16 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ebe3d4;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbb89a;
-  border-radius: 4px;
+  background: #d4d4d4;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -55,42 +58,42 @@ a {
 
 @layer components {
   .neon-glow {
-    box-shadow: 0 0 24px rgba(212, 175, 55, 0.28);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
   }
 
   .neon-text {
-    text-shadow: 0 0 14px rgba(212, 175, 55, 0.45);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
   }
 
   .glass-effect {
-    background: rgba(255, 252, 246, 0.94);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   }
 
   .glass-effect-dark {
-    background: rgba(10, 22, 40, 0.88);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #f0d78c 0%, #d4af37 40%, #9a7b2e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #b89428;
+    background: none;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: #b89428;
   }
 
   .gradient-neon {
-    background: linear-gradient(135deg, #d4af37 0%, #9a7b2e 50%, #f0d78c 100%);
+    background: #d4af37;
   }
 
   .gradient-gold {
-    background: linear-gradient(135deg, #d4af37 0%, #8b6914 100%);
+    background: #d4af37;
   }
 
   .gradient-gold-deep {
-    background: linear-gradient(135deg, #d4af37 0%, #9a7b2e 55%, #f5e6b8 100%);
+    background: #b89428;
   }
 
   .card-hover {
@@ -98,34 +101,35 @@ a {
   }
 
   .card-hover:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 22px 44px rgba(10, 22, 40, 0.08);
+    transform: translateY(-4px);
+    border-color: rgba(212, 175, 55, 0.4);
   }
 
   .button-primary {
-    background: linear-gradient(135deg, #d4af37 0%, #9a7b2e 100%);
-    transition: all 0.3s ease;
-    color: #0a1628;
+    background: #d4af37;
+    transition: all 0.25s ease;
+    color: #000000;
     font-weight: 600;
   }
 
   .button-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(212, 175, 55, 0.35);
+    background: #c5a030;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
   }
 
   .button-secondary {
-    background: transparent;
-    border: 2px solid #9a7b2e;
-    transition: all 0.3s ease;
-    color: #8b6914;
+    background: #ffffff;
+    border: 1px solid #d4af37;
+    transition: all 0.25s ease;
+    color: #b89428;
     font-weight: 600;
   }
 
   .button-secondary:hover {
-    background: rgba(212, 175, 55, 0.12);
-    box-shadow: 0 0 24px rgba(212, 175, 55, 0.2);
+    background: rgba(212, 175, 55, 0.08);
     border-color: #d4af37;
+    color: #000000;
   }
 
   .text-neon-gold {
@@ -133,23 +137,23 @@ a {
   }
 
   .text-neon-gold-deep {
-    color: #9a7b2e;
+    color: #b89428;
   }
 
   .text-neon-gold-champagne {
-    color: #c9a961;
+    color: #d4af37;
   }
 
   .text-neon-gold-dark {
-    color: #8b6914;
+    color: #b89428;
   }
 
   .text-neon-amber {
-    color: #c17f24;
+    color: #d4af37;
   }
 
   .text-neon-cream {
-    color: #57534e;
+    color: #a3a3a3;
   }
 
   .bg-neon-gold {
@@ -157,23 +161,23 @@ a {
   }
 
   .bg-neon-gold-deep {
-    background-color: #9a7b2e;
+    background-color: #b89428;
   }
 
   .bg-neon-gold-champagne {
-    background-color: #c9a961;
+    background-color: #d4af37;
   }
 
   .bg-neon-gold-dark {
-    background-color: #8b6914;
+    background-color: #b89428;
   }
 
   .bg-neon-amber {
-    background-color: #c17f24;
+    background-color: #d4af37;
   }
 
   .bg-neon-cream {
-    background-color: #f7f3ea;
+    background-color: #121212;
   }
 
   .border-neon-gold {
@@ -181,19 +185,19 @@ a {
   }
 
   .border-neon-gold-deep {
-    border-color: #9a7b2e;
+    border-color: #b89428;
   }
 
   .border-neon-gold-champagne {
-    border-color: #c9a961;
+    border-color: #d4af37;
   }
 
   .border-neon-gold-dark {
-    border-color: #8b6914;
+    border-color: #b89428;
   }
 
   .border-neon-amber {
-    border-color: #c17f24;
+    border-color: #d4af37;
   }
 
   .ring-neon-gold {
@@ -201,19 +205,19 @@ a {
   }
 
   .ring-neon-gold-deep {
-    --tw-ring-color: #9a7b2e;
+    --tw-ring-color: #b89428;
   }
 
   .ring-neon-gold-champagne {
-    --tw-ring-color: #c9a961;
+    --tw-ring-color: #d4af37;
   }
 
   .ring-neon-gold-dark {
-    --tw-ring-color: #8b6914;
+    --tw-ring-color: #b89428;
   }
 
   .ring-neon-amber {
-    --tw-ring-color: #c17f24;
+    --tw-ring-color: #d4af37;
   }
 
   .bg-dark-50 {

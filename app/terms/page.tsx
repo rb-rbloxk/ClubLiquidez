@@ -84,11 +84,11 @@ const TermsOfServicePage = () => {
   ]
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-dark-900">
+      <section className="pt-32 pb-16 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -98,16 +98,16 @@ const TermsOfServicePage = () => {
             className="text-center"
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
-              <FileText className="w-8 h-8 text-neon-gold" />
-              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900">
-                Terms of <span className="gradient-text">Service</span>
+              <FileText className="w-8 h-8 text-[#b89428]" />
+              <h1 className="text-5xl lg:text-6xl font-bold text-black">
+                Terms of <span className="text-[#b89428]">Service</span>
               </h1>
             </div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto mb-6 leading-relaxed">
               Please read these terms carefully before using our services. 
               ClubLiquidez provides educational services only. We do not provide investment advice or manage funds.
             </p>
-            <div className="text-slate-500">
+            <div className="text-neutral-500 text-sm font-medium">
               Last updated: {lastUpdated}
             </div>
           </motion.div>
@@ -115,7 +115,7 @@ const TermsOfServicePage = () => {
       </section>
 
       {/* Terms Content */}
-      <section className="py-16 bg-dark-850">
+      <section className="py-16 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -124,18 +124,17 @@ const TermsOfServicePage = () => {
             className="space-y-12"
           >
             {/* Introduction */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
-              <h2 className="text-2xl font-bold text-slate-900 mb-6">Introduction</h2>
-              <div className="space-y-4 text-slate-600">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
+              <h2 className="text-2xl font-bold text-black mb-6">Introduction</h2>
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   These Terms of Service (&quot;Terms&quot;) govern your use of ClubLiquidez&apos;s
-                  trading platform, website, and related services (collectively, the
+                  educational platform, website, and related services (collectively, the
                   &quot;Services&quot;). By using our Services, you agree to these Terms and our Privacy
                   Policy.
                 </p>
                 <p>
-                  ClubLiquidez is operated by ClubLiquidez Inc., a company registered in the United States. 
-                  Our platform provides access to various financial markets and trading instruments.
+                  ClubLiquidez provides educational services and market analytics for traders worldwide.
                 </p>
                 <p>
                   These Terms constitute a legally binding agreement between you and ClubLiquidez. 
@@ -151,14 +150,14 @@ const TermsOfServicePage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-dark-800 rounded-2xl border border-slate-200 p-8"
+                className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-6">{section.title}</h3>
+                <h3 className="text-xl font-bold text-black mb-6">{section.title}</h3>
                 <ul className="space-y-3">
                   {section.content.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-neon-gold-champagne mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-600">{item}</span>
+                      <CheckCircle className="w-5 h-5 text-[#b89428] mt-0.5 flex-shrink-0" />
+                      <span className="text-neutral-700 font-medium text-sm leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -166,45 +165,45 @@ const TermsOfServicePage = () => {
             ))}
 
             {/* Risk Disclosure */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
               <div className="flex items-center space-x-3 mb-6">
-                <AlertTriangle className="w-6 h-6 text-neon-amber" />
-                <h3 className="text-xl font-bold text-slate-900">Risk Disclosure</h3>
+                <AlertTriangle className="w-6 h-6 text-[#b89428]" />
+                <h3 className="text-xl font-bold text-black">Risk Disclosure</h3>
               </div>
-              <div className="space-y-4 text-slate-600">
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   Trading financial instruments involves substantial risk and may result in the loss 
                   of your invested capital. You should carefully consider whether trading is appropriate 
                   for you in light of your financial condition, investment objectives, and risk tolerance.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                  <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-slate-900 font-semibold mb-2">Market Risk</h4>
-                    <p className="text-sm text-slate-500">Prices can move against your position</p>
+                  <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <h4 className="text-black font-bold mb-1">Market Risk</h4>
+                    <p className="text-sm text-neutral-600">Prices can move against your position</p>
                   </div>
-                  <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-slate-900 font-semibold mb-2">Leverage Risk</h4>
-                    <p className="text-sm text-slate-500">Amplified gains and losses</p>
+                  <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <h4 className="text-black font-bold mb-1">Leverage Risk</h4>
+                    <p className="text-sm text-neutral-600">Amplified gains and losses</p>
                   </div>
-                  <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-slate-900 font-semibold mb-2">Liquidity Risk</h4>
-                    <p className="text-sm text-slate-500">Difficulty exiting positions</p>
+                  <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <h4 className="text-black font-bold mb-1">Liquidity Risk</h4>
+                    <p className="text-sm text-neutral-600">Difficulty exiting positions</p>
                   </div>
-                  <div className="p-4 bg-dark-700 rounded-lg">
-                    <h4 className="text-slate-900 font-semibold mb-2">Technology Risk</h4>
-                    <p className="text-sm text-slate-500">System failures and delays</p>
+                  <div className="p-4 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <h4 className="text-black font-bold mb-1">Technology Risk</h4>
+                    <p className="text-sm text-neutral-600">System failures and delays</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Limitation of Liability */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
               <div className="flex items-center space-x-3 mb-6">
-                <Shield className="w-6 h-6 text-neon-gold" />
-                <h3 className="text-xl font-bold text-slate-900">Limitation of Liability</h3>
+                <Shield className="w-6 h-6 text-[#b89428]" />
+                <h3 className="text-xl font-bold text-black">Limitation of Liability</h3>
               </div>
-              <div className="space-y-4 text-slate-600">
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   To the maximum extent permitted by law, ClubLiquidez shall not be liable for any 
                   indirect, incidental, special, consequential, or punitive damages, including but 
@@ -223,99 +222,71 @@ const TermsOfServicePage = () => {
             </div>
 
             {/* Dispute Resolution */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
               <div className="flex items-center space-x-3 mb-6">
-                <Scale className="w-6 h-6 text-neon-gold-champagne" />
-                <h3 className="text-xl font-bold text-slate-900">Dispute Resolution</h3>
+                <Scale className="w-6 h-6 text-[#b89428]" />
+                <h3 className="text-xl font-bold text-black">Dispute Resolution</h3>
               </div>
-              <div className="space-y-4 text-slate-600">
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   Any disputes arising from these Terms or your use of our Services shall be resolved 
-                  through binding arbitration in accordance with the rules of the American Arbitration 
-                  Association.
+                  through binding arbitration in accordance with applicable legal guidelines.
                 </p>
                 <p>
-                  Arbitration shall be conducted in New York, New York, and the decision of the 
+                  Arbitration shall be conducted in a fair manner, and the decision of the 
                   arbitrator shall be final and binding.
-                </p>
-                <p>
-                  You agree to waive any right to a jury trial or to participate in a class action 
-                  lawsuit.
                 </p>
               </div>
             </div>
 
             {/* Termination */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Termination</h3>
-              <div className="space-y-4 text-slate-600">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-black mb-6">Termination</h3>
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   We may terminate or suspend your account and access to our Services at any time, 
                   with or without cause, with or without notice.
                 </p>
                 <p>
-                  You may terminate your account at any time by contacting our support team. Upon 
-                  termination, you will lose access to our Services and any remaining balance will 
-                  be processed according to our withdrawal procedures.
-                </p>
-                <p>
-                  The provisions of these Terms that by their nature should survive termination 
-                  shall survive termination, including but not limited to intellectual property 
-                  rights, disclaimers, and limitations of liability.
+                  You may terminate your account at any time by contacting our support team.
                 </p>
               </div>
             </div>
 
             {/* Governing Law */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Governing Law</h3>
-              <div className="space-y-4 text-slate-600">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-black mb-6">Governing Law</h3>
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
-                  These Terms shall be governed by and construed in accordance with the laws of 
-                  the State of New York, without regard to its conflict of law provisions.
-                </p>
-                <p>
-                  Any legal action or proceeding relating to these Terms shall be instituted in 
-                  the state or federal courts located in New York County, New York.
-                </p>
-                <p>
-                  You agree to submit to the personal jurisdiction of these courts and waive any 
-                  objection to venue or forum non conveniens.
+                  These Terms shall be governed by and construed in accordance with applicable governing laws.
                 </p>
               </div>
             </div>
 
             {/* Severability */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Severability</h3>
-              <div className="space-y-4 text-slate-600">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-black mb-6">Severability</h3>
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   If any provision of these Terms is found to be unenforceable or invalid, that 
                   provision will be limited or eliminated to the minimum extent necessary so that 
                   these Terms will otherwise remain in full force and effect.
                 </p>
-                <p>
-                  The failure of ClubLiquidez to enforce any right or provision of these Terms 
-                  will not constitute a waiver of that right or provision.
-                </p>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className="bg-dark-800 rounded-2xl border border-slate-200 p-8">
-              <h3 className="text-xl font-bold text-slate-900 mb-6">Contact Information</h3>
-              <div className="space-y-4 text-slate-600">
+            <div className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm">
+              <h3 className="text-xl font-bold text-black mb-6">Contact Information</h3>
+              <div className="space-y-4 text-neutral-700 leading-relaxed text-base">
                 <p>
                   If you have any questions about these Terms of Service, please contact us:
                 </p>
-                <div className="space-y-2">
-                  <p><strong>Email:</strong> legal@clubliquidez.com</p>
-                  <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                  <p><strong>Address:</strong> 350 5th Avenue, New York, NY 10118</p>
+                <div className="space-y-2 text-sm font-medium">
+                  <p><strong>Email:</strong> support@clubliquidez.com</p>
+                  <p><strong>Phone:</strong> +91 733 88 33887</p>
+                  <p><strong>Address:</strong> Kanchipuram, Tamil Nadu, India</p>
                 </div>
-                <p>
-                  We will respond to your inquiry within 48 hours during business days.
-                </p>
               </div>
             </div>
           </motion.div>

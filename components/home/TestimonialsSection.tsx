@@ -104,12 +104,7 @@ const TestimonialsSection = () => {
   }, [])
 
   return (
-    <section className="py-24 md:py-28 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.06] pointer-events-none">
-        <div className="absolute top-24 left-10 w-80 h-80 bg-brand-gold rounded-full blur-3xl" />
-        <div className="absolute bottom-16 right-10 w-96 h-96 bg-brand-navy rounded-full blur-3xl" />
-      </div>
-
+    <section className="py-24 relative overflow-hidden bg-white text-black border-y border-neutral-200">
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -118,18 +113,18 @@ const TestimonialsSection = () => {
           transition={{ duration: 0.65 }}
           className="text-center mb-14"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200 mb-5 shadow-sm">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-100 border border-neutral-200 mb-5">
             <Star className="w-4 h-4 text-brand-gold" />
-            <span className="text-sm font-medium text-slate-700">Learner voices</span>
+            <span className="text-sm font-medium text-neutral-800">Learner voices</span>
           </div>
 
-          <h2 className="font-spectral text-4xl sm:text-5xl lg:text-6xl font-semibold text-slate-900 mb-6">
-            Proof lives in <span className="gradient-text">process wins</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black mb-6">
+            Proof lives in <span className="text-[#b89428]">process wins</span>
           </h2>
 
-          <div className="text-lg text-slate-600 max-w-3xl mx-auto space-y-2">
+          <div className="text-lg text-neutral-600 max-w-3xl mx-auto space-y-2 tracking-tight">
             <p>Cohorts stay small so mentors actually know your playbook.</p>
-            <p className="text-slate-500 text-base">
+            <p className="text-neutral-600 text-base">
               Results vary individually—what we guarantee is curriculum depth and honest critique.
             </p>
           </div>
@@ -144,18 +139,18 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.5, delay: 0.05 * index }}
               className="group"
             >
-              <div className="h-full bg-white rounded-2xl border border-slate-200 p-6 hover:border-brand-gold/35 hover:shadow-lg transition-all duration-300">
+              <div className="h-full bg-neutral-50 rounded-2xl border border-neutral-200 p-6 hover:border-brand-gold transition-all duration-300 shadow-sm">
                 <div className="flex items-center justify-between mb-4 gap-3">
                   <div className="flex items-center gap-3 min-w-0">
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-brand-gold to-brand-gold-deep flex items-center justify-center shrink-0">
-                      <span className="text-brand-midnight font-bold text-sm">{testimonial.image}</span>
+                    <div className="w-11 h-11 rounded-full bg-brand-gold flex items-center justify-center shrink-0">
+                      <span className="text-black font-bold text-sm">{testimonial.image}</span>
                     </div>
                     <div className="min-w-0">
-                      <h4 className="font-semibold text-slate-900 truncate">{testimonial.name}</h4>
-                      {testimonial.role && <p className="text-sm text-slate-500 truncate">{testimonial.role}</p>}
-                      {testimonial.location && <p className="text-xs text-slate-500 truncate">{testimonial.location}</p>}
+                      <h4 className="font-semibold text-black truncate">{testimonial.name}</h4>
+                      {testimonial.role && <p className="text-sm text-neutral-600 truncate">{testimonial.role}</p>}
+                      {testimonial.location && <p className="text-xs text-neutral-500 truncate">{testimonial.location}</p>}
                       {testimonial.isGoogle && testimonial.relativeTime && (
-                        <p className="text-xs text-slate-500">{testimonial.relativeTime}</p>
+                        <p className="text-xs text-neutral-500">{testimonial.relativeTime}</p>
                       )}
                     </div>
                   </div>
@@ -190,13 +185,13 @@ const TestimonialsSection = () => {
                 </div>
 
                 <div className="relative mb-4">
-                  <Quote className="w-8 h-8 text-brand-gold/25 absolute -top-2 -left-1" />
-                  <p className="text-slate-600 leading-relaxed relative z-10 pl-6 text-sm">{testimonial.text}</p>
+                  <Quote className="w-8 h-8 text-[#b89428]/25 absolute -top-2 -left-1" />
+                  <p className="text-neutral-700 leading-relaxed relative z-10 pl-6 text-sm">{testimonial.text}</p>
                 </div>
 
                 {testimonial.highlight && (
-                  <div className="pt-4 border-t border-slate-100">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-brand-gold-dark">{testimonial.highlight}</span>
+                  <div className="pt-4 border-t border-neutral-200">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-[#b89428]">{testimonial.highlight}</span>
                   </div>
                 )}
               </div>

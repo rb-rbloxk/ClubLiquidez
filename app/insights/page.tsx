@@ -132,11 +132,11 @@ const InsightsPage = () => {
   const featuredArticles = displayArticles.filter(article => article.featured)
 
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-dark-900">
+      <section className="pt-32 pb-16 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             ref={ref}
@@ -145,27 +145,27 @@ const InsightsPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Market <span className="gradient-text">Insights</span>
+            <h1 className="text-5xl lg:text-6xl font-bold text-black mb-6">
+              Market <span className="text-[#b89428]">Insights</span>
             </h1>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto mb-8 leading-relaxed">
               Educational blog for traders. Forex education, market strategy, risk management, trading psychology, and market breakdowns. No signal service — just learning.
             </p>
             
             {/* Search and Filters */}
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="relative">
-                <BookOpen className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-500 w-5 h-5" />
+                <BookOpen className="absolute left-4 top-1/2 transform -translate-y-1/2 text-neutral-400 w-5 h-5" />
                 <input
                   type="text"
                   placeholder="Search insights..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-dark-800 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-neon-gold focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-white border border-neutral-300 rounded-xl text-black placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent shadow-sm"
                 />
               </div>
               
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-3">
                 {categories.map((category) => (
                   <Button
                     key={category.id}
@@ -186,14 +186,14 @@ const InsightsPage = () => {
 
       {/* Featured Articles */}
       {featuredArticles.length > 0 && (
-        <section className="py-16 bg-dark-850">
+        <section className="py-16 bg-neutral-50 border-b border-neutral-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-8">Featured Insights</h2>
+              <h2 className="text-3xl font-bold text-black mb-8">Featured Insights</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {featuredArticles.map((article, index) => (
                   <motion.div
@@ -201,46 +201,46 @@ const InsightsPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 group cursor-pointer"
+                    className="bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-gold transition-all duration-300 group cursor-pointer shadow-sm"
                     onClick={() => handleArticleClick(article.id)}
                   >
                     <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-neon-gold/20 text-neon-gold rounded-full text-sm font-medium">
+                      <span className="px-3 py-1 bg-neutral-100 border border-neutral-200 text-[#b89428] rounded-full text-xs font-semibold">
                         {article.category === 'Gold Strategy' ? 'Market Strategy' : article.category}
                       </span>
-                      <Star className="w-5 h-5 text-yellow-400" />
+                      <Star className="w-5 h-5 text-amber-500 fill-amber-500" />
                     </div>
                     
-                    <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-neon-gold transition-colors">
+                    <h3 className="text-xl font-bold text-black mb-3 group-hover:text-[#b89428] transition-colors">
                       {article.title}
                     </h3>
                     
-                    <p className="text-slate-500 mb-4 line-clamp-3">
+                    <p className="text-neutral-600 mb-4 line-clamp-3 leading-relaxed text-sm">
                       {article.excerpt}
                     </p>
                     
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-4 text-sm text-slate-500">
+                      <div className="flex items-center space-x-4 text-sm text-neutral-600">
                         <div className="flex items-center space-x-1">
-                          <User className="w-4 h-4" />
+                          <User className="w-4 h-4 text-neutral-400" />
                           <span>{article.author}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
+                          <Calendar className="w-4 h-4 text-neutral-400" />
                           <span>{mounted ? format(new Date(article.date), 'MMM dd, yyyy') : '...'}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
+                          <Clock className="w-4 h-4 text-neutral-400" />
                           <span>{article.readTime}</span>
                         </div>
                       </div>
                       
                       <div className="flex items-center space-x-2">
-                        <div className="flex items-center space-x-1 text-slate-500">
+                        <div className="flex items-center space-x-1 text-neutral-500">
                           <Eye className="w-4 h-4" />
                           <span className="text-sm">{article.views.toLocaleString()}</span>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-neon-gold group-hover:translate-x-1 transition-transform" />
+                        <ArrowRight className="w-4 h-4 text-[#b89428] group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
                   </motion.div>
@@ -252,7 +252,7 @@ const InsightsPage = () => {
       )}
 
       {/* All Articles */}
-      <section className="py-16 bg-dark-850">
+      <section className="py-16 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -260,11 +260,11 @@ const InsightsPage = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-3xl font-bold text-slate-900">Latest Insights</h2>
-              <div className="text-slate-500">
+              <h2 className="text-3xl font-bold text-black">Latest Insights</h2>
+              <div className="text-neutral-600 text-sm font-medium">
                 {loading ? (
                   <div className="flex items-center space-x-2">
-                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <Loader2 className="w-4 h-4 animate-spin text-brand-gold" />
                     <span>Loading...</span>
                   </div>
                 ) : (
@@ -275,7 +275,7 @@ const InsightsPage = () => {
 
             {loading ? (
               <div className="flex items-center justify-center py-16">
-                <Loader2 className="w-8 h-8 text-neon-gold animate-spin" />
+                <Loader2 className="w-8 h-8 text-brand-gold animate-spin" />
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -285,45 +285,39 @@ const InsightsPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-dark-800 rounded-2xl border border-slate-200 p-6 hover:border-neon-gold/50 transition-all duration-300 group cursor-pointer"
+                  className="bg-white rounded-2xl border border-neutral-200 p-6 hover:border-brand-gold transition-all duration-300 group cursor-pointer shadow-sm"
                   onClick={() => handleArticleClick(article.id)}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      article.category === 'Forex Education' ? 'bg-neon-gold/20 text-neon-gold' :
-                      article.category === 'Market Strategy' || article.category === 'Gold Strategy' ? 'bg-neon-gold-champagne/20 text-neon-gold-champagne' :
-                      article.category === 'Risk Management' ? 'bg-neon-gold-dark/20 text-neon-gold-dark' :
-                      article.category === 'Trading Psychology' ? 'bg-neon-amber/20 text-neon-amber' :
-                      'bg-neon-gold/20 text-neon-gold'
-                    }`}>
+                    <span className="px-3 py-1 bg-neutral-100 border border-neutral-200 text-[#b89428] rounded-full text-xs font-semibold">
                       {article.category === 'Gold Strategy' ? 'Market Strategy' : article.category}
                     </span>
-                    {article.featured && <Star className="w-4 h-4 text-yellow-400" />}
+                    {article.featured && <Star className="w-4 h-4 text-amber-500 fill-amber-500" />}
                   </div>
                   
-                  <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-neon-gold transition-colors line-clamp-2">
+                  <h3 className="text-lg font-bold text-black mb-3 group-hover:text-[#b89428] transition-colors line-clamp-2">
                     {article.title}
                   </h3>
                   
-                  <p className="text-slate-500 mb-4 line-clamp-3 text-sm">
+                  <p className="text-neutral-600 mb-4 line-clamp-3 text-sm leading-relaxed">
                     {article.excerpt}
                   </p>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
                     {article.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-dark-700 text-slate-500 rounded text-xs">
+                      <span key={tag} className="px-2.5 py-1 bg-neutral-100 text-neutral-700 rounded-md text-xs font-medium border border-neutral-200">
                         {tag}
                       </span>
                     ))}
                   </div>
                   
-                  <div className="flex items-center justify-between text-sm text-slate-500">
+                  <div className="flex items-center justify-between text-sm text-neutral-600">
                     <div className="flex items-center space-x-1">
-                      <User className="w-4 h-4" />
+                      <User className="w-4 h-4 text-neutral-400" />
                       <span>{article.author}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Eye className="w-4 h-4" />
+                      <Eye className="w-4 h-4 text-neutral-400" />
                       <span>{article.views.toLocaleString()}</span>
                     </div>
                   </div>
@@ -340,9 +334,9 @@ const InsightsPage = () => {
               >
                 {error ? (
                   <>
-                    <AlertCircle className="w-16 h-16 text-slate-600 mx-auto mb-4" />
-                    <div className="text-slate-500 text-lg mb-2">Failed to load insights</div>
-                    <div className="text-slate-500 text-sm mb-4">{error}</div>
+                    <AlertCircle className="w-16 h-16 text-neutral-400 mx-auto mb-4" />
+                    <div className="text-black text-lg font-semibold mb-2">Failed to load insights</div>
+                    <div className="text-neutral-600 text-sm mb-4">{error}</div>
                     <Button
                       variant="primary"
                       size="md"
@@ -353,9 +347,9 @@ const InsightsPage = () => {
                   </>
                 ) : (
                   <>
-                    <BookOpen className="w-16 h-16 text-slate-600 mx-auto mb-4" />
-                    <div className="text-slate-500 text-lg mb-2">No insights found</div>
-                    <div className="text-slate-500 text-sm mb-4">
+                    <BookOpen className="w-16 h-16 text-neutral-400 mx-auto mb-4" />
+                    <div className="text-black text-lg font-semibold mb-2">No insights found</div>
+                    <div className="text-neutral-600 text-sm mb-4">
                       {searchTerm || selectedCategory !== 'all' 
                         ? 'Try adjusting your search or filters'
                         : 'No published insights available yet'}
@@ -381,17 +375,17 @@ const InsightsPage = () => {
       </section>
 
       {/* Trending Ticker */}
-      <section className="py-16 bg-dark-850">
+      <section className="py-16 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="bg-dark-800 rounded-2xl border border-slate-800 p-8"
+            className="bg-white rounded-2xl border border-neutral-200 p-8 shadow-sm"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <TrendingUp className="w-6 h-6 text-neon-gold-champagne" />
-              <h2 className="text-2xl font-bold text-slate-900">Trending Insights</h2>
+              <TrendingUp className="w-6 h-6 text-[#b89428]" />
+              <h2 className="text-2xl font-bold text-black">Trending Insights</h2>
             </div>
             
             <div className="flex items-center space-x-8 overflow-x-auto pb-4">
@@ -408,9 +402,9 @@ const InsightsPage = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-center space-x-2 text-slate-600 hover:text-neon-gold transition-colors cursor-pointer whitespace-nowrap"
+                  className="flex items-center space-x-2 text-neutral-700 hover:text-[#b89428] transition-colors cursor-pointer whitespace-nowrap font-medium"
                 >
-                  <div className="w-2 h-2 bg-neon-gold-champagne rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse" />
                   <span className="text-sm">{trend}</span>
                 </motion.div>
               ))}

@@ -49,10 +49,10 @@ export default function AuthCallbackPage() {
   }, [router, searchParams])
 
   return (
-    <div className="min-h-screen bg-dark-950 flex items-center justify-center">
+    <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="text-center">
-        <Loader2 className="w-8 h-8 text-neon-gold animate-spin mx-auto mb-4" />
-        <p className="text-slate-500">Completing authentication...</p>
+        <Loader2 className="w-8 h-8 text-[#b89428] animate-spin mx-auto mb-4" />
+        <p className="text-neutral-600 font-medium">Completing authentication...</p>
       </div>
     </div>
   )

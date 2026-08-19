@@ -10,26 +10,23 @@ import Link from 'next/link'
 
 export default function AlgoTradingPage() {
   return (
-    <main className="min-h-screen bg-dark-950">
+    <main className="min-h-screen bg-white text-black">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden bg-dark-900">
-        <div className="absolute inset-0" />
-        <div className="absolute inset-0" />
-
+      <section className="relative py-24 bg-white border-b border-neutral-200">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-dark-800 rounded-full border border-neon-gold/20 mb-8">
-              <div className="w-2 h-2 bg-neon-gold rounded-full animate-pulse" />
-              <span className="text-sm text-neon-gold">Advanced Strategy & Automation Training</span>
+            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-neutral-100 rounded-full border border-neutral-200 mb-8">
+              <div className="w-2 h-2 bg-brand-gold rounded-full animate-pulse" />
+              <span className="text-sm text-neutral-800 font-medium">Advanced Strategy &amp; Automation Training</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6">
-              Advanced Strategy & <span className="gradient-text">Automation Training</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
+              Advanced Strategy &amp; <span className="text-[#b89428]">Automation Training</span>
             </h1>
 
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-neutral-700 max-w-3xl mx-auto mb-8 leading-relaxed">
               Learn how algorithms and automated trading systems work. We teach concepts, EA development basics, and MT4/MT5 strategy training — education only. We do not offer execution services or build EAs for you.
             </p>
           </div>
@@ -37,13 +34,13 @@ export default function AlgoTradingPage() {
       </section>
 
       {/* What We Teach Section */}
-      <section className="py-20 bg-dark-850">
+      <section className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-              What We <span className="gradient-text">Teach</span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+              What We <span className="text-[#b89428]">Teach</span>
             </h2>
-            <p className="text-lg text-slate-500 max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
               Curriculum focused on understanding how automated systems work — not on providing execution.
             </p>
           </div>
@@ -61,13 +58,13 @@ export default function AlgoTradingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-dark-800 rounded-2xl p-8 border border-slate-200"
+                className="bg-white rounded-2xl p-8 border border-neutral-200 shadow-sm"
               >
-                <div className="w-12 h-12 bg-neon-gold/20 rounded-lg flex items-center justify-center mb-6">
-                  <item.icon className="w-6 h-6 text-neon-gold" />
+                <div className="w-12 h-12 bg-neutral-100 border border-neutral-200 rounded-xl flex items-center justify-center mb-6">
+                  <item.icon className="w-6 h-6 text-[#b89428]" />
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-4">{item.title}</h3>
-                <p className="text-slate-500">{item.desc}</p>
+                <h3 className="text-xl font-semibold text-black mb-4">{item.title}</h3>
+                <p className="text-neutral-600 leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -75,24 +72,24 @@ export default function AlgoTradingPage() {
       </section>
 
       {/* Education-Only Notice */}
-      <section className="py-16 bg-dark-950 border-y border-slate-200">
+      <section className="py-16 bg-white border-y border-neutral-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl font-bold text-black mb-4">
             Education Only — No Execution Services
           </h2>
-          <p className="text-slate-600 leading-relaxed">
+          <p className="text-neutral-700 leading-relaxed text-base">
             ClubLiquidez provides training in algorithmic and automation concepts. We do not build, deploy, or operate trading systems on your behalf. You learn how algorithms work so you can develop your own approach and execute in your own account.
           </p>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-dark-850">
+      <section className="py-20 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-6">
-            Ready to <span className="gradient-text">Learn</span> How Automation Works?
+          <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">
+            Ready to <span className="text-[#b89428]">Learn</span> How Automation Works?
           </h2>
-          <p className="text-xl text-slate-600 mb-8">
+          <p className="text-xl text-neutral-700 mb-8">
             Enroll in our Advanced Program or view the full curriculum.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

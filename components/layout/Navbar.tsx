@@ -29,19 +29,19 @@ const Navbar = () => {
   ]
 
   const linkClass =
-    'flex items-center space-x-1 text-slate-200/95 transition-colors duration-200 hover:text-white'
+    'flex items-center space-x-1 text-neutral-700 transition-colors duration-200 hover:text-black font-medium'
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-brand-midnight transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-neutral-200 transition-all duration-300"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <motion.div whileHover={{ scale: 1.02 }} className="flex items-center space-x-2">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="relative h-6 md:h-8 w-auto drop-shadow-sm">
+              <div className="relative h-6 md:h-8 w-auto">
                 <Image
                   src="/LCP.png"
                   alt="ClubLiquidez — Market Trading Education"
@@ -76,15 +76,15 @@ const Navbar = () => {
                   onClick={() => setUserMenuOpen(!userMenuOpen)}
                   className={cn(
                     'flex items-center space-x-2 px-4 py-2 rounded-lg border transition-colors',
-                    'bg-white border-slate-200 hover:border-brand-gold-deep'
+                    'bg-neutral-50 border-neutral-200 hover:border-brand-gold'
                   )}
                 >
-                  <div className="w-8 h-8 bg-gradient-to-br from-brand-gold to-brand-gold-deep rounded-full flex items-center justify-center">
-                    <span className="text-brand-midnight font-bold text-sm">
+                  <div className="w-8 h-8 bg-brand-gold rounded-full flex items-center justify-center">
+                    <span className="text-black font-bold text-sm">
                       {user.email?.charAt(0).toUpperCase() || 'U'}
                     </span>
                   </div>
-                  <ChevronDown className="w-4 h-4 text-slate-300" />
+                  <ChevronDown className="w-4 h-4 text-neutral-500" />
                 </motion.button>
 
                 <AnimatePresence>
@@ -93,28 +93,28 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute right-0 mt-2 w-52 bg-white rounded-xl border border-slate-200 shadow-xl z-50"
+                      className="absolute right-0 mt-2 w-52 bg-white rounded-xl border border-neutral-200 shadow-xl z-50"
                     >
                       <div className="p-2">
-                        <div className="px-3 py-2 border-b border-slate-100">
-                          <p className="text-sm font-medium text-slate-900 truncate">
+                        <div className="px-3 py-2 border-b border-neutral-100">
+                          <p className="text-sm font-medium text-black truncate">
                             {user.user_metadata?.full_name || user.email}
                           </p>
-                          <p className="text-xs text-slate-500 truncate">{user.email}</p>
+                          <p className="text-xs text-neutral-500 truncate">{user.email}</p>
                         </div>
                         <Link
                           href="/profile"
                           onClick={() => setUserMenuOpen(false)}
-                          className="flex items-center space-x-2 px-3 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
+                          className="flex items-center space-x-2 px-3 py-2 text-sm text-neutral-700 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors"
                         >
-                          <UserIcon className="w-4 h-4" />
+                          <UserIcon className="w-4 h-4 text-brand-gold" />
                           <span>Profile</span>
                         </Link>
                         <button
                           onClick={handleSignOut}
-                          className="w-full flex items-center space-x-2 px-3 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors"
+                          className="w-full flex items-center space-x-2 px-3 py-2 text-sm text-neutral-700 hover:text-black hover:bg-neutral-100 rounded-lg transition-colors"
                         >
-                          <LogOut className="w-4 h-4" />
+                          <LogOut className="w-4 h-4 text-brand-gold" />
                           <span>Sign Out</span>
                         </button>
                       </div>
@@ -125,7 +125,7 @@ const Navbar = () => {
             ) : (
               <>
                 <Link href="/auth">
-                  <Button variant="ghost" size="sm" className="!text-slate-200 hover:!bg-white/10">
+                  <Button variant="ghost" size="sm" className="!text-neutral-700 hover:!bg-neutral-100 hover:!text-black">
                     Sign In
                   </Button>
                 </Link>
@@ -140,7 +140,7 @@ const Navbar = () => {
 
           <motion.button
             whileTap={{ scale: 0.95 }}
-            className="md:hidden p-2 text-slate-200"
+            className="md:hidden p-2 text-neutral-800"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -154,7 +154,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-white/10 bg-brand-midnight"
+            className="md:hidden border-t border-neutral-200 bg-white"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
@@ -162,7 +162,7 @@ const Navbar = () => {
                   
                   <Link
                     href={item.href}
-                    className="text-slate-200 hover:text-white transition-colors duration-200"
+                    className="text-neutral-700 hover:text-black transition-colors duration-200 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
@@ -170,14 +170,14 @@ const Navbar = () => {
                 </motion.div>
               ))}
               {!loading && (
-                <div className="pt-4 space-y-3 border-t border-white/10">
+                <div className="pt-4 space-y-3 border-t border-neutral-200">
                   {user ? (
                     <>
-                      <div className="px-3 py-2 bg-white/10 rounded-lg">
-                        <p className="text-sm font-medium text-slate-100 truncate">
+                      <div className="px-3 py-2 bg-neutral-100 rounded-lg">
+                        <p className="text-sm font-medium text-black truncate">
                           {user.user_metadata?.full_name || user.email}
                         </p>
-                        <p className="text-xs text-slate-500 truncate">{user.email}</p>
+                        <p className="text-xs text-neutral-500 truncate">{user.email}</p>
                       </div>
                       <Link href="/profile" onClick={() => setIsOpen(false)}>
                         <Button variant="ghost" size="sm" className="w-full">
@@ -201,7 +201,7 @@ const Navbar = () => {
                   ) : (
                     <>
                       <Link href="/auth" onClick={() => setIsOpen(false)}>
-                        <Button variant="ghost" size="sm" className="w-full !text-slate-200 hover:!bg-white/10">
+                        <Button variant="ghost" size="sm" className="w-full !text-neutral-700 hover:!bg-neutral-100">
                           Sign In
                         </Button>
                       </Link>
