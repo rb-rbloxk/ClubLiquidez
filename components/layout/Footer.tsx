@@ -74,7 +74,7 @@ const Footer = () => {
             >
               <Link href="/" className="inline-flex items-center gap-2">
                 <div className="relative h-7 md:h-8 w-auto">
-                  <Image src="/LCP.png" alt="ClubLiquidez" width={200} height={36} className="object-contain h-full w-auto" priority />
+                  <Image src="/liquidez.png" alt="ClubLiquidez" width={200} height={36} className="object-contain h-full w-auto" priority />
                 </div>
               </Link>
               <p className="text-neutral-600 max-w-md text-sm leading-relaxed">

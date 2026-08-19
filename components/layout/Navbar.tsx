@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center space-x-2">
               <div className="relative h-6 md:h-8 w-auto">
                 <Image
-                  src="/LCP.png"
+                  src="/liquidez.png"
                   alt="ClubLiquidez — Market Trading Education"
                   width={200}
                   height={32}
@@ -159,7 +159,7 @@ const Navbar = () => {
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <motion.div key={item.href} whileHover={{ x: 10 }} className="flex items-center space-x-3">
-                  
+
                   <Link
                     href={item.href}
                     className="text-neutral-700 hover:text-black transition-colors duration-200 font-medium"
